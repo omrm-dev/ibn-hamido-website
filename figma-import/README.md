@@ -50,14 +50,14 @@ The cart and sheet states are one screen tall (1440×900 or 390×844) because th
     - **Order:** put the five state frames in a row under the Desktop/Mobile pair (Y = the Desktop frame's height + 200), Desktop states first, then Mobile states.
     - **Checkout & Confirmation:** same idea with the Errors and Confirmed frames.
 
-**Faster: one import per Figma page.** The File tab also accepts a **.zip** under 32 MB and imports every page inside it. Every page group here is under 14 MB.
-- Windows: in the design folder, select for example all twelve `04-order*` files, then right-click → **Send to → Compressed (zipped) folder**.
-- macOS: right-click → **Compress**.
-
-Then drop that zip in step 7 to import all twelve frames at once.
+**Faster: two imports per design.** The File tab accepts a **.zip** under 32 MB and imports every page inside it.
+1. In the design folder, select every `*-1440.html` file and zip them (Windows: right-click → **Send to → Compressed (zipped) folder**; macOS: right-click → **Compress**). Do the same for every `*-390.html` file. A design's desktop zip is about 23 MB and its mobile zip about 18 MB.
+2. Import the desktop zip with the plugin's viewport/width set to **1440**, and the mobile zip with it set to **390**. Don't leave it on the default 1920, and keep the two widths in separate zips.
+3. Zip imports name each frame after the file (for example `a-corniche/05-checkout-1440.html`) and drop them all on one page. Move each frame to its page and rename it, or ask Claude to do that tidy-up for you.
 
 ## Notes
 
+- **Layout is frozen for Figma.** Every flex/grid child carries its rendered pixel width, and CSS grids become wrapping rows, because html.to.design doesn't translate `fr`, `minmax()`, flex-grow/basis or `min-width: 0`. That's what made the Checkout's Order summary collapse in the first export.
 - If a frame name doesn't come through as the file's title, rename the frame to `<Page> — Desktop` / `<Page> — Mobile` (states: `Order — Cart open — Desktop`, and so on).
 - **Fonts:** Young Serif, Inter, Aref Ruqaa and Rakkas are all Google Fonts that Figma already has, so text stays editable in the right typeface.
 - **Photo tags:** "AI concept" and "Stand-in" tags on photos are part of the mockup. Delete them from frames you hand to the owner as finals.
