@@ -19,9 +19,21 @@ No framework, no build step: open the files or serve the folder.
 | `shared/data/menu-data.js` | The same data wrapped as `window.IHS_MENU_DATA`, only for pages opened straight from disk (browsers block `fetch()` on `file://`). |
 | `shared/js/order.js` | One ordering engine for all 4 designs. It renders the menu from `menu-data.json` and handles: option sheets (combo sides stepper with "0 / 2" and repeats, preparation, sandwich side, rice size, fresh catch weight/style/sides with a live price breakdown), direct add with "Added · Undo", the cart drawer and mobile bar, the `localStorage` cart, checkout validation and confirmation. Price math is a set of pure functions (`window.IHS.Price`): `null` prices give `[PRICE]`. |
 | `shared/js/ui.js` | Mobile nav drawer, cooking-style reveal (click/tap only), dish accordion (150 ms hover intent, click always works), reviews carousel with Pause/Play, story scroll reveal. All of it respects `prefers-reduced-motion`. |
+| `figma-import/` | One self-contained HTML snapshot per page, state and width (1440 / 390) for the html.to.design Figma plugin. Steps are in [`figma-import/README.md`](figma-import/README.md). |
 | `design-source/` | For the record: every canvas board (`project/*.dc.html`), `project/canvas.json`, the design-system tokens, `SPEC.md`, and `ContentChecklist.md` (the owner checklist board as markdown). |
 
 The canvas boards were converted to plain HTML: the markup and styles come from the boards, while the interactions and ordering logic are re-implemented in `shared/js/`. No canvas runtime is included. `/_blob/` asset URLs from the canvas are replaced by files in `shared/photos/`.
+
+## Figma files
+
+| Design | Figma |
+|---|---|
+| Base v2 | https://www.figma.com/design/oYZJu9L7PhTNYInUz5sHRm |
+| A · Corniche | https://www.figma.com/design/GgbwMZrpBHmsiMjxe2JELB |
+| B · Anfushi market | https://www.figma.com/design/GX7lTEODTp3nWMuDgXQjc7 |
+| C · Mix | https://www.figma.com/design/QTWiZzWXXNWZTySf7XZhPN |
+
+Each file has a Cover, one page per site page and a Styles page (color and text styles for that look). The page frames are imported from `figma-import/` with html.to.design.
 
 ## Preview locally
 
