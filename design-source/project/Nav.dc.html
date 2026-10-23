@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Site navigation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.nv-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px}
+.nv-menu-btn{display:none;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;border:1px solid #AFBBD6;background:#FFFFFF;color:#0F1B3D;font:600 15px/1 Inter,system-ui,sans-serif;cursor:pointer}
+.nv-menu-btn:hover{background:#E9EEF9}
+.nv-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#2B4AA5;color:#FFFFFF;font-weight:600;font-size:15px;text-decoration:none}
+.nv-cta:hover{background:#213C8C;color:#FFFFFF}
+.nv a:focus-visible,.nv button:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.nv-top a:focus-visible{outline-color:#5CC8C8}
+@media (max-width:899px){.nv-links{display:none}.nv-menu-btn{display:inline-flex}}
+.nv-overlay{position:fixed;inset:0;z-index:60}
+.nv-scrim{position:absolute;inset:0;width:100%;height:100%;border:0;margin:0;padding:0;background:rgba(15,27,61,.5);cursor:pointer}
+.nv-drawer{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:#FFFFFF;box-shadow:-12px 0 40px rgba(15,27,61,.2);display:flex;flex-direction:column;gap:8px;padding:16px 20px 24px;box-sizing:border-box;overflow-y:auto;animation:nvIn .22s ease-out}
+@keyframes nvIn{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.nv-drawer{animation:none}}
+.nv-dlink{display:flex;align-items:center;min-height:52px;padding:0 4px;border-bottom:1px solid #DCE2F0;font:400 22px/1.2 'Young Serif',Georgia,serif;color:#0F1B3D;text-decoration:none}
+.nv-dlink:hover{color:#2B4AA5}
+.nv-close{width:44px;height:44px;border-radius:999px;border:1px solid #DCE2F0;background:#FFFFFF;color:#0F1B3D;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+</style>
+</helmet>
+<div class="nv" style="font-family: Inter, system-ui, sans-serif; color: #0F1B3D; background: #FFFFFF; border-bottom: 1px solid #DCE2F0;">
+  <div class="nv-top" style="background: #13245A; color: #C9D3EE; font-size: 13px; line-height: 18px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;">
+      <span><span style="color: #5CC8C8; font-weight: 600;">Walk-in only</span> · 14035 LaGrange Rd</span>
+      <sc-if value="{{launchMode}}" hint-placeholder-val="{{true}}">
+        <span>Opening [OPENING DATE]</span>
+      </sc-if>
+    </div>
+  </div>
+  <nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 16px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px;">
+    <a href="Home.dc.html" aria-label="Ibn Hamido Seafood home" style="display: block; line-height: 0;">
+      <img src="/_blob/505e7dbf643cd914c5af3de17f72b5fd" alt="Ibn Hamido Seafood" style="height: 40px; width: auto;">
+    </a>
+    <div class="nv-links">
+      <sc-for list="{{links}}" as="item" hint-placeholder-count="5">
+        <a href="{{item.href}}" style="{{item.style}}" aria-current="{{item.current}}">{{item.label}}</a>
+      </sc-for>
+      <a class="nv-cta" href="Order.dc.html">Order pickup</a>
+    </div>
+    <button type="button" class="nv-menu-btn" aria-expanded="{{expanded}}" aria-controls="nv-drawer" onClick="{{openDrawer}}">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      Menu
+    </button>
+  </nav>
+  <sc-if value="{{drawerOpen}}" hint-placeholder-val="{{false}}">
+    <div class="nv-overlay">
+      <button type="button" class="nv-scrim" tabindex="-1" aria-hidden="true" onClick="{{closeDrawer}}"></button>
+      <div id="nv-drawer" class="nv-drawer" role="dialog" aria-modal="true" aria-label="Site menu" onKeyDown="{{drawerKey}}">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+          <img src="/_blob/505e7dbf643cd914c5af3de17f72b5fd" alt="Ibn Hamido Seafood" style="height: 32px; width: auto;">
+          <button type="button" class="nv-close" data-nv-close="true" aria-label="Close menu" onClick="{{closeDrawer}}">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+        </div>
+        <a class="nv-dlink" href="Home.dc.html">Home</a>
+        <sc-for list="{{links}}" as="item" hint-placeholder-count="5">
+          <a class="nv-dlink" href="{{item.href}}" aria-current="{{item.current}}">{{item.label}}</a>
+        </sc-for>
+        <a class="nv-cta" href="Order.dc.html" style="justify-content: center; min-height: 48px; margin-top: 16px;">Order pickup</a>
+        <p style="margin: 12px 0 0; font-size: 14px; line-height: 20px; color: #4F5F7E;">Walk-in only · 14035 LaGrange Rd, Orland Park, IL</p>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"current":{"editor":"enum","options":["home","menu","order","story","visit","catering","none"],"default":"home"},"launchMode":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":128}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { drawerOpen: false };
+  }
+  componentDidUpdate(prevProps, prevState) {
+    try {
+      if (!prevState.drawerOpen && this.state.drawerOpen) {
+        const b = document.querySelector('[data-nv-close]');
+        if (b) b.focus();
+      }
+      if (prevState.drawerOpen && !this.state.drawerOpen && this.lastFocus && this.lastFocus.focus) this.lastFocus.focus();
+    } catch (e) {}
+  }
+  renderVals() {
+    const current = this.props.current ?? 'home';
+    const launchMode = this.props.launchMode ?? true;
+    const base = 'display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;';
+    const on = 'display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; text-decoration: none; color: #2B4AA5; border-bottom: 2px solid #1F9AA0;';
+    const links = [
+      { id: 'menu', label: 'Menu', href: 'Menu.dc.html' },
+      { id: 'order', label: 'Order', href: 'Order.dc.html' },
+      { id: 'story', label: 'Our Story', href: 'Story.dc.html' },
+      { id: 'visit', label: 'Visit', href: 'Visit.dc.html' },
+      { id: 'catering', label: 'Parties & Catering', href: 'Catering.dc.html' }
+    ].map((l) => ({ ...l, style: l.id === current ? on : base, current: l.id === current ? 'page' : 'false' }));
+    const close = () => this.setState({ drawerOpen: false });
+    return {
+      links,
+      launchMode,
+      drawerOpen: this.state.drawerOpen,
+      expanded: this.state.drawerOpen ? 'true' : 'false',
+      openDrawer: () => { try { this.lastFocus = document.activeElement; } catch (e) {} this.setState({ drawerOpen: true }); },
+      closeDrawer: close,
+      drawerKey: (e) => {
+        if (e.key === 'Escape') { e.stopPropagation(); close(); return; }
+        if (e.key !== 'Tab') return;
+        const f = Array.prototype.slice.call(e.currentTarget.querySelectorAll('a[href], button:not([disabled])'));
+        if (!f.length) return;
+        const first = f[0];
+        const last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

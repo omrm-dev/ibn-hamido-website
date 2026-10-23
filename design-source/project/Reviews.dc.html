@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reviews band</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.rv-btn{width:48px;height:48px;border-radius:999px;border:1px solid #8C9CCB;background:transparent;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.rv-btn:hover{background:rgba(255,255,255,.08)}
+.rv-play{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid #8C9CCB;background:transparent;color:#FFFFFF;font:600 14px/1 Inter,system-ui,sans-serif;cursor:pointer}
+.rv-play:hover{background:rgba(255,255,255,.08)}
+.rv button:focus-visible{outline:2px solid #5CC8C8;outline-offset:2px}
+.rv-dot{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;padding:0;margin:0;background:transparent;cursor:pointer}
+.rv-pip{display:block;height:10px;border-radius:999px;transition:width .3s ease}
+@media (prefers-reduced-motion:reduce){.rv-pip{transition:none}}
+</style>
+</helmet>
+<section class="rv" style="font-family: Inter, system-ui, sans-serif; background: #13245A; color: #FFFFFF;" onMouseEnter="{{hoverOn}}" onMouseLeave="{{hoverOff}}" onFocus="{{focusOn}}" onBlur="{{focusOff}}">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 96px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-direction: column; gap: 64px;">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <p style="margin: 0; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">The Astoria original</p>
+        <h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">A Queens favorite, now headed to Chicagoland.</h2>
+        <p lang="ar" dir="rtl" style="margin: 0; font-family: 'Aref Ruqaa', serif; font-size: 28px; line-height: 40px; color: #E9EEF9; text-align: left;">من إسكندرية إلى نيويورك إلى شيكاغو</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1F9AA0; padding-top: 16px;">
+          <span style="font-family: 'Young Serif', Georgia, serif; font-size: 30px;">NYT Top 100</span>
+          <span style="font-size: 14px; line-height: 20px; color: #C9D3EE;">The New York Times · Astoria</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1F9AA0; padding-top: 16px;">
+          <span style="font-family: 'Young Serif', Georgia, serif; font-size: 30px;">4.7★</span>
+          <span style="font-size: 14px; line-height: 20px; color: #C9D3EE;">Diner rating · Astoria</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1F9AA0; padding-top: 16px;">
+          <span style="font-family: 'Young Serif', Georgia, serif; font-size: 30px;">7.7/10</span>
+          <span style="font-size: 14px; line-height: 20px; color: #C9D3EE;">The Infatuation · Astoria</span>
+        </div>
+      </div>
+    </div>
+
+    <div role="region" aria-roledescription="carousel" aria-label="Guest reviews" style="border-top: 1px solid #2E4280; padding-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 40px; align-items: end;">
+      <figure aria-live="{{live}}" aria-atomic="true" style="margin: 0; display: flex; flex-direction: column; gap: 24px; min-height: 260px;">
+        <span style="display: flex; align-items: center; gap: 12px;">
+          <span aria-hidden="true" style="font-size: 20px; letter-spacing: 4px; color: #5CC8C8;">★★★★★</span>
+          <span style="font-size: 13px; color: #C9D3EE;">[RATING]</span>
+        </span>
+        <blockquote style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.3;">“{{review.quote}}”</blockquote>
+        <figcaption style="font-size: 15px; line-height: 22px; color: #C9D3EE;"><span style="color: #FFFFFF; font-weight: 600;">{{review.name}}</span> · {{review.source}}</figcaption>
+      </figure>
+      <div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start;">
+        <div style="display: flex; gap: 0; align-items: center;">
+          <sc-for list="{{dots}}" as="dot" hint-placeholder-count="5">
+            <button type="button" class="rv-dot" aria-label="{{dot.label}}" aria-current="{{dot.current}}" onClick="{{dot.go}}"><span class="rv-pip" style="{{dot.style}}"></span></button>
+          </sc-for>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <button type="button" class="rv-btn" aria-label="Previous review" onClick="{{prev}}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
+          </button>
+          <button type="button" class="rv-btn" aria-label="Next review" onClick="{{next}}">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+          </button>
+          <button type="button" class="rv-play" aria-pressed="{{pressed}}" onClick="{{togglePlay}}">
+            <sc-if value="{{playing}}" hint-placeholder-val="{{true}}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 5v14M16 5v14"></path></svg>
+            </sc-if>
+            <sc-if value="{{stopped}}" hint-placeholder-val="{{false}}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 5v14l12-7z"></path></svg>
+            </sc-if>
+            {{playText}}
+          </button>
+          <span style="font-size: 13px; color: #C9D3EE; margin-left: 4px;">{{counter}}</span>
+        </div>
+        <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">{{helpText}}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"autoplay":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":960}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let reduced = false;
+    try { reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+    this.reduced = reduced;
+    this.state = { i: 0, playing: (props.autoplay ?? true) && !reduced, hover: false, focus: false, manual: false };
+    this.reviews = [1, 2, 3, 4, 5].map((n) => ({
+      quote: '[OWNER: handpicked review #' + n + ', quote]',
+      name: '[First name + last initial]',
+      source: '[SOURCE]'
+    }));
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      const s = this.state;
+      if (s.playing && !s.hover && !s.focus) this.setState({ i: (s.i + 1) % this.reviews.length });
+    }, 6000);
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.autoplay !== this.props.autoplay) this.setState({ playing: (this.props.autoplay ?? true) && !this.reduced });
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  renderVals() {
+    const n = this.reviews.length;
+    const i = this.state.i;
+    const playing = this.state.playing;
+    const manualGo = (k) => this.setState({ i: ((k % n) + n) % n, manual: true });
+    const dots = this.reviews.map((r, k) => ({
+      label: 'Show review ' + (k + 1),
+      current: k === i ? 'true' : 'false',
+      go: () => manualGo(k),
+      style: k === i ? 'width: 32px; background: #5CC8C8;' : 'width: 10px; background: #8C9CCB;'
+    }));
+    return {
+      review: this.reviews[i],
+      dots,
+      live: this.state.manual && !playing ? 'polite' : (this.state.manual ? 'polite' : 'off'),
+      counter: String(i + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+      playing,
+      stopped: !playing,
+      pressed: playing ? 'false' : 'true',
+      playText: playing ? 'Pause' : 'Play',
+      helpText: this.reduced ? 'Handpicked reviews. Auto-rotation is off because reduced motion is on.' : 'Handpicked reviews. Rotates every 6 seconds; pauses on hover or keyboard focus.',
+      prev: () => manualGo(i - 1),
+      next: () => manualGo(i + 1),
+      togglePlay: () => this.setState({ playing: !playing, manual: playing ? this.state.manual : false }),
+      hoverOn: () => this.setState({ hover: true }),
+      hoverOff: () => this.setState({ hover: false }),
+      focusOn: () => { if (!this.state.focus) this.setState({ focus: true }); },
+      focusOff: (e) => {
+        const next = e && e.relatedTarget;
+        if (next && e.currentTarget && e.currentTarget.contains(next)) return;
+        this.setState({ focus: false });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

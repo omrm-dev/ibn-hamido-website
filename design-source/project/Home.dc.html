@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ibn Hamido Seafood | Orland Park, IL</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+:root{--surface:#FFFFFF;--surface-tint:#F1F4FB;--foam:#E9EEF9;--ink:#0F1B3D;--ink-muted:#4F5F7E;--sea:#2B4AA5;--sea-ink:#213C8C;--sea-deep:#13245A;--turquoise:#1F9AA0;--turquoise-ink:#0F6E73;--turquoise-bright:#5CC8C8;--line:#DCE2F0;--font-display:"Young Serif",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif;--font-arabic:"Aref Ruqaa",serif}
+body{margin:0}
+a{color:#213C8C}a:hover{color:#13245A}
+h1,h2,h3{font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;box-sizing:border-box}
+@media (max-width:720px){.wrap{padding:0 16px}}
+.eyebrow{margin:0;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise-ink)}
+.ar{font-family:var(--font-arabic);direction:rtl}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--font-sans);text-decoration:none;border:2px solid transparent;box-sizing:border-box;cursor:pointer}
+.btn-primary{background:#2B4AA5;color:#FFFFFF}.btn-primary:hover{background:#213C8C;color:#FFFFFF}
+.btn-secondary{border-color:#213C8C;color:#213C8C;background:transparent}.btn-secondary:hover{background:#E9EEF9;color:#213C8C}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.ph{background:repeating-linear-gradient(135deg,#E6EBF5 0 12px,#EEF2F9 12px 24px);color:#3F4F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;font:600 12px/1.5 var(--font-sans);letter-spacing:.08em;text-transform:uppercase}
+.ph-navy{background:repeating-linear-gradient(135deg,#3A57B0 0 12px,#3350A8 12px 24px);color:#E9EEF9}
+.arch{border-radius:50% 50% 12px 12px / 200px 200px 12px 12px;overflow:hidden}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;background:#E9EEF9;color:#13245A;font:600 13px/1 var(--font-sans)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.ph-on{position:relative;overflow:hidden}.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;border-radius:inherit}.ph-tag{position:absolute;left:8px;bottom:8px;z-index:2;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;background:rgba(15,27,61,.86);color:#FFFFFF;font:600 10px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:none;padding:4px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}.thumb .ph-tag{left:4px;bottom:4px;font-size:8px;padding:3px 5px;letter-spacing:0}.ph-white{background:#FFFFFF !important;border-color:#FFFFFF}
+</style>
+</helmet>
+<div style="background: var(--surface); color: var(--ink); font-family: var(--font-sans);">
+
+  <dc-import name="Nav" current="home" launch-mode="{{launchMode}}" hint-size="100%,128px"></dc-import>
+
+  <section style="padding: 72px 0 96px;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 64px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <p class="eyebrow">Alexandrian seafood · Orland Park, IL</p>
+        <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 32px; line-height: 44px; color: var(--sea); text-align: left;">من بحر إسكندرية</p>
+        <h1 style="margin: 0; font-family: var(--font-display); font-size: clamp(44px, 6vw, 80px); line-height: 1.02; letter-spacing: -0.01em;">Come taste Alexandria in Orland Park.</h1>
+        <p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-muted); max-width: 520px;">Pick your fish at the counter. Tell the chef how you want it. Sit down to a table full of Egyptian sides. Family-owned, the same way we do it at our Astoria, NY restaurant.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+          <a class="btn btn-primary" href="Order.dc.html">Order pickup</a>
+          <a class="btn btn-secondary" href="Menu.dc.html">See the menu</a>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px;">
+          <span class="chip"><span style="width: 8px; height: 8px; border-radius: 999px; background: #1F9AA0; display: inline-block;"></span>Walk-in only · No reservations needed</span>
+          <span class="chip">{{todayChip}}</span>
+          <sc-if value="{{showHalal}}" hint-placeholder-val="{{true}}">
+            <span class="chip">Halal [OWNER CONFIRM]</span>
+          </sc-if>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 16px; align-items: end;">
+        <div class="ph arch ph-on" style="aspect-ratio: 3 / 4;"><img class="ph-img" src="/_blob/5afe29d021e7a0af54f9970b9eef02dc" alt="Whole grilled branzino on the table" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-01 · Whole grilled branzino on the table · arch 3:4</div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; padding: 16px;"><img class="ph-img" src="/_blob/de5eeb842780be0cabdfb08b553e251b" alt="The fish counter on ice" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-02 · The fish counter on ice · arch 4:5</div>
+          <div class="ph ph-on" style="aspect-ratio: 3 / 2; border-radius: 12px; padding: 12px;"><img class="ph-img" src="/_blob/a4c371605b9f613e878a4ee8d40b8597" alt="A spread of sides" style="object-position: center;"><span class="ph-tag">AI concept</span>H-03 · Sides spread · 3:2</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--surface-tint); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 32px; padding-top: 36px; padding-bottom: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p class="eyebrow">Address</p>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">14035 LaGrange Rd<br>Orland Park, IL 60462</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p class="eyebrow">Hours</p>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">Mon–Thu [HOURS]<br>Fri–Sun [HOURS]</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p class="eyebrow">Seating</p>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;">Walk-in only.<br><span style="font-weight: 400; color: var(--ink-muted);">Reservations for <a href="Catering.dc.html">private parties</a> only.</span></p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p class="eyebrow">Call</p>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; font-weight: 500;"><a href="tel:">[PHONE NUMBER]</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="padding: 112px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 48px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px;">
+          <p class="eyebrow">How it works</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 50px); line-height: 1.08;">Seafood, the Alexandrian way.</h2>
+          <p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-muted);">You choose it, you see it, we cook it.</p>
+        </div>
+        <a class="btn btn-secondary" href="Menu.dc.html#styles">Cooking styles</a>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px;">
+        <li style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; padding: 16px;"><img class="ph-img" src="/_blob/07a28d83b6a5a0a22c849fd5fa20e7aa" alt="Fresh catch on ice" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-04 · Catch on ice · arch 4:5</div>
+          <span style="font-family: var(--font-display); font-size: 28px; color: var(--turquoise);">01</span>
+          <h3 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 28px;">Pick your fish</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Choose from the day’s catch at the counter. It’s weighed by the pound.</p>
+        </li>
+        <li style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; padding: 16px;"><img class="ph-img" src="/_blob/88af42c9ca0abd24fbdcdb87846dc738" alt="Chef at the grill" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-05 · Chef at the grill · arch 4:5</div>
+          <span style="font-family: var(--font-display); font-size: 28px; color: var(--turquoise);">02</span>
+          <h3 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 28px;">Tell the chef how</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Grilled, fried, baked, singari, rada, butterflied or deboned.</p>
+        </li>
+        <li style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; padding: 16px;"><img class="ph-img" src="/_blob/32c636433eb7abc95d18afd4d3e7dcde" alt="The dining room" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-06 · Dining room · arch 4:5</div>
+          <span style="font-family: var(--font-display); font-size: 28px; color: var(--turquoise);">03</span>
+          <h3 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 28px;">Take a seat</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">We seat you while your fish hits the fire.</p>
+        </li>
+        <li style="display: flex; flex-direction: column; gap: 14px;">
+          <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; padding: 16px;"><img class="ph-img" src="/_blob/3ec625e2493f42797984c6870ed5b08b" alt="Sides and pita" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-07 · Sides &amp; pita · arch 4:5</div>
+          <span style="font-family: var(--font-display); font-size: 28px; color: var(--turquoise);">04</span>
+          <h3 style="margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 28px;">Add your sides</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Golden rice, tahini, babaghanoush, the Hamido salad and more.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="background: var(--surface-tint); padding: 112px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px;">
+          <p class="eyebrow">Hamido Combos · two sides included</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">كومبو ابن حميدو</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 50px); line-height: 1.08;">Hamido Combos, two sides included.</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">One price, [PRICE] each. [VERIFY: lunch-only or all day]</p>
+        </div>
+        <a class="btn btn-primary" href="Order.dc.html">Order a combo</a>
+      </div>
+      <dc-import name="Accordion" set="combos" hint-size="100%,520px"></dc-import>
+    </div>
+  </section>
+
+  <dc-import name="Reviews" hint-size="100%,960px"></dc-import>
+
+  <section style="background: var(--surface-tint); padding: 112px 0;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 64px; align-items: center;">
+      <div class="ph arch ph-on" style="aspect-ratio: 4 / 5; max-height: 600px;"><img class="ph-img" src="/_blob/6214dd813ff83940de5155a0693b1501" alt="Alexandria harbor" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>H-08 · Story teaser: Alexandria harbor / family (video loop optional) · arch 4:5</div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <p class="eyebrow">Our story</p>
+        <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 30px; line-height: 42px; color: var(--sea); text-align: left;">من إسكندرية إلى نيويورك إلى شيكاغو</p>
+        <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 50px); line-height: 1.08;">From the Alexandria sea, to Astoria, to Orland Park.</h2>
+        <a class="btn btn-secondary" href="Story.dc.html" style="align-self: flex-start;">Read our story</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 112px 0;">
+    <div class="wrap">
+      <div style="background: var(--sea); color: #FFFFFF; border-radius: 24px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <p class="eyebrow" style="color: #FFFFFF;">Private parties &amp; catering</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1;">Feed the whole family, or the whole party.</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #E9EEF9;">Private parties are by reservation. Catering is call-ahead: [PHONE NUMBER].</p>
+          <a class="btn" href="Catering.dc.html" style="align-self: flex-start; margin-top: 8px; background: #FFFFFF; color: #13245A;">Plan an event</a>
+        </div>
+        <div class="ph ph-navy ph-on" style="aspect-ratio: 16 / 10; border-radius: 16px;"><img class="ph-img" src="/_blob/d43d4e14dc752af6d2073531975bad70" alt="Catering trays on a long table" style="object-position: center;"><span class="ph-tag">AI concept</span>H-09 · Catering trays on a long table · 16:10</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="background: var(--surface-tint); padding: 112px 0;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 56px; align-items: center;">
+      <div class="ph" style="aspect-ratio: 4 / 3; border-radius: 24px;">MAP · Google Maps embed: 14035 LaGrange Rd, Orland Park, IL 60462 · 4:3</div>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <p class="eyebrow">Visit us · Walk-ins only</p>
+        <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 50px); line-height: 1.08;">14035 LaGrange Rd, Orland Park.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Mon–Thu [HOURS] · Fri–Sun [HOURS]<br>No reservations. Come in, pick your fish, and we’ll seat you.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462">Get directions</a>
+          <a class="btn btn-secondary" href="Visit.dc.html">Hours &amp; contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,600px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"launchMode":{"editor":"boolean","default":true},"showHalal":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":5300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const launchMode = this.props.launchMode ?? true;
+    const hours = { monThu: '[HOURS]', friSun: '[HOURS]', openingDate: '[OPENING DATE]' };
+    const day = new Date().getDay();
+    const todays = (day >= 1 && day <= 4) ? hours.monThu : hours.friSun;
+    return {
+      launchMode,
+      showHalal: this.props.showHalal ?? true,
+      todayChip: launchMode ? 'Opening ' + hours.openingDate : 'Open today ' + todays
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Checkout | Ibn Hamido Seafood Orland Park</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+:root{--surface:#FFFFFF;--surface-tint:#F1F4FB;--foam:#E9EEF9;--ink:#0F1B3D;--ink-muted:#4F5F7E;--sea:#2B4AA5;--sea-ink:#213C8C;--sea-deep:#13245A;--turquoise:#1F9AA0;--turquoise-ink:#0F6E73;--turquoise-bright:#5CC8C8;--line:#DCE2F0;--font-display:"Young Serif",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif;--font-arabic:"Aref Ruqaa",serif}
+body{margin:0}
+a{color:#213C8C}a:hover{color:#13245A}
+h1,h2,h3{font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;box-sizing:border-box}
+@media (max-width:720px){.wrap{padding:0 16px}}
+.eyebrow{margin:0;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--font-sans);text-decoration:none;border:2px solid transparent;box-sizing:border-box;cursor:pointer}
+.btn-primary{background:#2B4AA5;color:#FFFFFF}.btn-primary:hover{background:#213C8C;color:#FFFFFF}
+.btn-primary:disabled{background:#E9EEF9;color:#4F5F7E;cursor:not-allowed}
+.btn-secondary{border-color:#213C8C;color:#213C8C;background:transparent}.btn-secondary:hover{background:#E9EEF9;color:#213C8C}
+.co a:focus-visible,.co button:focus-visible,.co input:focus-visible,.co select:focus-visible,.co [tabindex]:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.co-grid{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.co-main{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.co-aside{flex:1 1 340px;min-width:0;position:sticky;top:24px}
+.co-card{background:#FFFFFF;border:1px solid #DCE2F0;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.co-h2{margin:0;font:400 24px/30px var(--font-display);color:#0F1B3D}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin:0 0 12px;font:400 24px/30px var(--font-display);color:#0F1B3D}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.opt{display:flex;align-items:flex-start;gap:12px;min-height:56px;padding:14px 16px;border:1px solid #AFBBD6;border-radius:12px;font:400 14px/20px var(--font-sans);color:#4F5F7E;cursor:pointer;box-sizing:border-box}
+.opt b{font-weight:600;font-size:15px;color:#0F1B3D}
+.opt input{width:20px;height:20px;margin:0;flex:none;accent-color:#2B4AA5;cursor:pointer}
+.opt-on{border-color:#2B4AA5;background:#E9EEF9}
+.opt-dis{opacity:.55;cursor:not-allowed}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font:600 15px/20px var(--font-sans);color:#0F1B3D}
+.field input,.field select{min-height:48px;height:48px;border:1px solid #AFBBD6;border-radius:4px;padding:0 14px;font:400 16px var(--font-sans);color:#0F1B3D;background:#FFFFFF;box-sizing:border-box;width:100%}
+.field-err input,.field-err select{border:2px solid #B42318}
+.hint{margin:0;font:400 13px/18px var(--font-sans);color:#4F5F7E}
+.err{display:flex;gap:6px;align-items:flex-start;margin:0;font:600 14px/20px var(--font-sans);color:#B42318}
+.errsum{padding:20px 24px;border-radius:16px;border:2px solid #B42318;background:#FDF0EE;display:flex;flex-direction:column;gap:8px}
+.errsum h2{margin:0;font:600 17px/24px var(--font-sans);color:#B42318}
+.errsum ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.errsum a{color:#B42318;font:600 15px/22px var(--font-sans)}
+.consent{display:flex;gap:12px;align-items:flex-start;min-height:44px;font:400 14px/20px var(--font-sans);color:#4F5F7E;cursor:pointer}
+.consent input{flex:none;width:22px;height:22px;margin:0;accent-color:#2B4AA5;cursor:pointer}
+.consent b{color:#0F1B3D;font-weight:600}
+.ph{background:repeating-linear-gradient(135deg,#E6EBF5 0 12px,#EEF2F9 12px 24px);color:#3F4F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;font:600 12px/1.5 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;border-radius:12px}
+.note-box{margin:0;padding:12px 16px;border-radius:12px;background:#F1F4FB;font:400 14px/20px var(--font-sans);color:#0F1B3D}
+.ln{list-style:none;padding:12px 0;border-bottom:1px solid #DCE2F0;display:flex;gap:12px;align-items:flex-start}
+.ln-name{margin:0;font:600 15px/21px var(--font-sans);color:#0F1B3D}
+.ln-opt{margin:2px 0 0;font:400 13px/18px var(--font-sans);color:#4F5F7E}
+.totals{margin:0;display:flex;flex-direction:column;gap:8px}
+.totals div{display:flex;justify-content:space-between;gap:16px;font:400 15px/22px var(--font-sans)}
+.totals dt{color:#4F5F7E}.totals dd{margin:0;font-weight:600;color:#0F1B3D}
+.totals .tot{border-top:1px solid #DCE2F0;padding-top:12px;margin-top:4px}
+.totals .tot dt,.totals .tot dd{font:600 17px/24px var(--font-sans);color:#0F1B3D}
+.sum-toggle{display:none;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:0 4px;border:0;background:transparent;font:600 15px var(--font-sans);color:#213C8C;cursor:pointer;text-align:left}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font:500 14px/20px var(--font-sans);color:#4F5F7E}
+.steps li{display:flex;align-items:center;gap:8px}
+.steps .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;border:1px solid #AFBBD6;font-weight:600;font-size:13px}
+.steps .on{color:#0F1B3D;font-weight:600}.steps .on .n{background:#2B4AA5;border-color:#2B4AA5;color:#FFFFFF}
+.steps .done .n{background:#E9EEF9;border-color:#E9EEF9;color:#213C8C}
+.conf-dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px}
+.conf-dl dt{font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:#0F6E73;margin-bottom:6px}
+.conf-dl dd{margin:0;font:400 20px/28px var(--font-display);color:#0F1B3D}
+@media (max-width:899px){.co-aside{order:-1;position:static}.sum-toggle{display:flex}.sum-closed{display:none}}
+@media (max-width:720px){.co-card{padding:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+<div class="co" style="background: var(--surface-tint); color: var(--ink); font-family: var(--font-sans);">
+
+  <dc-import name="Nav" current="order" hint-size="100%,128px"></dc-import>
+
+  <sc-if value="{{isCheckout}}" hint-placeholder-val="{{true}}">
+    <section style="padding: 48px 0 112px;">
+      <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <ol class="steps" aria-label="Order progress">
+            <li class="done"><span class="n" aria-hidden="true">✓</span><a href="Order.dc.html">Order</a></li>
+            <li class="on" aria-current="step"><span class="n" aria-hidden="true">2</span>Checkout</li>
+            <li><span class="n" aria-hidden="true">3</span>Confirmed</li>
+          </ol>
+          <h1 style="margin: 0; font-family: var(--font-display); font-size: clamp(40px, 5vw, 64px); line-height: 1.04;">Checkout</h1>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Pickup only at 14035 LaGrange Rd, Orland Park.</p>
+        </div>
+
+        <div class="co-grid">
+          <form class="co-main" novalidate="true" aria-label="Checkout">
+            <sc-if value="{{showSummary}}" hint-placeholder-val="{{false}}">
+              <div class="errsum" role="alert" tabindex="-1" data-err-summary="true">
+                <h2>{{errHeading}}</h2>
+                <ul>
+                  <sc-for list="{{errList}}" as="er" hint-placeholder-count="3">
+                    <li><a href="{{er.href}}">{{er.msg}}</a></li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+
+            <div class="co-card">
+              <fieldset aria-describedby="co-when-hint">
+                <legend>Pickup time</legend>
+                <sc-if value="{{closed}}" hint-placeholder-val="{{false}}">
+                  <p class="note-box" style="margin-bottom: 12px; background: #13245A; color: #FFFFFF;">Online ordering has closed for today (last orders [LAST ORDER TIME]). Please check back during opening hours.</p>
+                </sc-if>
+                <div class="opts">
+                  <label class="{{asapCls}}"><input type="radio" name="co-when" checked="{{isAsap}}" disabled="{{closed}}" onChange="{{pickAsap}}"><span><b>ASAP</b><br>Ready in about [PREP TIME]</span></label>
+                  <label class="{{schedCls}}"><input type="radio" name="co-when" checked="{{isSched}}" disabled="{{closed}}" onChange="{{pickSched}}"><span><b>Schedule for later today</b><br>15-minute slots within today’s [HOURS]</span></label>
+                </div>
+                <p id="co-when-hint" class="hint" style="margin-top: 10px;">We’ll have it bagged and ready at the counter.</p>
+                <sc-if value="{{isSched}}" hint-placeholder-val="{{false}}">
+                  <div class="{{slotFieldCls}}" style="margin-top: 16px; max-width: 360px;">
+                    <label for="co-slot">Pickup time today</label>
+                    <select id="co-slot" value="{{slot}}" aria-invalid="{{slotInvalid}}" aria-describedby="co-slot-err" onChange="{{onSlot}}" onBlur="{{touchSlot}}">
+                      <option value="">Choose a time</option>
+                      <sc-for list="{{slots}}" as="o" hint-placeholder-count="5">
+                        <option value="{{o.v}}">{{o.label}}</option>
+                      </sc-for>
+                    </select>
+                    <sc-if value="{{showSlotErr}}" hint-placeholder-val="{{false}}"><p id="co-slot-err" class="err">{{errSlot}}</p></sc-if>
+                  </div>
+                </sc-if>
+              </fieldset>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Your details</h2>
+              <div class="{{nameFieldCls}}">
+                <label for="co-name">Full name</label>
+                <input id="co-name" type="text" autocomplete="name" value="{{name}}" aria-invalid="{{nameInvalid}}" aria-describedby="co-name-err" onChange="{{onName}}" onBlur="{{touchName}}">
+                <sc-if value="{{showNameErr}}" hint-placeholder-val="{{false}}"><p id="co-name-err" class="err">{{errName}}</p></sc-if>
+              </div>
+              <div class="{{phoneFieldCls}}">
+                <label for="co-phone">Mobile number</label>
+                <input id="co-phone" type="tel" autocomplete="tel" inputmode="tel" value="{{phone}}" aria-invalid="{{phoneInvalid}}" aria-describedby="co-phone-hint co-phone-err" onChange="{{onPhone}}" onBlur="{{touchPhone}}">
+                <p id="co-phone-hint" class="hint">So the counter can reach you about your order.</p>
+                <sc-if value="{{showPhoneErr}}" hint-placeholder-val="{{false}}"><p id="co-phone-err" class="err">{{errPhone}}</p></sc-if>
+              </div>
+              <div class="{{emailFieldCls}}">
+                <label for="co-email">Email</label>
+                <input id="co-email" type="email" autocomplete="email" value="{{email}}" aria-invalid="{{emailInvalid}}" aria-describedby="co-email-hint co-email-err" onChange="{{onEmail}}" onBlur="{{touchEmail}}">
+                <p id="co-email-hint" class="hint">We’ll email your receipt.</p>
+                <sc-if value="{{showEmailErr}}" hint-placeholder-val="{{false}}"><p id="co-email-err" class="err">{{errEmail}}</p></sc-if>
+              </div>
+              <label class="consent"><input type="checkbox" checked="{{smsOrder}}" onChange="{{toggleSmsOrder}}"><span><b>Text me updates about this order</b> (received, ready for pickup). Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="Privacy.dc.html">Privacy &amp; SMS Terms</a>.</span></label>
+              <label class="consent"><input type="checkbox" checked="{{smsMkt}}" onChange="{{toggleSmsMkt}}"><span>Text me opening news and offers from Ibn Hamido. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. See <a href="Privacy.dc.html">Privacy &amp; SMS Terms</a>.</span></label>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Payment</h2>
+              <div class="ph" style="min-height: 200px;">[POS PAYMENT EMBED] · Pay online now, pick up when ready</div>
+              <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+                <p class="note-box">Your card is authorised for the estimated total plus up to [AUTH BUFFER %]. We charge the final amount after weighing, and you’ll get a receipt with the actual weight.</p>
+              </sc-if>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+              <button type="button" class="btn btn-primary" style="min-height: 56px; padding: 0 32px; font-size: 16px;" disabled="{{closed}}" onClick="{{place}}">Place order · {{totalLabel}} [TOTAL]</button>
+              <a href="Order.dc.html" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Back to the menu</a>
+            </div>
+          </form>
+
+          <aside class="co-aside" aria-labelledby="sum-title">
+            <div class="co-card" style="gap: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <h2 id="sum-title" class="co-h2">Order summary</h2>
+                <a href="Order.dc.html" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Edit order</a>
+              </div>
+              <button type="button" class="sum-toggle" aria-expanded="{{sumExpanded}}" aria-controls="sum-body" onClick="{{toggleSum}}">
+                <span>{{sumToggleText}}</span>
+                <span aria-hidden="true">{{sumIcon}}</span>
+              </button>
+              <div id="sum-body" class="{{sumCls}}">
+                <sc-if value="{{isEmpty}}" hint-placeholder-val="{{false}}">
+                  <p class="hint" style="padding: 12px 0;">Your order is empty. <a href="Order.dc.html">Browse the menu</a></p>
+                </sc-if>
+                <ul style="margin: 0; padding: 0;">
+                  <sc-for list="{{lines}}" as="ln" hint-placeholder-count="3">
+                    <li class="ln">
+                      <span style="font: 600 14px/21px var(--font-sans); color: var(--ink-muted); min-width: 28px;">{{ln.qtyText}}</span>
+                      <div style="flex: 1; min-width: 0;">
+                        <p class="ln-name">{{ln.name}}</p>
+                        <sc-for list="{{ln.optList}}" as="o" hint-placeholder-count="1"><p class="ln-opt">{{o.t}}</p></sc-for>
+                      </div>
+                      <span style="font: 600 14px/21px var(--font-sans); white-space: nowrap;">{{ln.price}}</span>
+                    </li>
+                  </sc-for>
+                </ul>
+                <dl class="totals" style="margin-top: 16px;">
+                  <div><dt>Subtotal</dt><dd>[SUBTOTAL]</dd></div>
+                  <div><dt>Tax ([TAX RATE])</dt><dd>[TAX]</dd></div>
+                  <div><dt>Tip</dt><dd>[TIP]</dd></div>
+                  <div class="tot"><dt>{{totalLabel}}</dt><dd>[TOTAL]</dd></div>
+                </dl>
+                <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+                  <p class="hint" style="margin-top: 12px;">Includes fish sold by the pound. The final price is set by actual weight at the counter.</p>
+                </sc-if>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{isConfirmed}}" hint-placeholder-val="{{false}}">
+    <section style="padding: 56px 0 112px;">
+      <div class="wrap" style="display: flex; flex-direction: column; gap: 28px; max-width: 960px;">
+        <ol class="steps" aria-label="Order progress">
+          <li class="done"><span class="n" aria-hidden="true">✓</span>Order</li>
+          <li class="done"><span class="n" aria-hidden="true">✓</span>Checkout</li>
+          <li class="on" aria-current="step"><span class="n" aria-hidden="true">3</span>Confirmed</li>
+        </ol>
+        <div class="co-card" style="padding: clamp(24px, 5vw, 48px); gap: 24px;">
+          <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 999px; background: #E9EEF9; color: #1F9AA0;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+          </span>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <p class="eyebrow">Order confirmed</p>
+            <h1 tabindex="-1" data-conf-title="true" style="margin: 0; font-family: var(--font-display); font-size: clamp(36px, 5vw, 60px); line-height: 1.05;">Order #[ORDER NUMBER] is in.</h1>
+            <p lang="ar" dir="rtl" style="margin: 0; font-family: var(--font-arabic); font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">شكراً</p>
+            <p style="margin: 0; font-size: 17px; line-height: 26px; color: var(--ink-muted);">Thank you. We’ve started on your order.</p>
+          </div>
+          <dl class="conf-dl">
+            <div><dt>Pickup time</dt><dd>{{pickupText}}</dd></div>
+            <div><dt>Pick up at</dt><dd>14035 LaGrange Rd<br>Orland Park, IL 60462</dd></div>
+          </dl>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462">Get directions</a>
+            <a class="btn btn-secondary" href="tel:">Call [PHONE NUMBER]</a>
+          </div>
+          <sc-if value="{{smsOrder}}" hint-placeholder-val="{{false}}">
+            <p class="note-box">We’ll text order updates to your mobile number.</p>
+          </sc-if>
+          <div style="border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <h2 class="co-h2">Your items</h2>
+            <ul style="margin: 0; padding: 0;">
+              <sc-for list="{{lines}}" as="ln" hint-placeholder-count="3">
+                <li class="ln">
+                  <span style="font: 600 14px/21px var(--font-sans); color: var(--ink-muted); min-width: 28px;">{{ln.qtyText}}</span>
+                  <div style="flex: 1; min-width: 0;">
+                    <p class="ln-name">{{ln.name}}</p>
+                    <sc-for list="{{ln.optList}}" as="o" hint-placeholder-count="1"><p class="ln-opt">{{o.t}}</p></sc-for>
+                    <sc-if value="{{ln.lb}}" hint-placeholder-val="{{false}}"><p class="ln-opt" style="font-weight: 600; color: var(--turquoise-ink);">Est., final after weighing</p></sc-if>
+                  </div>
+                  <span style="font: 600 14px/21px var(--font-sans); white-space: nowrap;">{{ln.price}}</span>
+                </li>
+              </sc-for>
+            </ul>
+            <dl class="totals" style="margin-top: 12px;">
+              <div class="tot" style="border-top: 0; padding-top: 0;"><dt>{{totalLabel}}</dt><dd>[TOTAL]</dd></div>
+            </dl>
+            <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+              <p class="hint">Your card was authorised for the estimated total plus up to [AUTH BUFFER %]. We charge the final amount after weighing and send a receipt with the actual weight.</p>
+            </sc-if>
+          </div>
+          <p class="note-box">Dining in? We’re walk-in only. Come pick your fish at the counter.</p>
+          <a href="Order.dc.html" style="font-weight: 600; align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center;">Back to the menu</a>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <dc-import name="Footer" hint-size="100%,600px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"step":{"editor":"enum","options":["checkout","confirmed"],"default":"checkout"},"showErrors":{"editor":"boolean","default":false},"status":{"editor":"enum","options":["open","closed"],"default":"open"},"demoCart":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.KEY = 'ihs-order-v4';
+    this.state = {
+      step: props.step ?? 'checkout', when: 'asap', slot: '', name: '', phone: '', email: '',
+      smsOrder: false, smsMkt: false, touched: {}, submitted: !!props.showErrors, sumOpen: false, lines: []
+    };
+  }
+  demoLines() {
+    return [
+      { name: 'Branzino · by the lb', opts: ['Est. weight: 1.5 lb', 'Cooking: Singari (+[PRICE])', 'Add sides: Tahini'], qty: 1, price: 'Est. [PRICE]', lb: true },
+      { name: 'Tiger Shrimp, Grilled or Fried · Hamido Combo', opts: ['Preparation: Grilled', 'Combo sides: Rice, Hamido (House) Salad'], qty: 1, price: '[PRICE]', lb: false },
+      { name: 'Rice (Medium)', opts: [], qty: 1, price: '[PRICE]', lb: false }
+    ];
+  }
+  componentDidMount() {
+    let lines = [];
+    try {
+      const raw = window.localStorage.getItem(this.KEY);
+      if (raw) { const p = JSON.parse(raw); if (p && Array.isArray(p.lines)) lines = p.lines; }
+    } catch (e) {}
+    if (!lines.length && (this.props.demoCart ?? true)) lines = this.demoLines();
+    this.setState({ lines });
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.step !== this.props.step) this.setState({ step: this.props.step ?? 'checkout' });
+    if (prevProps.showErrors !== this.props.showErrors) this.setState({ submitted: !!this.props.showErrors });
+    if (prevProps.demoCart !== this.props.demoCart) this.componentDidMount();
+  }
+  focusSel(sel) { setTimeout(() => { try { const el = document.querySelector(sel); if (el) el.focus(); } catch (e) {} }, 0); }
+  errors() {
+    const s = this.state;
+    const out = {};
+    if (!s.name.trim()) out.name = 'Enter your full name.';
+    if (String(s.phone).replace(/\D/g, '').length < 10) out.phone = 'Enter a mobile number with at least 10 digits, like (708) 555-0123.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email.trim())) out.email = 'Enter an email address, like name@example.com.';
+    if (s.when === 'sched' && !s.slot) out.slot = 'Choose a pickup time.';
+    return out;
+  }
+  renderVals() {
+    const s = this.state;
+    const closed = (this.props.status ?? 'open') === 'closed';
+    const errs = this.errors();
+    const show = (f) => !!errs[f] && (s.submitted || !!s.touched[f]);
+    const touch = (f) => () => this.setState({ touched: { ...this.state.touched, [f]: true } });
+    const order = [['slot', '#co-slot'], ['name', '#co-name'], ['phone', '#co-phone'], ['email', '#co-email']];
+    const errList = s.submitted ? order.filter(([f]) => errs[f]).map(([f, href]) => ({ href, msg: errs[f] })) : [];
+    const lines = s.lines.map((l) => ({ ...l, lb: !!l.lb, qtyText: (l.qty || 1) + '×', optList: (l.opts || []).map((t) => ({ t })) }));
+    const hasLb = s.lines.some((l) => l.lb);
+    const slots = [
+      { v: 's1', label: '[FIRST SLOT]' },
+      { v: 's2', label: '[FIRST SLOT + 15 min]' },
+      { v: 's3', label: '[FIRST SLOT + 30 min]' },
+      { v: 's4', label: '[FIRST SLOT + 45 min]' },
+      { v: 's5', label: '[LAST SLOT] · last orders [LAST ORDER TIME]' }
+    ];
+    const slotObj = slots.find((o) => o.v === s.slot);
+    const fieldCls = (f) => 'field' + (show(f) ? ' field-err' : '');
+    return {
+      isCheckout: s.step !== 'confirmed',
+      isConfirmed: s.step === 'confirmed',
+      closed,
+      showSummary: errList.length > 0,
+      errList,
+      errHeading: 'There ' + (errList.length === 1 ? 'is 1 problem' : 'are ' + errList.length + ' problems') + ' with your order',
+      isAsap: s.when === 'asap', isSched: s.when === 'sched',
+      asapCls: 'opt' + (s.when === 'asap' ? ' opt-on' : '') + (closed ? ' opt-dis' : ''),
+      schedCls: 'opt' + (s.when === 'sched' ? ' opt-on' : '') + (closed ? ' opt-dis' : ''),
+      pickAsap: () => this.setState({ when: 'asap' }),
+      pickSched: () => this.setState({ when: 'sched' }),
+      slots, slot: s.slot,
+      onSlot: (e) => this.setState({ slot: e.target.value }),
+      touchSlot: touch('slot'),
+      slotFieldCls: fieldCls('slot'), slotInvalid: show('slot') ? 'true' : 'false', showSlotErr: show('slot'), errSlot: errs.slot || '',
+      name: s.name, phone: s.phone, email: s.email,
+      onName: (e) => this.setState({ name: e.target.value }),
+      onPhone: (e) => this.setState({ phone: e.target.value }),
+      onEmail: (e) => this.setState({ email: e.target.value }),
+      touchName: touch('name'), touchPhone: touch('phone'), touchEmail: touch('email'),
+      nameFieldCls: fieldCls('name'), phoneFieldCls: fieldCls('phone'), emailFieldCls: fieldCls('email'),
+      nameInvalid: show('name') ? 'true' : 'false', phoneInvalid: show('phone') ? 'true' : 'false', emailInvalid: show('email') ? 'true' : 'false',
+      showNameErr: show('name'), showPhoneErr: show('phone'), showEmailErr: show('email'),
+      errName: errs.name || '', errPhone: errs.phone || '', errEmail: errs.email || '',
+      smsOrder: s.smsOrder, smsMkt: s.smsMkt,
+      toggleSmsOrder: () => this.setState({ smsOrder: !this.state.smsOrder }),
+      toggleSmsMkt: () => this.setState({ smsMkt: !this.state.smsMkt }),
+      hasLb, lines, isEmpty: lines.length === 0,
+      totalLabel: hasLb ? 'Estimated total' : 'Total',
+      sumCls: s.sumOpen ? 'sum-open' : 'sum-closed',
+      sumExpanded: s.sumOpen ? 'true' : 'false',
+      sumToggleText: (s.sumOpen ? 'Hide' : 'Show') + ' items (' + lines.reduce((a, l) => a + (l.qty || 1), 0) + ') · ' + (hasLb ? 'Est. ' : '') + '[TOTAL]',
+      sumIcon: s.sumOpen ? '–' : '+',
+      toggleSum: () => this.setState({ sumOpen: !this.state.sumOpen }),
+      pickupText: s.when === 'sched' && slotObj ? 'Today, ' + slotObj.label : 'ASAP · ready in about [PREP TIME]',
+      place: () => {
+        if (Object.keys(this.errors()).length) { this.setState({ submitted: true }); this.focusSel('[data-err-summary]'); return; }
+        try { window.localStorage.removeItem(this.KEY); } catch (e) {}
+        this.setState({ step: 'confirmed' });
+        try { window.scrollTo(0, 0); } catch (e) {}
+        this.focusSel('[data-conf-title]');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

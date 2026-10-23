@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mobile check — Order</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; background: #FFFFFF; font-family: Inter, system-ui, sans-serif; color: #0F1B3D;">
+  <dc-import name="Order" demo-cart="{{demoCart}}" status="{{status}}" combos-lunch-only="{{combosLunchOnly}}" online-by-weight="{{onlineByWeight}}" open-panel="{{openPanel}}" hint-size="390px,11000px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"status":{"editor":"enum","options":["open","lunch","closed"],"default":"open"},"combosLunchOnly":{"editor":"boolean","default":false},"onlineByWeight":{"editor":"boolean","default":true},"demoCart":{"editor":"boolean","default":true},"openPanel":{"editor":"enum","options":["none","cart","comboSheet","sidesError","sandwichSheet","catchSheet"],"default":"none"},"$preview":{"width":390,"height":11000}}'>
+class Component extends DCLogic {
+  renderVals() { return { status: this.props.status ?? 'open', combosLunchOnly: this.props.combosLunchOnly ?? false, onlineByWeight: this.props.onlineByWeight ?? true, demoCart: this.props.demoCart ?? true, openPanel: this.props.openPanel ?? 'none' }; }
+}
+</script>
+</body>
+</html>

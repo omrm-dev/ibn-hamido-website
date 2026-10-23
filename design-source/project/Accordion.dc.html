@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dish accordion (Hamido Combos and sides)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.ac-panel{position:relative;overflow:hidden;border-radius:16px;background:repeating-linear-gradient(135deg,#1E3270 0 14px,#223878 14px 28px);transition:flex .45s ease}
+.ac-open{display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:24px;box-sizing:border-box;height:100%;background:rgba(10,18,45,.35)}
+.ac-shot{align-self:flex-end;width:min(190px,100%);aspect-ratio:1;border-radius:12px;background:repeating-linear-gradient(135deg,#3A57B0 0 12px,#3350A8 12px 24px);color:#E9EEF9;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-sizing:border-box;font:600 11px/1.45 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.ac-btn{position:absolute;inset:0;width:100%;height:100%;margin:0;border:0;background:rgba(10,18,45,.15);font:inherit;color:#FFFFFF;cursor:pointer;display:flex;padding:24px;box-sizing:border-box}
+.ac-btn:hover{background:rgba(10,18,45,.05)}
+.ac-btn:focus-visible,.ac-link:focus-visible{outline:2px solid #5CC8C8;outline-offset:-4px}
+.ac-link{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#13245A;font:600 14px/1 Inter,system-ui,sans-serif;text-decoration:none}
+.ac-link:hover{background:#E9EEF9;color:#13245A}
+.ac-narrow .ac-shot{align-self:flex-start}
+@media (prefers-reduced-motion:reduce){.ac-panel{transition:none}}
+.ph-on{position:relative;overflow:hidden}.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;border-radius:inherit}.ph-tag{position:absolute;left:8px;bottom:8px;z-index:2;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;background:rgba(15,27,61,.86);color:#FFFFFF;font:600 10px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:none;padding:4px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}.thumb .ph-tag{left:4px;bottom:4px;font-size:8px;padding:3px 5px;letter-spacing:0}.ph-white{background:#FFFFFF !important;border-color:#FFFFFF}
+</style>
+</helmet>
+<div class="{{rootClass}}" style="{{rootStyle}}">
+  <sc-for list="{{panels}}" as="item" hint-placeholder-count="9">
+    <div class="ac-panel" style="{{item.panelStyle}}" onMouseEnter="{{item.hoverIn}}" onMouseLeave="{{item.hoverOut}}">
+      <sc-if value="{{item.active}}" hint-placeholder-val="{{false}}">
+        <div class="ac-open">
+          <div class="ac-shot ph-on"><sc-if value="{{item.pic.on}}" hint-placeholder-val="{{true}}"><img class="ph-img" src="{{item.pic.src}}" alt="{{item.pic.alt}}" style="{{item.pic.style}}"><span class="ph-tag">{{item.pic.tag}}</span></sc-if>{{item.shot}}</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">{{item.id}}{{item.tag}}</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">{{item.name}}</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">{{item.desc}}</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">{{item.price}}</span>
+              <a class="ac-link" href="Order.dc.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{item.collapsed}}" hint-placeholder-val="{{true}}">
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="{{item.showLabel}}" onClick="{{item.select}}" style="{{item.btnStyle}}">
+          <span aria-hidden="true" style="{{item.titleStyle}}">{{item.short}}</span>
+        </button>
+      </sc-if>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"set":{"editor":"enum","options":["combos","sides"],"default":"sides"},"$preview":{"width":1440,"height":560}}'>
+class Component extends DCLogic {
+  phPics() {
+    return {"C-01": ["/_blob/f21d404259b3f679548710de90024f29", "Long table of seafood platters", "center bottom", "AI concept"], "C-02": ["/_blob/0159b6ec254ddfeea3c8ce083e349f0c", "Room set for a party", "center", "AI concept"], "C-03": ["/_blob/372c0e465b79d600fb4825653cbf85c9", "Catering trays", "center", "AI concept"], "CB-01": ["/_blob/0de4d8eeefff6cac7e950f3cf12c3156", "Grilled salmon combo with two sides", "center", "AI concept"], "CB-02": ["/_blob/86f966b7a401069f25f131d5c553b959", "Mixed grilled calamari and shrimp combo with two sides", "center", "AI concept"], "CB-03": ["/_blob/84a318feea625ff85858215d43e421de", "Mixed fried calamari and shrimp combo with two sides", "center", "AI concept"], "CB-04": ["/_blob/100a6b508f6726cbfc9f47afa5a7b89a", "Tiger shrimp combo with two sides", "center", "AI concept"], "CB-05": ["/_blob/5e9ab896f31e76f590ce76b24e29a04b", "Calamari combo with two sides", "center", "AI concept"], "CB-06": ["/_blob/e05d20b8a967f46ff439efec33471999", "Whole branzino combo with two sides", "center", "AI concept"], "CS-01": ["/_blob/c8dd4ecfb2ac0eb4718bc01f9d3c8d2a", "Grilled branzino, shrimp, rice and salads", "center bottom", "AI concept"], "F-01": ["/_blob/3191abf799126290021c831e34b8ab07", "Branzino, raw on ice", "center", "AI concept"], "F-02": ["/_blob/cf750ad9facf6eea9829c684db2162f7", "Salmon, raw on ice", "center", "AI concept"], "F-03": ["/_blob/5ed71932ba1917b4589d11022eb1e12d", "Red snapper, raw on ice", "center", "AI concept"], "F-04": ["/_blob/c46e10456c388289e08543e5e852446c", "Tiger shrimp, raw on ice", "center", "AI concept"], "F-05": ["/_blob/59d7b39264cabf47a47b1d21fd8d772d", "Scallops, raw on ice", "center", "AI concept"], "F-06": ["/_blob/b9e4666583506c4eec3652a8dae8f589", "Lobster, raw on ice", "center", "AI concept"], "H-01": ["/_blob/5afe29d021e7a0af54f9970b9eef02dc", "Whole grilled branzino on the table", "center bottom", "AI concept"], "H-02": ["/_blob/de5eeb842780be0cabdfb08b553e251b", "The fish counter on ice", "center bottom", "AI concept"], "H-03": ["/_blob/a4c371605b9f613e878a4ee8d40b8597", "A spread of sides", "center", "AI concept"], "H-04": ["/_blob/07a28d83b6a5a0a22c849fd5fa20e7aa", "Fresh catch on ice", "center bottom", "AI concept"], "H-05": ["/_blob/88af42c9ca0abd24fbdcdb87846dc738", "Chef at the grill", "center bottom", "AI concept"], "H-06": ["/_blob/32c636433eb7abc95d18afd4d3e7dcde", "The dining room", "center bottom", "AI concept"], "H-07": ["/_blob/3ec625e2493f42797984c6870ed5b08b", "Sides and pita", "center bottom", "AI concept"], "H-08": ["/_blob/6214dd813ff83940de5155a0693b1501", "Alexandria harbor", "center bottom", "AI concept"], "H-09": ["/_blob/d43d4e14dc752af6d2073531975bad70", "Catering trays on a long table", "center", "AI concept"], "K-01": ["/_blob/ad35255c144ae8db3bc9a21f9f21d0a0", "Grilled fish, plated", "center", "AI concept"], "K-02": ["/_blob/f285d1c0f15202d10368d26d97f76f1c", "Fried fish, plated", "center", "AI concept"], "K-03": ["/_blob/f5fc8155b3828f0c64b47313bd55ff73", "Baked fish, plated", "center 60%", "AI concept"], "K-04": ["/_blob/15830bc78119ee876a7834ac009c8d74", "Singari-style fish, plated", "center 60%", "AI concept"], "K-05": ["/_blob/563a3703386f41170509257b5a13b788", "Rada-style fish, plated", "center 60%", "AI concept"], "K-06": ["/_blob/ce5786d277e2e839c32f41cb74a021cd", "Butterflied fish, plated", "center", "AI concept"], "K-07": ["/_blob/35cd73154d8ca3357efb2cc9a2a687f3", "Deboned fish, plated", "center", "AI concept"], "M-01": ["/_blob/ee89421eaf0e9c58b68db30fb15b71b8", "The day’s catch on ice", "center bottom", "AI concept"], "SD-01": ["/_blob/f4da2cb4433383c7fa37ec31e4d6d70c", "Golden rice", "center", "AI concept"], "SD-02": ["/_blob/26e313080c6c7132c1e3ebf9f008da4f", "Tahini", "center", "AI concept"], "SD-03": ["/_blob/c1a3c6ae5a85d61720547215340751a5", "Babaghanoush", "center", "AI concept"], "SD-04": ["/_blob/5c0555edcad7e263644bc9408c03f9d1", "Hamido house salad", "center", "AI concept"], "SD-05": ["/_blob/4a5fdc4b9e2b1b5ebc361ee955224c57", "Beet salad", "center", "AI concept"], "SD-06": ["/_blob/ef1d50fc3668aebd74dfbe31b5ce4a5a", "Lemon potatoes", "center", "AI concept"], "SD-07": ["/_blob/9cc7e49aa460ccc4b9f09cc1489b73b9", "Garlic eggplant", "center", "AI concept"], "SD-08": ["/_blob/b2b779b6bf10589c5803f5708cd37e45", "Moussaka", "center", "AI concept"], "SD-09": ["/_blob/9d2388a04dc6431e9441d3ed9c97a10f", "French fries", "center", "AI concept"], "SD-10": ["/_blob/c0e85fa3a6dfda79bf7289318d1c115c", "Greek salad", "center", "AI concept"], "SD-11": ["/_blob/20ea4d7f5d1e7806f12c7fa16723f99c", "Herring salad", "center", "AI concept"], "SD-12": ["/_blob/cfaae7fed00bd3fe361d20ba79405fca", "Mezza platter", "center", "AI concept"], "SG-01": ["/_blob/6398c825cff5eb5f2c9ad2b6c558055e", "Branzino stuffed singari", "center", "AI concept"], "SG-02": ["/_blob/f13739086d00efe0586fa26f33bb09ed", "Whole wild red snapper", "center", "AI concept"], "SG-03": ["/_blob/4136c684e549d4d4cb7ef573b6c3a50b", "Seafood tajin", "center", "AI concept"], "SG-04": ["/_blob/fa0092b19f8a6025e207bfd10ad89323", "Head-on shrimp butterfly", "center", "AI concept"], "SG-05": ["/_blob/7839b5dc809949a7442f27f788ec51e9", "Jumbo shrimp grilled", "center", "AI concept"], "SG-06": ["/_blob/9000d51ac053acaa751ffa6057f44368", "King crab legs", "center", "AI concept"], "SG-07": ["/_blob/77782c7124c90e21b76a89fe313dfaaa", "Lobster tail", "center", "AI concept"], "SG-08": ["/_blob/6bf42f4f9e379c92084ab31e30281f15", "Baked clams", "center", "AI concept"], "SG-09": ["/_blob/33a96366f88c3fdd9d62954da9dcbe72", "Scallops and shrimp linguine", "center", "AI concept"], "SG-10": ["/_blob/406083ea79b8ae6e5e715ec888661e58", "White sauce pasta with shrimp", "center", "AI concept"], "SG-11": ["/_blob/f598c051a293ac65771b304cae26080e", "Fish and chips", "center", "AI concept"], "SG-12": ["/_blob/1c11e5c3f59caea3d17b45851dd07d85", "White fried shrimp", "center", "AI concept"], "SG-13": ["/_blob/2285d5ba0907a71a008141b3b2e80b9d", "Hamido seafood pizza", "center", "AI concept"], "ST-01": ["/_blob/df790f1bcc9924270914a9ac34bca3e3", "Alexandria harbor and the Qaitbay Citadel", "center 40%", "AI concept"], "ST-02": ["/_blob/ff28b715d30064ad1c0c2c745bb51213", "Family photo (stand-in)", "center 40%", "Stand-in"], "ST-03": ["/_blob/6ccaf8483fddcbfbf2581c4dee76def9", "Astoria storefront (stand-in)", "center 40%", "Stand-in"], "ST-04": ["/_blob/980390f22192ba05a398d8500babc3ab", "Astoria dining room (stand-in)", "center 40%", "Stand-in"], "ST-05": ["/_blob/2f2ba8e268cd997f138b51962f2fe481", "Orland Park dining room (stand-in)", "center 40%", "Stand-in"], "SW-01": ["/_blob/4a302f73077b7cae92b0c3ed7b396eca", "Fried fish fillet sandwich with fries", "center", "AI concept"], "SW-02": ["/_blob/01ba17ff0a89f68dab7facfd5ab8eff1", "Grilled fish fillet sandwich with fries", "center", "AI concept"], "SW-03": ["/_blob/e7b12547107044896e37f6e4615ed83e", "Fried shrimp sandwich with fries", "center", "AI concept"], "SW-04": ["/_blob/d1a4978498d629cd34de42db364e2edf", "Grilled shrimp sandwich with fries", "center", "AI concept"], "SW-05": ["/_blob/18bd51dc82c168e2608596484e0c5f70", "Salmon burger with fries", "center", "AI concept"], "V-01": ["/_blob/5680667fe49f8259bbbec8d4116c3e8b", "Orland Park storefront (stand-in)", "center", "Stand-in"]};
+  }
+  phWalk(v, d, P) {
+    if (!v || typeof v !== 'object' || d > 6) return v;
+    if (Array.isArray(v)) { for (const x of v) this.phWalk(x, d + 1, P); return v; }
+    if (typeof v.shot === 'string') {
+      const m = v.shot.match(/^[A-Z]{1,2}-\d\d/);
+      const p = m ? P[m[0]] : null;
+      v.pic = p ? { on: true, src: p[0], alt: p[1], style: 'object-position: ' + p[2] + ';', tag: p[3] } : { on: false };
+    }
+    for (const k of Object.keys(v)) { if (k !== 'pic') this.phWalk(v[k], d + 1, P); }
+    return v;
+  }
+  renderVals() { return this.phWalk(this.renderVals0(), 0, this.phPics()); }
+  constructor(props) {
+    super(props);
+    this.state = { active: 0, narrow: false };
+    this.onResize = () => {
+      const narrow = window.innerWidth < 760;
+      if (narrow !== this.state.narrow) this.setState({ narrow });
+    };
+  }
+  componentDidMount() { this.onResize(); window.addEventListener('resize', this.onResize); }
+  componentWillUnmount() { window.removeEventListener('resize', this.onResize); clearTimeout(this.hoverTimer); }
+  renderVals0() {
+    const sets = {
+      combos: [
+        ['CB-01', 'Grilled Salmon', 'Salmon', 'Half a pound of grilled salmon, with your choice of two sides.'],
+        ['CB-02', 'Mixed Grilled Calamari & Shrimp', 'Grilled Mix', 'Half a pound of calamari and shrimp off the grill, with your choice of two sides.'],
+        ['CB-03', 'Mixed Fried Calamari & Shrimp', 'Fried Mix', 'Half a pound of calamari and shrimp, lightly battered and fried, with your choice of two sides.'],
+        ['CB-04', 'Tiger Shrimp, Grilled or Fried', 'Tiger Shrimp', 'Seven black tiger shrimp, grilled or fried, with your choice of two sides.'],
+        ['CB-05', 'Calamari, Grilled or Fried', 'Calamari', 'Half a pound of calamari, grilled or fried, with your choice of two sides.'],
+        ['CB-06', 'Whole Branzino, Grilled or Fried', 'Branzino', 'A one-pound whole branzino, grilled or fried, with your choice of two sides.']
+      ].map(([id, name, short, desc]) => ({ id, name, short, desc, price: '[PRICE] · 2 sides included', tag: ' · Hamido Combo' })),
+      sides: [
+        ['SD-01', 'Rice', 'Rice', 'Egyptian golden rice cooked with caramelized onions.'],
+        ['SD-02', 'Tahini', 'Tahini', 'Smooth sesame tahini.'],
+        ['SD-03', 'Babaghanoush', 'Babaghanoush', 'Smoked eggplant with tahini, lemon, garlic and olive oil.'],
+        ['SD-04', 'Hamido (House) Salad', 'Hamido Salad', 'Tomato, cucumber, cilantro and onion with vinegar and olive oil.'],
+        ['SD-05', 'Beet Salad', 'Beet Salad', 'Diced beets with garlic and olive oil.'],
+        ['SD-06', 'Lemon Potatoes', 'Lemon Potatoes', 'Roasted potatoes and bell peppers in lemon and olive oil.'],
+        ['SD-07', 'Garlic Eggplant', 'Garlic Eggplant', 'Roasted eggplant and mild chilies in a garlic-vinegar marinade.'],
+        ['SD-08', 'Moussaka', 'Moussaka', 'Roasted eggplant and chilies in a garlicky tomato sauce. Vegetarian.'],
+        ['SD-09', 'French Fries', 'Fries', 'Straight-cut fries with house seasoning.']
+      ].map(([id, name, short, desc]) => ({ id, name, short, desc, price: id === 'SD-01' ? '[PRICE] · Small / Medium / Large' : '[PRICE]', tag: ' · Side' }))
+    };
+    const set = sets[this.props.set ?? 'sides'] || sets.sides;
+    const narrow = this.state.narrow;
+    const select = (i) => { clearTimeout(this.hoverTimer); if (this.state.active !== i) this.setState({ active: i }); };
+    const panels = set.map((d, i) => {
+      const active = this.state.active === i;
+      const size = narrow ? (active ? 'min-height: 420px;' : 'height: 64px;') : ('flex: ' + (active ? '7' : '1') + ' 1 0; min-width: 0;');
+      return {
+        ...d,
+        active,
+        collapsed: !active,
+        shot: d.id + ' · ' + d.name + (d.tag === ' · Side' ? '' : ', plated with two side bowls') + ' · 1:1',
+        showLabel: 'Show ' + d.name,
+        panelStyle: size,
+        btnStyle: narrow ? 'align-items: center; justify-content: flex-start; padding: 0 24px;' : 'align-items: flex-end; justify-content: center;',
+        titleStyle: 'font-family: \'Young Serif\', Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; ' + (narrow ? '' : 'writing-mode: vertical-rl; transform: rotate(180deg);'),
+        select: () => select(i),
+        hoverIn: () => {
+          if (narrow) return;
+          clearTimeout(this.hoverTimer);
+          this.hoverTimer = setTimeout(() => select(i), 150);
+        },
+        hoverOut: () => clearTimeout(this.hoverTimer)
+      };
+    });
+    const rootStyle = 'font-family: Inter, system-ui, sans-serif; display: flex; gap: 10px; ' + (narrow ? 'flex-direction: column;' : 'flex-direction: row; height: 520px;');
+    return { panels, rootStyle, rootClass: narrow ? 'ac-narrow' : 'ac-wide' };
+  }
+}
+</script>
+</body>
+</html>

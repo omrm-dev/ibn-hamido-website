@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A · Corniche — Order pickup</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Rakkas&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="background: #FBF8F1;">
+  <dc-import name="L_Order" look="a" status="{{status}}" combos-lunch-only="{{combosLunchOnly}}" online-by-weight="{{onlineByWeight}}" demo-cart="{{demoCart}}" open-panel="{{openPanel}}" hint-size="100%,9900px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"status": {"editor": "enum", "default": "open", "options": ["open", "lunch", "closed"]}, "combosLunchOnly": {"editor": "boolean", "default": false}, "onlineByWeight": {"editor": "boolean", "default": true}, "demoCart": {"editor": "boolean", "default": false}, "openPanel": {"editor": "enum", "default": "none", "options": ["none", "cart", "comboSheet", "sidesError", "sandwichSheet", "catchSheet"]}, "$preview": {"width": 1440, "height": 9900}}'>
+class Component extends DCLogic {
+  renderVals() { return { status: this.props.status ?? "open", combosLunchOnly: this.props.combosLunchOnly ?? false, onlineByWeight: this.props.onlineByWeight ?? true, demoCart: this.props.demoCart ?? false, openPanel: this.props.openPanel ?? "none" }; }
+}
+</script>
+</body>
+</html>

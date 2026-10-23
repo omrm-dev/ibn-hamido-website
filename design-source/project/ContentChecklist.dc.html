@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Owner content checklist — Ibn Hamido Orland Park (internal)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.cl{font-family:Inter,system-ui,sans-serif;color:#0F1B3D;background:#F1F4FB}
+.cl-wrap{max-width:1200px;margin:0 auto;padding:0 48px;box-sizing:border-box}
+@media (max-width:720px){.cl-wrap{padding:0 16px}}
+.cl-eyebrow{margin:0;font:600 12px/16px Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#0F6E73}
+.grp{background:#FFFFFF;border:1px solid #DCE2F0;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:20px}
+.grp h2{margin:0;font:400 28px/34px 'Young Serif',Georgia,serif}
+.grp h3{margin:0;font:600 13px/18px Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4F5F7E}
+.rows{display:flex;flex-direction:column;border-top:1px solid #DCE2F0}
+.row{display:grid;grid-template-columns:28px 56px 88px minmax(0,1fr) 110px 230px;gap:8px 14px;align-items:center;min-height:48px;padding:8px 4px;border-bottom:1px solid #DCE2F0;font:400 15px/21px Inter,system-ui,sans-serif;cursor:pointer}
+.row:hover{background:#F1F4FB}
+.row input{width:20px;height:20px;margin:0;accent-color:#2B4AA5;cursor:pointer}
+.row input:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.id{font:600 14px/20px Inter,system-ui,sans-serif;color:#213C8C}
+.ratio{font:500 14px/20px Inter,system-ui,sans-serif;color:#4F5F7E}
+.st{justify-self:start;display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:999px;font:600 12px/1 Inter,system-ui,sans-serif}
+.st-need{background:#E9EEF9;color:#213C8C}
+.st-owner{background:#13245A;color:#FFFFFF}
+.st-have{background:#F1F4FB;color:#0F6E73;border:1px solid #DCE2F0}
+.st-ai{background:#FDE7D3;color:#7A3300;line-height:1.25;padding:5px 10px}
+.st-owner{line-height:1.25;padding:5px 10px}
+.thumbc{position:relative;overflow:hidden;width:56px;height:56px;border-radius:8px;background:repeating-linear-gradient(135deg,#E6EBF5 0 6px,#EEF2F9 6px 12px)}
+.thumbc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.trow{display:grid;grid-template-columns:28px minmax(0,320px) minmax(0,1fr);gap:8px 14px;align-items:center;min-height:48px;padding:8px 4px;border-bottom:1px solid #DCE2F0;font:400 15px/21px Inter,system-ui,sans-serif;cursor:pointer}
+.trow:hover{background:#F1F4FB}
+.trow input{width:20px;height:20px;margin:0;accent-color:#2B4AA5;cursor:pointer}
+.ph-code{font:600 14px/20px ui-monospace,SFMono-Regular,Menlo,monospace;color:#0F1B3D}
+.where{color:#4F5F7E}
+@media (max-width:760px){.row{grid-template-columns:28px 48px minmax(0,1fr)}.row>span:not(.thumbc){grid-column:3}.row .thumbc{grid-row:1 / span 4;align-self:start;width:48px;height:48px}.trow{grid-template-columns:28px minmax(0,1fr)}.trow .where{grid-column:2}}
+</style>
+</helmet>
+<div class="cl">
+  <header style="background: #13245A; color: #FFFFFF; padding: 64px 0 56px;">
+    <div class="cl-wrap" style="display: flex; flex-direction: column; gap: 16px;">
+      <p class="cl-eyebrow" style="color: #5CC8C8;">Internal · not linked from the site · /content-checklist</p>
+      <h1 style="margin: 0; font: 400 clamp(36px, 5vw, 60px)/1.05 'Young Serif', Georgia, serif;">Owner content checklist</h1>
+      <p style="margin: 0; font-size: 18px; line-height: 28px; color: #C9D3EE; max-width: 760px;">Ibn Hamido Seafood, Orland Park. Everything we still need from you before launch, grouped by page. Tick items off as you send them.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 15px; line-height: 22px; color: #C9D3EE;">
+        <span><b style="color: #FFFFFF;">{{shotCount}}</b> photo slots</span>
+        <span><b style="color: #FFFFFF;">{{textCount}}</b> facts, copy &amp; checks</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="cl-wrap" style="padding-top: 40px; padding-bottom: 112px; display: flex; flex-direction: column; gap: 24px;">
+    <div class="grp" style="gap: 12px;">
+      <h2>How to read this</h2>
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 22px; color: #4F5F7E;">
+        <li><b style="color: #0F1B3D;">Photos</b> show the shot ID used on the design boards, what to shoot, and the crop ratio. “Owner photo only” means it must be your real photo (no stand-ins beyond the generic placeholder).</li>
+        <li><b style="color: #0F1B3D;">AI concept images</b> may stand in on the mockups until launch. Each one is tagged “AI concept” on the boards and listed here as REPLACE BEFORE LAUNCH. All 69 board photos are placed, plus OG-01 as the social-share image (og:image). Each has a thumbnail below and is marked REPLACE BEFORE LAUNCH. Owner-only shots (ST-02…05, V-01) carry stand-ins tagged “Stand-in”, never final.</li>
+        <li><b style="color: #0F1B3D;">[FACT]</b> is a missing fact, <b style="color: #0F1B3D;">[OWNER: …]</b> is copy in your own words, <b style="color: #0F1B3D;">[VERIFY: …]</b> is something to check, and <b style="color: #0F1B3D;">[PRICE]</b> is every price on the site.</li>
+      </ul>
+    </div>
+
+    <sc-for list="{{groups}}" as="g" hint-placeholder-count="10">
+      <section class="grp" aria-labelledby="{{g.hid}}">
+        <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px;">
+          <h2 id="{{g.hid}}">{{g.title}}</h2>
+          <span style="font: 500 14px/20px Inter, system-ui, sans-serif; color: #4F5F7E;">{{g.route}}</span>
+        </div>
+        <sc-if value="{{g.hasShots}}" hint-placeholder-val="{{true}}">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3>Photos ({{g.shotN}})</h3>
+            <div class="rows">
+              <sc-for list="{{g.shots}}" as="s" hint-placeholder-count="4">
+                <label class="row"><input type="checkbox"><span class="thumbc"><sc-if value="{{s.pic.on}}" hint-placeholder-val="{{true}}"><img src="{{s.pic.src}}" alt="{{s.pic.alt}}" style="{{s.pic.style}}"></sc-if></span><span class="id">{{s.id}}</span><span>{{s.desc}}</span><span class="ratio">{{s.ratio}}</span><span class="{{s.stCls}}">{{s.status}}</span></label>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{g.hasTexts}}" hint-placeholder-val="{{true}}">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3>Facts, copy &amp; checks ({{g.textN}})</h3>
+            <div class="rows">
+              <sc-for list="{{g.texts}}" as="t" hint-placeholder-count="4">
+                <label class="trow"><input type="checkbox"><span class="ph-code">{{t.ph}}</span><span class="where">{{t.where}}</span></label>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+      </section>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":10600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const N = 'Needed';
+    const O = 'Owner photo only';
+    const shot = (id, desc, ratio, status) => ({ id, desc, ratio, status: status || N });
+    const range = (prefix, names, descFn, ratio) => names.map((n, i) => shot(prefix + '-' + String(i + 1).padStart(2, '0'), descFn(n), ratio));
+    const fish = ['Branzino', 'Salmon', 'Red Snapper', 'Tiger Shrimp', 'Scallops', 'Lobster', '[ADDITIONAL FISH]'];
+    const styles = ['Grilled', 'Fried', 'Baked', 'Singari', 'Rada', 'Butterfly', 'Deboned'];
+    const lunch = ['Grilled Salmon', 'Mixed Grilled Calamari & Shrimp', 'Mixed Fried Calamari & Shrimp', 'Linguine with Scallops & Shrimp', 'Fish & Chips', 'Hamido Seafood Pizza', 'Seasoned Branzino, Grilled or Fried', 'Tiger Shrimp, Grilled or Fried', 'Calamari, Grilled or Fried'];
+    const sides = ['Rice', 'Tahini', 'Hummus', 'Babaganoush', 'Hamido Salad', 'Beet Salad', 'Lemon Potato', 'Garlic Eggplant', 'Moussaka (veggie)', 'Grilled Vegetables', 'Seasoned Fries', 'Fresh Pita'];
+    const t = (ph, where) => ({ ph, where });
+    const OS = 'Owner photo only · stand-in until supplied';
+    const sig = ['Branzino Stuffed Singari', 'Whole Wild Red Snapper', 'Seafood Tajin', 'Head-on Shrimp Butterfly', 'Jumbo Shrimp Grilled', 'King Crab Legs', 'Lobster Tail (9 oz)', 'Baked Clams', 'Scallops & Shrimp Linguine', 'White Sauce Pasta with Shrimp', 'Fish & Chips', 'White Fried Shrimp', 'Hamido Seafood Pizza'];
+    const combos = ['Grilled Salmon', 'Mixed Grilled Calamari & Shrimp', 'Mixed Fried Calamari & Shrimp', 'Tiger Shrimp, Grilled or Fried', 'Calamari, Grilled or Fried', 'Whole Branzino, Grilled or Fried'];
+    const sandw = ['Fried Fish Fillet Sandwich', 'Grilled Fish Fillet Sandwich', 'Fried Shrimp Sandwich', 'Grilled Shrimp Sandwich', 'Salmon Burger'];
+    const sdl = ['Rice (Small / Medium / Large)', 'Tahini', 'Babaghanoush', 'Hamido (House) Salad', 'Beet Salad', 'Lemon Potatoes', 'Garlic Eggplant', 'Moussaka', 'French Fries', 'Greek Salad', 'Herring Salad', 'Mezza Platter'];
+    const rng = (pre, names, fn, ratio) => names.map((n, i) => shot(pre + '-' + String(i + 1).padStart(2, '0'), fn(n), ratio));
+    const raw = [
+      { title: 'Global (every page)', route: 'Nav, footer, sharing', shots: [
+        shot('LOGO-01', 'Logo, blue on light', 'vector', 'On boards · confirm final file'),
+        shot('LOGO-02', 'Logo, white on navy', 'vector', 'On boards · confirm final file'),
+        shot('OG-01', 'Social share image · used as og:image only (handoff note), not on a page', '1200×630')
+      ], texts: [
+        t('[OPENING DATE]', 'Coming Soon hero + info strip, top-bar opening slot (launchMode), Home and Visit chips before launch'),
+        t('[HOURS] Mon–Thu / Fri–Sun', 'Home, Visit hours table, footer, “Open today” chip after launch, Checkout pickup slots'),
+        t('[LUNCH HOURS]', 'Only if Hamido Combos are lunch-only: Order banner, combo badges, Home, Menu, Visit, footer'),
+        t('[HOLIDAY NOTE]', 'Visit hours table'),
+        t('[PHONE NUMBER]', 'Home, Visit, Catering, footer, Privacy, Order confirmation'),
+        t('[EMAIL]', 'Visit “Get in touch”, Privacy contact'),
+        t('Instagram [@HANDLE]', 'Coming Soon, Visit, footer'),
+        t('Facebook [PAGE]', 'Footer'),
+        t('Google [LISTING]', 'Footer'),
+        t('[JOBS EMAIL]', 'Coming Soon “Now hiring”, footer “Careers”')
+      ] },
+      { title: 'AI concept images · REPLACE BEFORE LAUNCH', route: 'Mockups only (never on the public site)', shots: [], texts: [], aiList: true },
+      { title: 'Coming Soon', route: '/ before launch', shots: [
+        shot('CS-01', 'Hero spread: grilled branzino, shrimp, rice, salads', 'arch 4:5'),
+        shot('MAP', 'Google Maps embed: 14035 LaGrange Rd', '4:3')
+      ], texts: [
+        t('[GRAND OPENING OFFER]', 'Waitlist form note'),
+        t('[VERIFY: owner may prefer the original “We seafood differently.”]', 'Tagline “Seafood, the Alexandrian way.” on Coming Soon + Home'),
+        t('Halal [OWNER CONFIRM]', 'Conditional chip: Coming Soon hero, Home hero, Order header. Hide if not halal.')
+      ] },
+      { title: 'Home', route: '/ after launch', shots: [
+        shot('H-01', 'Whole grilled branzino on the table', 'arch 3:4'),
+        shot('H-02', 'The fish counter on ice', 'arch 4:5'),
+        shot('H-03', 'Sides spread', '3:2'),
+        shot('H-04', 'Step 1: catch on ice', 'arch 4:5'),
+        shot('H-05', 'Step 2: chef at the grill', 'arch 4:5'),
+        shot('H-06', 'Step 3: dining room', 'arch 4:5'),
+        shot('H-07', 'Step 4: sides & pita', 'arch 4:5'),
+        shot('H-08', 'Story teaser: Alexandria harbor / family (video loop optional)', 'arch 4:5'),
+        shot('H-09', 'Catering trays on a long table', '16:10'),
+        shot('MAP', 'Google Maps embed: 14035 LaGrange Rd', '4:3')
+      ], texts: [
+        t('5 handpicked reviews', 'Reviews band: quote, first name + last initial, source, [RATING]'),
+        t('[VERIFY: lunch-only or all day]', 'Hamido Combos section, two sides included')
+      ] },
+      { title: 'Menu & Order: photos', route: '/menu · /order', shots: [
+        shot('M-01', 'Counter on ice · regenerate without the baked-in arch (on a white slot for now)', 'arch 4:5')
+      ].concat(
+        rng('F', ['Branzino', 'Salmon', 'Red Snapper', 'Tiger Shrimp', 'Scallops', 'Lobster', '[ADDITIONAL FISH] (only if added)'], (n) => n + ', raw on ice, overhead', '1:1'),
+        rng('K', ['Grilled', 'Fried', 'Baked', 'Singari', 'Rada', 'Butterfly', 'Deboned'], (n) => n + ', plated', '16:9'),
+        rng('CB', combos, (n) => n + ', plated with two side bowls', '1:1'),
+        rng('SG', sig, (n) => n + ', plated', '1:1'),
+        rng('SW', sandw, (n) => n + ' with fries', '1:1'),
+        rng('SD', sdl, (n) => n, '1:1')
+      ), texts: [] },
+      { title: 'Menu & Order: prices and copy', route: '/menu · /order', shots: [], texts: [
+        t('[PRICE] · Hamido Combos', 'One price for CB-01…06 (Astoria refs in menu-data.json)'),
+        t('[PRICE] · Signature Dishes', 'SG-01…13, each priced separately'),
+        t('[PRICE] · Seafood Sandwiches', 'SW-01…05'),
+        t('[PRICE] · Salads & Sides', 'SD-01…12; rice has Small / Medium / Large prices'),
+        t('[PRICE]/lb · market price per fish', 'Menu fresh catch, Order fish cards and sheet; updated daily'),
+        t('[PRICE]/lb · cooking charge', 'Menu, Order sheet breakdown'),
+        t('+[PRICE] · singari, rada, butterfly, deboned', 'Cooking styles, Order sheet'),
+        t('Menu descriptions', 'Paraphrased from the Astoria menu: owner confirms the wording for combos, signature dishes, sandwiches and sides'),
+        t('[OWNER: description] × 5 fish', 'Salmon, Red Snapper, Tiger Shrimp, Scallops, Lobster'),
+        t('[OWNER: what it is, how it’s prepared, best fish for it] × 7', 'Cooking styles (Menu) and one-line style descriptions in the Order sheet'),
+        t('Styles per fish [OWNER CONFIRM]', 'Defaults: Branzino & Red Snapper all 7 · Salmon grilled/fried/baked/singari · Tiger Shrimp & Scallops grilled/fried/singari · Lobster grilled/baked'),
+        t('“About 1 lb of whole fish per person” [OWNER CONFIRM]', 'Order sheet weight helper + by-the-pound explainer'),
+        t('[OWNER: shellfish & gluten warnings, halal sourcing if applicable]', 'Allergen note: Menu + Order'),
+        t('[VERIFY: drinks, desserts, kids’ items, hummus, grilled vegetables, pita]', 'Not on Astoria’s online menu: served in Orland Park?'),
+        t('[VERIFY: “Bronzini” (Astoria menu) vs “Branzino” (site)]', 'The site spells it Branzino everywhere')
+      ] },
+      { title: 'Order, Checkout & Confirmation', route: '/order · /order/checkout · /order/confirmed', shots: [], texts: [
+        t('[VERIFY: Hamido Combos lunch-only or all day]', 'combosLunchOnly switch: off = all day (default), on = Mon–Fri [LUNCH HOURS] with the lunch banner'),
+        t('[VERIFY: POS weight-adjusted charging]', 'Fresh catch is paid as an estimate online; the POS must charge the final weight'),
+        t('[AUTH BUFFER %]', 'Checkout payment note: card authorised for the estimate plus this buffer'),
+        t('[MAX LB]', 'Order sheet “Other” weight stepper limit'),
+        t('Daily market prices & sold-out updates', 'Who updates fish prices and “Sold out today” (availableToday) each morning'),
+        t('[PREP TIME]', 'Order header, cart, Checkout ASAP option, confirmation'),
+        t('[LAST ORDER TIME]', 'Order status banner, Visit, Checkout slots'),
+        t('[TAX RATE]', 'Cart + Checkout totals'),
+        t('Tip options 15 / 18 / 20 / custom / none', 'Cart: confirm tipping on pickup orders'),
+        t('Pickup slot rules', '15-minute slots within today’s [HOURS]: [FIRST SLOT] to [LAST SLOT]'),
+        t('POS / payment provider', 'Fills the [POS PAYMENT EMBED] slot (pickup only, paid online)'),
+        t('Sold-out handling', 'Menu items and fish (Order cards show Sold out / Sold out today)'),
+        t('[ORDER NUMBER] format', 'Confirmation heading')
+      ] },
+      { title: 'Our Story', route: '/story', shots: [
+        shot('ST-01', 'Alexandria harbor / Qaitbay Citadel', '16:9 full-bleed'),
+        shot('ST-02', 'Family archive photo', '16:9 full-bleed', OS),
+        shot('ST-03', 'Astoria storefront', '16:9 full-bleed', OS),
+        shot('ST-04', 'Astoria dining room', '16:9 full-bleed', OS),
+        shot('ST-05', 'Orland Park build / dining room', '16:9 full-bleed', OS)
+      ], texts: [
+        t('[YEAR] × 4', 'Chapters 1, 2, 3 and 5'),
+        t('[OWNER: family history]', 'Chapter 1'),
+        t('[OWNER: origin of the name “Ibn Hamido”]', 'Chapter 2'),
+        t('[OWNER: opening the first restaurant]', 'Chapter 3'),
+        t('[OWNER: why Orland Park]', 'Chapter 5'),
+        t('[VERIFY: The Infatuation lists 33-08 Ditmars Blvd after a 2025 move]', 'Chapter 3 currently says 31-29 Ditmars Blvd')
+      ] },
+      { title: 'Visit', route: '/visit', shots: [
+        shot('V-01', 'Orland Park storefront exterior', '3:2', OS),
+        shot('MAP', 'Google Maps embed: 14035 LaGrange Rd', '4:3')
+      ], texts: [] },
+      { title: 'Private Parties & Catering', route: '/catering', shots: [
+        shot('C-01', 'Long table platters', 'arch 4:5'),
+        shot('C-02', 'Room set for a party', '3:2'),
+        shot('C-03', 'Catering trays', '3:2')
+      ], texts: [
+        t('[CAPACITY]', 'Private parties card'),
+        t('[MIN. NOTICE]', 'Private parties + catering cards'),
+        t('Tray sizes [X–Y]', 'Catering card'),
+        t('[RESPONSE TIME]', 'Private party request form')
+      ] },
+      { title: 'Privacy & SMS Terms', route: '/privacy', shots: [], texts: [
+        t('[OWNER: legal text] · What we collect', 'Privacy page'),
+        t('[OWNER: legal text] · SMS program terms', 'Privacy page; required for SMS opt-in registration'),
+        t('[OWNER: legal text] · Contact', 'Privacy page'),
+        t('[EFFECTIVE DATE]', 'Privacy page header')
+      ] },
+      { title: 'Things to verify', route: 'Before launch', shots: [], texts: [
+        t('[VERIFY: NYT list name + year; rating sources]', 'Reviews band + Story ch. 4: “NYT Top 100 · 4.7★ · 7.7/10 The Infatuation” (labelled The Astoria original)'),
+        t('[VERIFY: Astoria brand name]', 'Referred to as “Hamido Seafood” / “our Astoria, NY restaurant”'),
+        t('[VERIFY: Astoria address]', '31-29 vs 33-08 Ditmars Blvd'),
+        t('[VERIFY: halal]', 'Halal chip on Coming Soon, Home, Order'),
+        t('[VERIFY: allergen note]', 'Menu + Order'),
+        t('[VERIFY: tagline preference]', '“Seafood, the Alexandrian way.” vs “We seafood differently.”'),
+        t('[VERIFY: combos lunch-only or all day]', 'Order, Menu, Home'),
+        t('[VERIFY: by-the-lb online]', 'POS weight-adjusted charging, [AUTH BUFFER %], [MAX LB], styles per fish, daily prices and sold-out updates'),
+        t('[VERIFY: Bronzini vs Branzino]', 'Astoria menu spelling vs the site'),
+        t('[VERIFY: drinks / desserts / hummus / pita]', 'Served in Orland Park?')
+      ] }
+    ];
+    const PICS = {"C-01": ["/_blob/f21d404259b3f679548710de90024f29", "Long table of seafood platters", "center bottom", "AI concept"], "C-02": ["/_blob/0159b6ec254ddfeea3c8ce083e349f0c", "Room set for a party", "center", "AI concept"], "C-03": ["/_blob/372c0e465b79d600fb4825653cbf85c9", "Catering trays", "center", "AI concept"], "CB-01": ["/_blob/0de4d8eeefff6cac7e950f3cf12c3156", "Grilled salmon combo with two sides", "center", "AI concept"], "CB-02": ["/_blob/86f966b7a401069f25f131d5c553b959", "Mixed grilled calamari and shrimp combo with two sides", "center", "AI concept"], "CB-03": ["/_blob/84a318feea625ff85858215d43e421de", "Mixed fried calamari and shrimp combo with two sides", "center", "AI concept"], "CB-04": ["/_blob/100a6b508f6726cbfc9f47afa5a7b89a", "Tiger shrimp combo with two sides", "center", "AI concept"], "CB-05": ["/_blob/5e9ab896f31e76f590ce76b24e29a04b", "Calamari combo with two sides", "center", "AI concept"], "CB-06": ["/_blob/e05d20b8a967f46ff439efec33471999", "Whole branzino combo with two sides", "center", "AI concept"], "CS-01": ["/_blob/c8dd4ecfb2ac0eb4718bc01f9d3c8d2a", "Grilled branzino, shrimp, rice and salads", "center bottom", "AI concept"], "F-01": ["/_blob/3191abf799126290021c831e34b8ab07", "Branzino, raw on ice", "center", "AI concept"], "F-02": ["/_blob/cf750ad9facf6eea9829c684db2162f7", "Salmon, raw on ice", "center", "AI concept"], "F-03": ["/_blob/5ed71932ba1917b4589d11022eb1e12d", "Red snapper, raw on ice", "center", "AI concept"], "F-04": ["/_blob/c46e10456c388289e08543e5e852446c", "Tiger shrimp, raw on ice", "center", "AI concept"], "F-05": ["/_blob/59d7b39264cabf47a47b1d21fd8d772d", "Scallops, raw on ice", "center", "AI concept"], "F-06": ["/_blob/b9e4666583506c4eec3652a8dae8f589", "Lobster, raw on ice", "center", "AI concept"], "H-01": ["/_blob/5afe29d021e7a0af54f9970b9eef02dc", "Whole grilled branzino on the table", "center bottom", "AI concept"], "H-02": ["/_blob/de5eeb842780be0cabdfb08b553e251b", "The fish counter on ice", "center bottom", "AI concept"], "H-03": ["/_blob/a4c371605b9f613e878a4ee8d40b8597", "A spread of sides", "center", "AI concept"], "H-04": ["/_blob/07a28d83b6a5a0a22c849fd5fa20e7aa", "Fresh catch on ice", "center bottom", "AI concept"], "H-05": ["/_blob/88af42c9ca0abd24fbdcdb87846dc738", "Chef at the grill", "center bottom", "AI concept"], "H-06": ["/_blob/32c636433eb7abc95d18afd4d3e7dcde", "The dining room", "center bottom", "AI concept"], "H-07": ["/_blob/3ec625e2493f42797984c6870ed5b08b", "Sides and pita", "center bottom", "AI concept"], "H-08": ["/_blob/6214dd813ff83940de5155a0693b1501", "Alexandria harbor", "center bottom", "AI concept"], "H-09": ["/_blob/d43d4e14dc752af6d2073531975bad70", "Catering trays on a long table", "center", "AI concept"], "K-01": ["/_blob/ad35255c144ae8db3bc9a21f9f21d0a0", "Grilled fish, plated", "center", "AI concept"], "K-02": ["/_blob/f285d1c0f15202d10368d26d97f76f1c", "Fried fish, plated", "center", "AI concept"], "K-03": ["/_blob/f5fc8155b3828f0c64b47313bd55ff73", "Baked fish, plated", "center 60%", "AI concept"], "K-04": ["/_blob/15830bc78119ee876a7834ac009c8d74", "Singari-style fish, plated", "center 60%", "AI concept"], "K-05": ["/_blob/563a3703386f41170509257b5a13b788", "Rada-style fish, plated", "center 60%", "AI concept"], "K-06": ["/_blob/ce5786d277e2e839c32f41cb74a021cd", "Butterflied fish, plated", "center", "AI concept"], "K-07": ["/_blob/35cd73154d8ca3357efb2cc9a2a687f3", "Deboned fish, plated", "center", "AI concept"], "M-01": ["/_blob/ee89421eaf0e9c58b68db30fb15b71b8", "The day’s catch on ice", "center bottom", "AI concept"], "OG-01": ["/_blob/e4c176019269a988c47be4a1688c49ef", "Ibn Hamido Seafood, Orland Park", "center", "AI concept"], "SD-01": ["/_blob/f4da2cb4433383c7fa37ec31e4d6d70c", "Golden rice", "center", "AI concept"], "SD-02": ["/_blob/26e313080c6c7132c1e3ebf9f008da4f", "Tahini", "center", "AI concept"], "SD-03": ["/_blob/c1a3c6ae5a85d61720547215340751a5", "Babaghanoush", "center", "AI concept"], "SD-04": ["/_blob/5c0555edcad7e263644bc9408c03f9d1", "Hamido house salad", "center", "AI concept"], "SD-05": ["/_blob/4a5fdc4b9e2b1b5ebc361ee955224c57", "Beet salad", "center", "AI concept"], "SD-06": ["/_blob/ef1d50fc3668aebd74dfbe31b5ce4a5a", "Lemon potatoes", "center", "AI concept"], "SD-07": ["/_blob/9cc7e49aa460ccc4b9f09cc1489b73b9", "Garlic eggplant", "center", "AI concept"], "SD-08": ["/_blob/b2b779b6bf10589c5803f5708cd37e45", "Moussaka", "center", "AI concept"], "SD-09": ["/_blob/9d2388a04dc6431e9441d3ed9c97a10f", "French fries", "center", "AI concept"], "SD-10": ["/_blob/c0e85fa3a6dfda79bf7289318d1c115c", "Greek salad", "center", "AI concept"], "SD-11": ["/_blob/20ea4d7f5d1e7806f12c7fa16723f99c", "Herring salad", "center", "AI concept"], "SD-12": ["/_blob/cfaae7fed00bd3fe361d20ba79405fca", "Mezza platter", "center", "AI concept"], "SG-01": ["/_blob/6398c825cff5eb5f2c9ad2b6c558055e", "Branzino stuffed singari", "center", "AI concept"], "SG-02": ["/_blob/f13739086d00efe0586fa26f33bb09ed", "Whole wild red snapper", "center", "AI concept"], "SG-03": ["/_blob/4136c684e549d4d4cb7ef573b6c3a50b", "Seafood tajin", "center", "AI concept"], "SG-04": ["/_blob/fa0092b19f8a6025e207bfd10ad89323", "Head-on shrimp butterfly", "center", "AI concept"], "SG-05": ["/_blob/7839b5dc809949a7442f27f788ec51e9", "Jumbo shrimp grilled", "center", "AI concept"], "SG-06": ["/_blob/9000d51ac053acaa751ffa6057f44368", "King crab legs", "center", "AI concept"], "SG-07": ["/_blob/77782c7124c90e21b76a89fe313dfaaa", "Lobster tail", "center", "AI concept"], "SG-08": ["/_blob/6bf42f4f9e379c92084ab31e30281f15", "Baked clams", "center", "AI concept"], "SG-09": ["/_blob/33a96366f88c3fdd9d62954da9dcbe72", "Scallops and shrimp linguine", "center", "AI concept"], "SG-10": ["/_blob/406083ea79b8ae6e5e715ec888661e58", "White sauce pasta with shrimp", "center", "AI concept"], "SG-11": ["/_blob/f598c051a293ac65771b304cae26080e", "Fish and chips", "center", "AI concept"], "SG-12": ["/_blob/1c11e5c3f59caea3d17b45851dd07d85", "White fried shrimp", "center", "AI concept"], "SG-13": ["/_blob/2285d5ba0907a71a008141b3b2e80b9d", "Hamido seafood pizza", "center", "AI concept"], "ST-01": ["/_blob/df790f1bcc9924270914a9ac34bca3e3", "Alexandria harbor and the Qaitbay Citadel", "center 40%", "AI concept"], "ST-02": ["/_blob/ff28b715d30064ad1c0c2c745bb51213", "Family photo (stand-in)", "center 40%", "Stand-in"], "ST-03": ["/_blob/6ccaf8483fddcbfbf2581c4dee76def9", "Astoria storefront (stand-in)", "center 40%", "Stand-in"], "ST-04": ["/_blob/980390f22192ba05a398d8500babc3ab", "Astoria dining room (stand-in)", "center 40%", "Stand-in"], "ST-05": ["/_blob/2f2ba8e268cd997f138b51962f2fe481", "Orland Park dining room (stand-in)", "center 40%", "Stand-in"], "SW-01": ["/_blob/4a302f73077b7cae92b0c3ed7b396eca", "Fried fish fillet sandwich with fries", "center", "AI concept"], "SW-02": ["/_blob/01ba17ff0a89f68dab7facfd5ab8eff1", "Grilled fish fillet sandwich with fries", "center", "AI concept"], "SW-03": ["/_blob/e7b12547107044896e37f6e4615ed83e", "Fried shrimp sandwich with fries", "center", "AI concept"], "SW-04": ["/_blob/d1a4978498d629cd34de42db364e2edf", "Grilled shrimp sandwich with fries", "center", "AI concept"], "SW-05": ["/_blob/18bd51dc82c168e2608596484e0c5f70", "Salmon burger with fries", "center", "AI concept"], "V-01": ["/_blob/5680667fe49f8259bbbec8d4116c3e8b", "Orland Park storefront (stand-in)", "center", "Stand-in"]};
+    const seen = {};
+    const aiRows = [];
+    raw.forEach((g) => g.shots.forEach((s) => {
+      const p = PICS[s.id];
+      if (!p) return;
+      s.pic = { on: true, src: p[0], alt: p[1], style: 'object-position: ' + p[2] + ';' };
+      s.status = p[3] === 'Stand-in' ? 'Stand-in · REPLACE BEFORE LAUNCH (owner photo)' : 'AI concept · REPLACE BEFORE LAUNCH';
+      if (seen[s.id]) return;
+      seen[s.id] = true;
+      aiRows.push(t(s.id + ' · ' + p[3], 'REPLACE BEFORE LAUNCH · ' + s.desc + (p[3] === 'Stand-in' ? ' · needs the owner’s real photo' : '')));
+    }));
+    raw.forEach((g) => { if (g.aiList) g.texts = aiRows; });
+    let shotCount = 0;
+    let textCount = 0;
+    const groups = raw.map((g, i) => {
+      shotCount += g.shots.length;
+      textCount += g.texts.length;
+      return {
+        ...g,
+        hid: 'grp-' + i,
+        hasShots: g.shots.length > 0,
+        hasTexts: g.texts.length > 0,
+        shotN: g.shots.length,
+        textN: g.texts.length,
+        shots: g.shots.map((s) => ({ ...s, pic: s.pic || { on: false }, stCls: 'st ' + (s.status === O || s.status.indexOf('Stand-in') === 0 ? 'st-owner' : (s.status === N ? 'st-need' : (s.status.indexOf('AI concept') === 0 ? 'st-ai' : 'st-have'))) }))
+      };
+    });
+    return { groups, shotCount, textCount };
+  }
+}
+</script>
+</body>
+</html>

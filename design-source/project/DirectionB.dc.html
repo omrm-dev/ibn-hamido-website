@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Direction B — Anfushi market</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Rakkas&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.cb{--wash:#FBF8F1;--blue:#2B4AA5;--navy:#13245A;--tomato:#C8381F;--lemon:#F6C945;--ice:#E3F3F6;--ice-2:#CBE7EC;--teal:#127A80;--ink:#13245A;--ink-2:#4B5675;
+  background:var(--wash);color:var(--ink);font:400 16px/1.55 Inter,system-ui,sans-serif}
+.cb *{box-sizing:border-box}
+.cb a{color:var(--blue)}
+.cb a:focus-visible,.cb button:focus-visible{outline:3px solid var(--tomato);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px}
+@media (max-width:720px){.wrap{padding:0 16px}}
+.rk{font-family:Rakkas,'Young Serif',serif;font-weight:400}
+.ar{direction:rtl}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:12px;font:600 15px/1 Inter,sans-serif;text-decoration:none;border:2px solid var(--navy);box-shadow:4px 4px 0 var(--navy)}
+.btn-tomato{background:var(--tomato);color:#FFFFFF}.btn-tomato:hover{background:#A92D17;color:#FFFFFF}
+.btn-wash{background:#FFFFFF;color:var(--navy)}.btn-wash:hover{background:var(--ice);color:var(--navy)}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;text-decoration:none;color:var(--navy)}
+.menu-btn{display:none;min-height:44px;padding:0 16px;border-radius:12px;border:2px solid var(--navy);background:#FFFFFF;color:var(--navy);font:600 15px Inter,sans-serif}
+@media (max-width:899px){.nav-links{display:none}.menu-btn{display:inline-flex;align-items:center}}
+.sign{position:relative;background:var(--blue);color:#FFFFFF;border-radius:22px;padding:14px;box-shadow:0 18px 40px rgba(19,36,90,.25)}
+.sign-in{border:3px solid #FFFFFF;border-radius:12px;padding:clamp(28px,4vw,48px) clamp(20px,4vw,56px);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ice{position:relative;background:var(--ice);border-radius:24px;padding:28px;overflow:hidden;border:2px solid var(--ice-2)}
+.fish-slot{position:relative;border-radius:18px;background:repeating-linear-gradient(135deg,#D3ECF1 0 12px,#E6F5F8 12px 24px);color:#2C5560;display:flex;align-items:flex-end;padding:14px;font:600 11px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:2px solid #FFFFFF}
+.tag{position:absolute;background:var(--lemon);color:var(--navy);border-radius:8px;padding:10px 14px 10px 26px;box-shadow:2px 3px 0 rgba(19,36,90,.25);display:flex;flex-direction:column;gap:2px;line-height:1.1}
+.tag::before{content:"";position:absolute;left:9px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:999px;background:var(--ice)}
+.tile{border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:12px;border:2px solid var(--navy);box-shadow:5px 5px 0 var(--navy)}
+.tile .num{display:flex;align-items:baseline;gap:12px}
+.board{background:var(--navy);color:#FFFFFF;border-radius:22px;padding:14px;border:6px solid #8A5A2B}
+.board-in{border:2px dashed rgba(255,255,255,.35);border-radius:12px;padding:clamp(24px,3vw,40px)}
+.price-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.price-row:last-child{border-bottom:0}
+.awning{height:22px;background:repeating-linear-gradient(90deg,var(--tomato) 0 44px,#FFFFFF 44px 88px)}
+</style>
+</helmet>
+<div class="cb">
+
+  <div style="background: #C8381F; color: #FFFFFF; font: 600 12px/18px Inter, sans-serif; letter-spacing: .14em; text-transform: uppercase;">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 10px; padding-bottom: 10px;">
+      <span>Walk-in only · 14035 LaGrange Rd</span>
+      <span>Opening [OPENING DATE]</span>
+    </div>
+  </div>
+
+  <header>
+    <nav aria-label="Main" class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 18px; padding-bottom: 18px;">
+      <a href="Home.dc.html" aria-label="Ibn Hamido Seafood home" style="line-height: 0;"><img src="/_blob/505e7dbf643cd914c5af3de17f72b5fd" alt="Ibn Hamido Seafood" style="height: 40px; width: auto;"></a>
+      <div class="nav-links">
+        <a href="Menu.dc.html">Menu</a>
+        <a href="Order.dc.html">Order</a>
+        <a href="Story.dc.html">Our Story</a>
+        <a href="Visit.dc.html">Visit</a>
+        <a href="Catering.dc.html">Parties &amp; Catering</a>
+        <a class="btn btn-tomato" href="Order.dc.html" style="min-height: 44px; box-shadow: 3px 3px 0 #13245A;">Order pickup</a>
+      </div>
+      <button type="button" class="menu-btn" aria-expanded="false">Menu</button>
+    </nav>
+  </header>
+
+  <section style="padding: 24px 0 0;">
+    <div class="wrap">
+      <div class="sign">
+        <div class="sign-in">
+          <svg aria-hidden="true" width="120" height="40" viewBox="0 0 120 40" fill="none" stroke="#F6C945" stroke-width="2.5" stroke-linejoin="round"><path d="M4 20 C 20 4, 50 4, 66 20 C 50 36, 20 36, 4 20 Z"></path><path d="M66 20 L 88 6 L 83 20 L 88 34 Z"></path><circle cx="18" cy="17" r="2.5" fill="#F6C945"></circle><path d="M28 10 Q 34 20 28 30"></path><path d="M96 20 H 116"></path></svg>
+          <p class="rk ar" lang="ar" dir="rtl" style="margin: 0; font-size: clamp(64px, 10vw, 140px); line-height: 1.05;">أسماك ابن حميدو</p>
+          <p class="rk" style="margin: 0; font-size: clamp(22px, 3vw, 40px); line-height: 1.1; color: #F6C945; letter-spacing: .04em;">FRESH FISH · COOKED YOUR WAY</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top: 18px;"><div class="awning" aria-hidden="true" style="border-radius: 6px;"></div></div>
+  </section>
+
+  <section style="padding: 72px 0 104px;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 56px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <p class="rk ar" lang="ar" dir="rtl" style="margin: 0; font-size: 44px; line-height: 1.2; color: #C8381F; text-align: left;">اختار سمكتك</p>
+        <h1 class="rk" style="margin: 0; font-size: clamp(44px, 6vw, 80px); line-height: 1;">Point at it. We’ll grill it.</h1>
+        <p style="margin: 0; font-size: 19px; line-height: 30px; color: #4B5675; max-width: 520px;">The catch sits on ice right by the door. Pick the one you want, we weigh it, and the chef cooks it the way you say. Grilled, fried, singari, rada, you name it. Just like the fish markets of Alexandria.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px;">
+          <a class="btn btn-tomato" href="Order.dc.html">Order pickup</a>
+          <a class="btn btn-wash" href="Menu.dc.html">See the menu</a>
+        </div>
+        <p style="margin: 6px 0 0; font-size: 14px; line-height: 20px; color: #4B5675;">Walk-in only · Family-owned · From the family behind Hamido Seafood in Astoria, NY</p>
+      </div>
+      <div class="ice" aria-label="Today’s catch on ice">
+        <svg aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%;" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <path d="M5 8 L14 5 L17 13 L8 16 Z M80 6 L90 9 L87 17 L78 14 Z M40 90 L50 87 L53 95 L43 97 Z M88 70 L96 73 L93 82 L85 79 Z M3 60 L10 57 L13 65 L6 68 Z M60 3 L68 5 L66 11 L58 9 Z" fill="#FFFFFF" opacity=".7"></path>
+        </svg>
+        <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+          <div class="fish-slot" style="grid-column: 1 / -1; aspect-ratio: 16 / 9;">F-01 · Branzino, raw on ice, overhead · owner photo</div>
+          <div class="fish-slot" style="aspect-ratio: 1;">F-04 · Tiger shrimp on ice</div>
+          <div class="fish-slot" style="aspect-ratio: 1;">F-03 · Red snapper on ice</div>
+        </div>
+        <div class="tag" style="top: 44px; right: 40px; transform: rotate(5deg);">
+          <span class="rk ar" lang="ar" dir="rtl" style="font-size: 26px;">قاروص</span>
+          <span style="font: 700 12px/1.2 Inter, sans-serif; letter-spacing: .08em;">BRANZINO · [PRICE]/lb</span>
+        </div>
+        <div class="tag" style="bottom: 40px; left: 44px; transform: rotate(-6deg);">
+          <span class="rk ar" lang="ar" dir="rtl" style="font-size: 26px;">جمبري</span>
+          <span style="font: 700 12px/1.2 Inter, sans-serif; letter-spacing: .08em;">TIGER SHRIMP · [PRICE]/lb</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FFFFFF; border-top: 2px solid #13245A; border-bottom: 2px solid #13245A; padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px;">
+        <h2 class="rk" style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1;">How it works here</h2>
+        <p class="rk ar" lang="ar" dir="rtl" style="margin: 0; font-size: 36px; color: #2B4AA5;">زي إسكندرية بالظبط</p>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 22px;">
+        <li class="tile" style="background: #2B4AA5; color: #FFFFFF;">
+          <div class="num"><span class="rk ar" lang="ar" dir="rtl" aria-hidden="true" style="font-size: 64px; line-height: 1; color: #F6C945;">١</span><span class="rk" style="font-size: 22px;">01</span></div>
+          <h3 class="rk" style="margin: 0; font-size: 28px; line-height: 1.1;">Pick your fish</h3>
+          <p style="margin: 0; color: #E3E9FA;">Choose from the day’s catch at the counter. It’s weighed by the pound.</p>
+        </li>
+        <li class="tile" style="background: #C8381F; color: #FFFFFF;">
+          <div class="num"><span class="rk ar" lang="ar" dir="rtl" aria-hidden="true" style="font-size: 64px; line-height: 1; color: #F6C945;">٢</span><span class="rk" style="font-size: 22px;">02</span></div>
+          <h3 class="rk" style="margin: 0; font-size: 28px; line-height: 1.1;">Tell the chef how</h3>
+          <p style="margin: 0; color: #FFE9E4;">Grilled, fried, baked, singari, rada, butterflied or deboned.</p>
+        </li>
+        <li class="tile" style="background: #127A80; color: #FFFFFF;">
+          <div class="num"><span class="rk ar" lang="ar" dir="rtl" aria-hidden="true" style="font-size: 64px; line-height: 1; color: #F6C945;">٣</span><span class="rk" style="font-size: 22px;">03</span></div>
+          <h3 class="rk" style="margin: 0; font-size: 28px; line-height: 1.1;">Take a seat</h3>
+          <p style="margin: 0; color: #E2F4F5;">We seat you while your fish hits the fire.</p>
+        </li>
+        <li class="tile" style="background: #F6C945; color: #13245A;">
+          <div class="num"><span class="rk ar" lang="ar" dir="rtl" aria-hidden="true" style="font-size: 64px; line-height: 1; color: #C8381F;">٤</span><span class="rk" style="font-size: 22px;">04</span></div>
+          <h3 class="rk" style="margin: 0; font-size: 28px; line-height: 1.1;">Add your sides</h3>
+          <p style="margin: 0; color: #13245A;">Rice, tahini, babaganoush, Hamido salad and fresh pita.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding: 104px 0;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 48px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <p class="rk ar" lang="ar" dir="rtl" style="margin: 0; font-size: 40px; color: #C8381F; text-align: left;">على الفحم ولا مقلي؟</p>
+        <h2 class="rk" style="margin: 0; font-size: clamp(36px, 5vw, 60px); line-height: 1;">Grilled or fried?</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 27px; color: #4B5675;">That’s the first question at the counter. Grilled, fried and baked are included. The house specials cost a little extra.</p>
+        <div class="fish-slot" style="aspect-ratio: 16 / 9; margin-top: 8px; border-color: #13245A;">K-01 · Fish on the coals · 16:9 · owner photo</div>
+      </div>
+      <div class="board">
+        <div class="board-in">
+          <p class="rk" style="margin: 0 0 12px; font-size: 30px; color: #F6C945;">Today at the counter <span class="ar" lang="ar" dir="rtl" style="font-size: 30px;">· النهارده</span></p>
+          <div class="price-row"><span><span class="rk" style="font-size: 24px;">Branzino</span> <span class="rk ar" lang="ar" dir="rtl" style="font-size: 22px; color: #9FC6FF;">قاروص</span></span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <div class="price-row"><span><span class="rk" style="font-size: 24px;">Salmon</span> <span class="rk ar" lang="ar" dir="rtl" style="font-size: 22px; color: #9FC6FF;">سلمون</span></span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <div class="price-row"><span class="rk" style="font-size: 24px;">Red Snapper</span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <div class="price-row"><span><span class="rk" style="font-size: 24px;">Tiger Shrimp</span> <span class="rk ar" lang="ar" dir="rtl" style="font-size: 22px; color: #9FC6FF;">جمبري</span></span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <div class="price-row"><span class="rk" style="font-size: 24px;">Scallops</span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <div class="price-row"><span><span class="rk" style="font-size: 24px;">Lobster</span> <span class="rk ar" lang="ar" dir="rtl" style="font-size: 22px; color: #9FC6FF;">استاكوزا</span></span><span class="rk" style="font-size: 22px; color: #F6C945;">[PRICE]/lb</span></div>
+          <p style="margin: 18px 0 0; font-size: 14px; line-height: 20px; color: #DCE3F5;">Plus a cooking charge of [PRICE]/lb. Singari, rada, butterfly and deboned +[PRICE].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="awning" aria-hidden="true"></div>
+  <footer style="background: #13245A; color: #DCE3F5; padding: 40px 0;">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+      <img src="/_blob/b55c7f77353a531c13995371fb023359" alt="Ibn Hamido Seafood" style="height: 34px; width: auto;">
+      <span style="font-size: 14px;">14035 LaGrange Rd, Orland Park, IL · Walk-in only</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3300}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

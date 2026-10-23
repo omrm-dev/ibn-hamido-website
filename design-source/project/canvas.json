@@ -1,0 +1,624 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 3080,
+      "is_interactive": true,
+      "title": "Coming Soon — ibnhamidochicago.com (launch now)",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "DirectionA.dc.html": {
+      "expand": "fill",
+      "h": 3260,
+      "title": "Direction A — Corniche (warm, family-upmarket)",
+      "w": 1440,
+      "x": 3480,
+      "y": 0
+    },
+    "DirectionB.dc.html": {
+      "expand": "fill",
+      "h": 3300,
+      "title": "Direction B — Anfushi fish market (loud, painted signs)",
+      "w": 1440,
+      "x": 5000,
+      "y": 0
+    },
+    "DirectionC.dc.html": {
+      "expand": "fill",
+      "h": 3700,
+      "title": "Direction C — Mix: Corniche warmth + Anfushi sign & ice counter",
+      "w": 1440,
+      "x": 6520,
+      "y": 0
+    },
+    "Home.dc.html": {
+      "expand": "fill",
+      "h": 5300,
+      "is_interactive": true,
+      "title": "Home",
+      "w": 1440,
+      "x": 0,
+      "y": 3320
+    },
+    "Menu.dc.html": {
+      "expand": "fill",
+      "h": 9200,
+      "is_interactive": true,
+      "title": "Menu (5 categories from menu-data.json · prices = [PRICE])",
+      "w": 1440,
+      "x": 1520,
+      "y": 3320
+    },
+    "Story.dc.html": {
+      "expand": "fill",
+      "h": 7900,
+      "is_interactive": true,
+      "title": "Our Story — scroll narrative",
+      "w": 1440,
+      "x": 3040,
+      "y": 3320
+    },
+    "Visit.dc.html": {
+      "expand": "fill",
+      "h": 2300,
+      "is_interactive": true,
+      "title": "Visit (walk-in only, hours, map)",
+      "w": 1440,
+      "x": 4560,
+      "y": 3320
+    },
+    "Catering.dc.html": {
+      "expand": "fill",
+      "h": 2800,
+      "is_interactive": true,
+      "title": "Private Parties & Catering",
+      "w": 1440,
+      "x": 6080,
+      "y": 3320
+    },
+    "Order.dc.html": {
+      "expand": "fill",
+      "h": 9400,
+      "is_interactive": true,
+      "title": "Order pickup (status · combosLunchOnly · onlineByWeight · demoCart · openPanel tweaks)",
+      "w": 1440,
+      "x": 7600,
+      "y": 3320
+    },
+    "Checkout.dc.html": {
+      "expand": "fill",
+      "h": 2600,
+      "is_interactive": true,
+      "title": "Checkout + Confirmation (step · showErrors tweaks)",
+      "w": 1440,
+      "x": 9120,
+      "y": 3320
+    },
+    "Privacy.dc.html": {
+      "expand": "fill",
+      "h": 1800,
+      "title": "Privacy & SMS Terms",
+      "w": 1440,
+      "x": 10640,
+      "y": 3320
+    },
+    "Nav.dc.html": {
+      "expand": "fill",
+      "h": 128,
+      "is_interactive": true,
+      "title": "Component — Nav (launchMode · drawer below 900px)",
+      "w": 1440,
+      "x": 0,
+      "y": 13140
+    },
+    "Footer.dc.html": {
+      "expand": "fill",
+      "h": 600,
+      "title": "Component — Footer",
+      "w": 1440,
+      "x": 1520,
+      "y": 13140
+    },
+    "CookingStyles.dc.html": {
+      "expand": "fill",
+      "h": 640,
+      "is_interactive": true,
+      "title": "Component — Cooking styles (click/tap to expand)",
+      "w": 1440,
+      "x": 3040,
+      "y": 13140
+    },
+    "Accordion.dc.html": {
+      "expand": "fill",
+      "h": 560,
+      "is_interactive": true,
+      "title": "Component — Dish accordion (set: combos | sides)",
+      "w": 1440,
+      "x": 4560,
+      "y": 13140
+    },
+    "Reviews.dc.html": {
+      "expand": "fill",
+      "h": 960,
+      "is_interactive": true,
+      "title": "Component — Reviews band (rotating, Pause/Play)",
+      "w": 1440,
+      "x": 6080,
+      "y": 13140
+    },
+    "MobileHome.dc.html": {
+      "h": 12400,
+      "is_interactive": true,
+      "title": "Mobile check — Home (390)",
+      "w": 390,
+      "x": 0,
+      "y": 14700
+    },
+    "MobileOrder.dc.html": {
+      "h": 11000,
+      "is_interactive": true,
+      "title": "Mobile check — Order, demo cart (390 · same tweaks as Order)",
+      "w": 390,
+      "x": 470,
+      "y": 14700
+    },
+    "ContentChecklist.dc.html": {
+      "expand": "fill",
+      "h": 10600,
+      "is_interactive": true,
+      "title": "Content checklist (internal — send to owner)",
+      "w": 1440,
+      "x": 1200,
+      "y": 14700
+    },
+    "A_Soon.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "title": "A · Corniche — Coming Soon",
+      "w": 1440,
+      "x": 13600,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Home.dc.html": {
+      "expand": "fill",
+      "h": 7500,
+      "title": "A · Corniche — Home",
+      "w": 1440,
+      "x": 15120,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Menu.dc.html": {
+      "expand": "fill",
+      "h": 10600,
+      "title": "A · Corniche — Menu",
+      "w": 1440,
+      "x": 16640,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Order.dc.html": {
+      "expand": "fill",
+      "h": 9900,
+      "title": "A · Corniche — Order pickup",
+      "w": 1440,
+      "x": 18160,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Checkout.dc.html": {
+      "expand": "fill",
+      "h": 2800,
+      "title": "A · Corniche — Checkout + Confirmation",
+      "w": 1440,
+      "x": 19680,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Story.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "A · Corniche — Our Story",
+      "w": 1440,
+      "x": 21200,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Visit.dc.html": {
+      "expand": "fill",
+      "h": 2500,
+      "title": "A · Corniche — Visit",
+      "w": 1440,
+      "x": 22720,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Catering.dc.html": {
+      "expand": "fill",
+      "h": 3300,
+      "title": "A · Corniche — Parties & Catering",
+      "w": 1440,
+      "x": 24240,
+      "y": 0,
+      "is_interactive": true
+    },
+    "A_Privacy.dc.html": {
+      "expand": "fill",
+      "h": 1900,
+      "title": "A · Corniche — Privacy & SMS Terms",
+      "w": 1440,
+      "x": 25760,
+      "y": 0
+    },
+    "B_Soon.dc.html": {
+      "expand": "fill",
+      "h": 4200,
+      "title": "B · Anfushi market — Coming Soon",
+      "w": 1440,
+      "x": 13600,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Home.dc.html": {
+      "expand": "fill",
+      "h": 7800,
+      "title": "B · Anfushi market — Home",
+      "w": 1440,
+      "x": 15120,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Menu.dc.html": {
+      "expand": "fill",
+      "h": 10900,
+      "title": "B · Anfushi market — Menu",
+      "w": 1440,
+      "x": 16640,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Order.dc.html": {
+      "expand": "fill",
+      "h": 10200,
+      "title": "B · Anfushi market — Order pickup",
+      "w": 1440,
+      "x": 18160,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Checkout.dc.html": {
+      "expand": "fill",
+      "h": 3100,
+      "title": "B · Anfushi market — Checkout + Confirmation",
+      "w": 1440,
+      "x": 19680,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Story.dc.html": {
+      "expand": "fill",
+      "h": 8300,
+      "title": "B · Anfushi market — Our Story",
+      "w": 1440,
+      "x": 21200,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Visit.dc.html": {
+      "expand": "fill",
+      "h": 2800,
+      "title": "B · Anfushi market — Visit",
+      "w": 1440,
+      "x": 22720,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Catering.dc.html": {
+      "expand": "fill",
+      "h": 3600,
+      "title": "B · Anfushi market — Parties & Catering",
+      "w": 1440,
+      "x": 24240,
+      "y": 11600,
+      "is_interactive": true
+    },
+    "B_Privacy.dc.html": {
+      "expand": "fill",
+      "h": 2200,
+      "title": "B · Anfushi market — Privacy & SMS Terms",
+      "w": 1440,
+      "x": 25760,
+      "y": 11600
+    },
+    "L_Soon.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "title": "C · Mix — Coming Soon (source file, look prop)",
+      "w": 1440,
+      "x": 13600,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Home.dc.html": {
+      "expand": "fill",
+      "h": 7500,
+      "title": "C · Mix — Home (source file, look prop)",
+      "w": 1440,
+      "x": 15120,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Menu.dc.html": {
+      "expand": "fill",
+      "h": 10600,
+      "title": "C · Mix — Menu (source file, look prop)",
+      "w": 1440,
+      "x": 16640,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Order.dc.html": {
+      "expand": "fill",
+      "h": 9900,
+      "title": "C · Mix — Order pickup (source file, look prop)",
+      "w": 1440,
+      "x": 18160,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Checkout.dc.html": {
+      "expand": "fill",
+      "h": 2800,
+      "title": "C · Mix — Checkout + Confirmation (source file, look prop)",
+      "w": 1440,
+      "x": 19680,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Story.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "C · Mix — Our Story (source file, look prop)",
+      "w": 1440,
+      "x": 21200,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Visit.dc.html": {
+      "expand": "fill",
+      "h": 2500,
+      "title": "C · Mix — Visit (source file, look prop)",
+      "w": 1440,
+      "x": 22720,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Catering.dc.html": {
+      "expand": "fill",
+      "h": 3300,
+      "title": "C · Mix — Parties & Catering (source file, look prop)",
+      "w": 1440,
+      "x": 24240,
+      "y": 23200,
+      "is_interactive": true
+    },
+    "L_Privacy.dc.html": {
+      "expand": "fill",
+      "h": 1900,
+      "title": "C · Mix — Privacy & SMS Terms (source file, look prop)",
+      "w": 1440,
+      "x": 25760,
+      "y": 23200
+    },
+    "LookNav.dc.html": {
+      "expand": "fill",
+      "h": 172,
+      "is_interactive": true,
+      "title": "Themed component — Nav (look a | b | c)",
+      "w": 1440,
+      "x": 27280,
+      "y": 23200
+    },
+    "LookFooter.dc.html": {
+      "expand": "fill",
+      "h": 680,
+      "title": "Themed component — Footer (look a | b | c)",
+      "w": 1440,
+      "x": 27280,
+      "y": 23452
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-21T17:57:08Z",
+    "v": 1
+  },
+  "designSystems": [
+    {
+      "artifact": "https://claude.ai/artifact/Hd98jS3uFRMXEmAQVKmQbB",
+      "copiedAt": "2026-10-22T18:30:00Z",
+      "namespace": "ibnhamido",
+      "title": "Ibn Hamido — Orland Park",
+      "version": "1792642626-2946"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "assumptions": {
+      "fill": "blue",
+      "maxH": 640,
+      "size": 24,
+      "text": "CONTENT STILL NEEDED FROM THE OWNER\n\n→ See the “Content checklist” board in the Internal row (bottom of the canvas).\n\nIt lists every photo slot (shot ID · description · ratio) and every [PRICE] / [FACT] / [OWNER: …] / [VERIFY: …] placeholder, grouped by page, with where each one appears. That board is what goes to the owner.",
+      "w": 520,
+      "x": 2240,
+      "y": 0
+    },
+    "astoriaPrices": {
+      "fill": "gray",
+      "maxH": 640,
+      "size": 22,
+      "text": "INTERNAL — Astoria price reference (never show on site)\n\n• Combos $21.99\n• Sandwiches $12.99\n• Signature $15.99–$99.99\n• Sides $5–$16\n• Fresh catch: market price + $4/lb cooking, style extras (in-store only at Astoria; online in Orland Park)\n\nSource: refPriceAstoria in menu-data.json. Reference only.",
+      "w": 480,
+      "x": 2840,
+      "y": 0
+    },
+    "directions": {
+      "kind": "title1",
+      "maxW": 4480,
+      "text": "Three looks for the owner — A Corniche · B Anfushi market · C Mix",
+      "w": 240,
+      "x": 3480,
+      "y": -300
+    },
+    "arabicVerify": {
+      "fill": "purple",
+      "maxH": 900,
+      "size": 20,
+      "text": "ARABIC TO CHECK WITH THE OWNER\n(written in Egyptian colloquial on purpose)\n\n• Shop sign: أسماك ابن حميدو — [VERIFY: Arabic brand name]\n• Lines: سمكك على مزاجك · على الفحم ولا مقلي؟ · اختار سمكتك · زي إسكندرية بالظبط · بالوزن\n• Cooking styles: مشوي · مقلي · في الفرن · سنجاري · بالردة (still to check) · بترفلاي and فيليه (confirmed by Omar)\n• Fish: قاروص (branzino) · جمبري · استاكوزا · سلمون (no Arabic yet for red snapper, scallops)\n• Sides (Direction A): رز · طحينة · حمص · بابا غنوج · سلطة حميدو · سلطة بنجر · بطاطس بالليمون · باذنجان بالتوم · مسقعة · خضار مشوي · بطاطس محمرة · عيش بلدي\n• Menu categories (menu-data.json): بالوزن (Fresh Catch by the lb) · كومبو ابن حميدو (Hamido Combos) · أطباق ابن حميدو (Signature) · سندوتشات (Sandwiches) · سلطات (Salads & Sides)\n• New sides: سلطة يوناني (Greek salad) · سلطة رنجة (herring salad) · طبق مزة (mezza platter)\n• Full-site pages: قريباً في أورلاند بارك · المنيو · كومبو ابن حميدو (was غدا ابن حميدو) · على الترابيزة · حكاية ابن حميدو · نورتونا (Visit) · سفرة من إسكندرية · من إسكندرية لنيويورك لشيكاغو",
+      "w": 480,
+      "x": 8040,
+      "y": 980
+    },
+    "ownerNote": {
+      "fill": "green",
+      "maxH": 900,
+      "size": 22,
+      "text": "FOR THE OWNER: WHICH LOOK FEELS LIKE HAMIDO?\n\nA, B and C are the same website: same menu, same pickup ordering, same pages. Only the look and feel change.\n\n• A — Corniche: warm stone, tiles, elegant menu board.\n• B — Anfushi market: painted shop sign, fish on ice with price tags, bold colors.\n• C — A mix of both.\n\n→ The full website in each look (all 9 pages) is to the right: one row per look. The original v2 pages are still on the left.\n\nThe striped boxes are where your own photos go: the fish on ice, the grill, the table, the storefront.",
+      "w": 480,
+      "x": 8040,
+      "y": 0
+    },
+    "comps": {
+      "kind": "title1",
+      "maxW": 7520,
+      "text": "Shared components",
+      "w": 240,
+      "x": 0,
+      "y": 12840
+    },
+    "handoff": {
+      "fill": "orange",
+      "maxH": 3600,
+      "size": 18,
+      "text": "ENGINEER HANDOFF (v4)\n\n• Design system: ‘Ibn Hamido — Orland Park’ (Theme menu). CSS vars in each page’s <helmet> match token names 1:1. Fonts: Young Serif 400 (never bold), Inter 400/500/600, Aref Ruqaa (Arabic: lang=\"ar\" dir=\"rtl\", always paired with English). Blue #2B4AA5 primary; turquoise #1F9AA0 secondary; #0F6E73 for small turquoise text. Form errors use #B42318.\n\n• MENU DATA: menu-data.json is the source of truth. 5 categories: Fresh Catch by the lb (F-01…06) · Hamido Combos (CB-01…06) · Signature (SG-01…13) · Sandwiches (SW-01…05) · Salads & Sides (SD-01…12). Names, descriptions and Arabic category labels come from the JSON. Item IDs = shot IDs. Old L-/S- IDs are retired.\n• PRICES: every price is a [PRICE] placeholder until the owner confirms. Build as POS/CMS-driven fields. refPriceAstoria never appears in the UI (gray sticky is internal only).\n\n• ORDERING FLOW (pickup only, paid online): /order → item options sheet → cart drawer → /order/checkout → /order/confirmed. Every Order / Order pickup CTA goes to /order.\n  – Status open | lunch | closed drives the banner; closed disables all Add buttons and checkout.\n  – combosLunchOnly (default off): off = combos all day; on = combos orderable only Mon–Fri [LUNCH HOURS], with the lunch banner and badges.\n  – onlineByWeight (default on): off replaces the fish grid with an in-store info card (“pick your fish at the counter”).\n• OPTION GROUPS:\n  – Combos: Preparation (Grilled / Fried) only on CB-04, CB-05, CB-06. Combo Sides (pick 2): steppers on SD-01…09, counter “0 / 2”, repeats allowed, error if not exactly 2.\n  – Sandwiches + SG-11 Fish & Chips: Side (pick 1): Fries · Potato Chips Classic · BBQ · Salt & Vinegar · Sour Cream & Onion.\n  – SG-02 Red Snapper: Grilled / Fried. SD-01 Rice: Small / Medium / Large.\n  – Every sheet has quantity + special instructions.\n• DIRECT-ADD ITEMS: anything with no option group adds straight to the cart with an “Added · Undo” toast (6 s, aria-live polite); no sheet.\n• FRESH CATCH: weight chips 1 / 1.5 / 2 / 2.5 / 3 / Other (0.5 lb stepper up to [MAX LB]); styles limited per fish (fish.styles); optional side steppers; live breakdown “weight × ([PRICE]/lb + [PRICE]/lb cooking) + style = Est. [PRICE]”. Sold out today = fish.availableToday false. Any by-the-lb line turns the total into “Estimated total” + the weighing note.\n• WEIGHT-ADJUSTED PAYMENT: checkout authorises the estimated total + [AUTH BUFFER %]; the POS captures the final amount after weighing and sends a receipt with the actual weight. Confirmation marks fresh-catch lines “Est., final after weighing”. [VERIFY: POS supports weight-adjusted capture.]\n  – Sold-out state per item. Sheet = modal on desktop, bottom sheet under 600px; cart = right drawer, full screen on mobile, sticky “View order (n) · [SUBTOTAL]” bar under 900px. Both focus-trapped, Esc closes, focus returns to the trigger.\n  – openPanel tweak: none | cart | comboSheet | sidesError | sandwichSheet | catchSheet (Order, A_/B_/L_Order, MobileOrder).\n• CART persists across pages (mockup: localStorage key ihs-order-v4; production: the POS cart/session).\n• PAYMENT: no real payments in the mockup. Checkout has a [POS PAYMENT EMBED] slot. Pickup only; no delivery in the UI.\n\n• launchMode (Nav, Home, Visit): on = top-bar “Opening [OPENING DATE]” + hero chip; off after launch = “Open today [HOURS]” computed from the hours data. Not hard-coded.\n\n• SMS: every phone field used for texts gets the UNTICKED marketing consent checkbox (exact copy in SPEC §5.1). Checkout has a separate, unticked order-update checkbox. Both link to /privacy (Privacy & SMS Terms, also in the footer); needed for SMS registration.\n\n• MOTION: prefers-reduced-motion = no review autoplay, no slide/scale/reveal transitions, Story chapters static. Reviews: visible Pause/Play, pause on hover and focus-within, aria-live=\"polite\" only after manual prev/next/dot. Cooking styles open on click/tap only, inside a fixed-height reveal (no layout jump). Dish accordion: hover switches after 150ms intent; click/tap always works.\n• NAV: links collapse into a Menu button + accessible drawer below 900px.\n\n• JSON-LD (Home + Visit <head>):\n{\"@context\":\"https://schema.org\",\"@type\":\"Restaurant\",\"name\":\"Ibn Hamido Seafood\",\"url\":\"https://ibnhamidochicago.com\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"14035 LaGrange Rd\",\"addressLocality\":\"Orland Park\",\"addressRegion\":\"IL\",\"postalCode\":\"60462\",\"addressCountry\":\"US\"},\"telephone\":\"[PHONE]\",\"openingHours\":\"[HOURS]\",\"servesCuisine\":[\"Egyptian\",\"Seafood\",\"Mediterranean\"],\"hasMenu\":\"https://ibnhamidochicago.com/menu\",\"acceptsReservations\":false}\n\n• PHOTOS: AI concept images are in the mockups until launch (canvas asset store, /_blob/… URLs). Each carries an ‘AI concept’ tag and its own REPLACE BEFORE LAUNCH row in the Content checklist. ST-02…05 and V-01 (family, Astoria, Orland Park storefront) are owner photos only: tagged ‘Stand-in’. Slots keep their size, arch crop and radius; photos use object-fit: cover. MAP stays a Google Maps embed.\n• OG IMAGE: <meta property=\"og:image\" content=\"/_blob/e4c176019269a988c47be4a1688c49ef\"> (OG-01, 1200×630, AI concept, REPLACE BEFORE LAUNCH). Also twitter:image. Not shown on any page.\n• PLACEHOLDERS: anything in [BRACKETS] and every striped box is a CMS field. Shot IDs on every slot map to the Content checklist board.\n• Pages are fluid: 1200px container, 48px gutters desktop / 16px mobile. Mobile checks at 390px are in the bottom row.",
+      "w": 640,
+      "x": 1520,
+      "y": 0
+    },
+    "internal": {
+      "kind": "title1",
+      "maxW": 1440,
+      "text": "Internal",
+      "w": 240,
+      "x": 1200,
+      "y": 14400
+    },
+    "mobile": {
+      "kind": "title1",
+      "maxW": 860,
+      "text": "Mobile checks",
+      "w": 240,
+      "x": 0,
+      "y": 14400
+    },
+    "phase1": {
+      "kind": "title1",
+      "maxW": 1440,
+      "text": "Phase 1 — Coming Soon (ship first)",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "phase2": {
+      "kind": "title1",
+      "maxW": 12080,
+      "text": "Phase 2 — Full site + online pickup ordering",
+      "w": 240,
+      "x": 0,
+      "y": 3020
+    },
+    "fullA": {
+      "kind": "title1",
+      "maxW": 13600,
+      "text": "Full website — A · Corniche (every page)",
+      "w": 240,
+      "x": 13600,
+      "y": -300
+    },
+    "fullB": {
+      "kind": "title1",
+      "maxW": 13600,
+      "text": "Full website — B · Anfushi market (every page)",
+      "w": 240,
+      "x": 13600,
+      "y": 11300
+    },
+    "fullC": {
+      "kind": "title1",
+      "maxW": 15120,
+      "text": "Full website — C · Mix (every page)",
+      "w": 240,
+      "x": 13600,
+      "y": 22900
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "DirectionA.dc.html",
+    "DirectionB.dc.html",
+    "DirectionC.dc.html",
+    "Home.dc.html",
+    "Menu.dc.html",
+    "Story.dc.html",
+    "Visit.dc.html",
+    "Catering.dc.html",
+    "Order.dc.html",
+    "Checkout.dc.html",
+    "Privacy.dc.html",
+    "Nav.dc.html",
+    "Footer.dc.html",
+    "CookingStyles.dc.html",
+    "Accordion.dc.html",
+    "Reviews.dc.html",
+    "MobileHome.dc.html",
+    "MobileOrder.dc.html",
+    "ContentChecklist.dc.html",
+    "A_Soon.dc.html",
+    "A_Home.dc.html",
+    "A_Menu.dc.html",
+    "A_Order.dc.html",
+    "A_Checkout.dc.html",
+    "A_Story.dc.html",
+    "A_Visit.dc.html",
+    "A_Catering.dc.html",
+    "A_Privacy.dc.html",
+    "B_Soon.dc.html",
+    "B_Home.dc.html",
+    "B_Menu.dc.html",
+    "B_Order.dc.html",
+    "B_Checkout.dc.html",
+    "B_Story.dc.html",
+    "B_Visit.dc.html",
+    "B_Catering.dc.html",
+    "B_Privacy.dc.html",
+    "L_Soon.dc.html",
+    "L_Home.dc.html",
+    "L_Menu.dc.html",
+    "L_Order.dc.html",
+    "L_Checkout.dc.html",
+    "L_Story.dc.html",
+    "L_Visit.dc.html",
+    "L_Catering.dc.html",
+    "L_Privacy.dc.html",
+    "LookNav.dc.html",
+    "LookFooter.dc.html"
+  ],
+  "pages": [],
+  "title": "Ibn Hamido Orland Park — Website Mockups"
+}

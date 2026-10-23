@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Checkout | Ibn Hamido Seafood Orland Park</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&amp;family=Inter:wght@400;500;600&amp;family=Rakkas&amp;family=Young+Serif&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.lk{--brand:#2B4AA5;--brand-ink:#213C8C;--deep:#13245A;--on-deep:#DCE3F5;--ink:#13245A;--ink-2:#4B5675;--teal:#127A80;--ice:#E3F3F6;--ice-2:#CBE7EC;--err:#B42318;
+  background:var(--bg);color:var(--ink);font:400 16px/1.55 Inter,system-ui,sans-serif}
+.lk-a{--bg:#F5EEE2;--bg-2:#EADFCB;--paper:#FBF7F0;--line:#DCCFB8;--in-b:#8C7F68;--accent:#F2C14E;--hot:#A4462A;--disp:'Young Serif',Georgia,serif;--ar-disp:'Aref Ruqaa',serif;--ar-w:700;--btn-r:999px;--btn-sh:none;--btn-b:transparent;--ph1:#E6D9C2;--ph2:#EEE4D3;--ph-ink:#5C4A2E;--card-b:1px solid #DCCFB8;--card-sh:none;--chip-r:999px}
+.lk-b{--bg:#FBF8F1;--bg-2:#E3F3F6;--paper:#FFFFFF;--line:#13245A;--in-b:#13245A;--accent:#F6C945;--hot:#C8381F;--disp:Rakkas,'Young Serif',serif;--ar-disp:Rakkas,serif;--ar-w:400;--btn-r:12px;--btn-sh:4px 4px 0 #13245A;--btn-b:#13245A;--ph1:#D3ECF1;--ph2:#E6F5F8;--ph-ink:#2C5560;--card-b:2px solid #13245A;--card-sh:5px 5px 0 #13245A;--chip-r:8px}
+.lk-c{--bg:#F5EEE2;--bg-2:#EADFCB;--paper:#FBF7F0;--line:#DCCFB8;--in-b:#8C7F68;--accent:#F2C14E;--hot:#C8381F;--disp:'Young Serif',Georgia,serif;--ar-disp:'Aref Ruqaa',serif;--ar-w:700;--btn-r:999px;--btn-sh:none;--btn-b:transparent;--ph1:#E6D9C2;--ph2:#EEE4D3;--ph-ink:#5C4A2E;--card-b:2px solid #13245A;--card-sh:6px 6px 0 #2B4AA5;--chip-r:999px}
+.lk *{box-sizing:border-box}
+.lk a{color:var(--brand-ink)}
+.lk a:focus-visible,.lk button:focus-visible,.lk input:focus-visible,.lk select:focus-visible,.lk textarea:focus-visible,.lk [tabindex]:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.lk .deep a:focus-visible,.lk .deep button:focus-visible{outline-color:var(--accent)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px}
+@media (max-width:720px){.wrap{padding:0 16px}}
+.disp{font-family:var(--disp);font-weight:400}
+.rk{font-family:Rakkas,'Young Serif',serif;font-weight:400}
+.ar{font-family:'Aref Ruqaa',serif;direction:rtl}
+.ard{font-family:var(--ar-disp);font-weight:var(--ar-w);direction:rtl;text-align:left;color:var(--brand);margin:0}
+.lk-b .ard.hotar,.lk-c .ard.hotar{color:var(--hot)}
+.eyebrow{margin:0;font:600 12px/16px Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--hot)}
+.h1{margin:0;font-family:var(--disp);font-weight:400;font-size:clamp(40px,5.6vw,72px);line-height:1.04}
+.h2{margin:0;font-family:var(--disp);font-weight:400;font-size:clamp(32px,4vw,50px);line-height:1.08}
+.h3{margin:0;font-family:var(--disp);font-weight:400;font-size:23px;line-height:28px}
+.lk-b .h1{line-height:1}.lk-b .h2{line-height:1.02}
+.lead{margin:0;font-size:18px;line-height:29px;color:var(--ink-2)}
+.muted{color:var(--ink-2)}
+.sec{padding:104px 0}
+@media (max-width:720px){.sec{padding:64px 0}}
+.bg2{background:var(--bg-2)}
+.paper{background:var(--paper)}
+.deep{background:var(--deep);color:#FFFFFF}
+.deep .lead,.deep .muted{color:var(--on-deep)}
+.deep .eyebrow{color:var(--accent)}
+.deep .h1,.deep .h2,.deep .h3{color:#FFFFFF}
+.lk-b .rule-y{border-top:2px solid #13245A;border-bottom:2px solid #13245A}
+.lk-a .rule-y,.lk-c .rule-y{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:var(--btn-r);font:600 15px/1 Inter,sans-serif;text-decoration:none;border:2px solid var(--btn-b);box-shadow:var(--btn-sh);cursor:pointer;white-space:nowrap}
+.btn-pri{background:var(--brand);color:#FFFFFF}.btn-pri:hover{background:var(--brand-ink);color:#FFFFFF}
+.lk-b .btn-pri{background:var(--hot)}.lk-b .btn-pri:hover{background:#A92D17;color:#FFFFFF}
+.btn-sec{background:transparent;border-color:var(--ink);color:var(--ink)}.btn-sec:hover{background:var(--bg-2);color:var(--ink)}
+.lk-b .btn-sec{background:#FFFFFF}
+.btn-light{background:#FFFFFF;color:var(--deep)}.btn-light:hover{background:var(--ice);color:var(--deep)}
+.btn:disabled{background:#E9EEF9;color:#4F5F7E;cursor:not-allowed;box-shadow:none;border-color:transparent}
+.ph{background:repeating-linear-gradient(135deg,var(--ph1) 0 12px,var(--ph2) 12px 24px);color:var(--ph-ink);display:flex;align-items:flex-end;justify-content:flex-start;padding:16px;font:600 11px/1.45 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:16px}
+.ph-deep{background:repeating-linear-gradient(135deg,#2A3B75 0 12px,#24356C 12px 24px);color:var(--on-deep)}
+.lk-b .ph{border:2px solid #13245A}
+.arch{border-radius:50% 50% 14px 14px/220px 220px 14px 14px;overflow:hidden}
+.lk-b .arch{border-radius:22px}
+.card{background:var(--paper);border:var(--card-b);box-shadow:var(--card-sh);border-radius:20px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:var(--chip-r);background:var(--paper);border:1px solid var(--line);color:var(--ink);font:600 13px/1 Inter,sans-serif}
+.lk-b .chip{border-width:2px}
+.chip .dot{width:8px;height:8px;border-radius:999px;background:var(--teal);display:inline-block}
+.awning{height:20px;background:repeating-linear-gradient(90deg,var(--hot) 0 44px,var(--bg) 44px 88px)}
+.sign{background:var(--brand);color:#FFFFFF;border-radius:20px;padding:12px;box-shadow:0 16px 36px rgba(19,36,90,.22)}
+.sign-in{border:2px solid var(--bg);border-radius:10px;padding:clamp(20px,3vw,34px) clamp(18px,3vw,44px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 32px}
+.lk-b .sign-in{flex-direction:column;justify-content:center;text-align:center;border-color:#FFFFFF}
+.sign-ar{margin:0;font-family:Rakkas,serif;font-size:clamp(52px,8vw,112px);line-height:1.05;direction:rtl}
+.sign-en{margin:0;font-family:Rakkas,serif;font-size:clamp(20px,2.6vw,34px);line-height:1.1;color:var(--accent);letter-spacing:.04em}
+.ice{position:relative;background:var(--ice);border-radius:24px;padding:26px;overflow:hidden;border:2px solid var(--ice-2)}
+.lk-c .ice{border-radius:50% 50% 18px 18px/160px 160px 18px 18px;padding-top:72px}
+.ice .ph{background:repeating-linear-gradient(135deg,#D3ECF1 0 12px,#E6F5F8 12px 24px);color:#2C5560;border:2px solid #FFFFFF}
+.ptag{position:absolute;background:var(--accent);color:var(--deep);border-radius:8px;padding:10px 14px 10px 26px;box-shadow:2px 3px 0 rgba(19,36,90,.22);display:flex;flex-direction:column;gap:2px;line-height:1.1}
+.ptag::before{content:"";position:absolute;left:9px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:999px;background:var(--ice)}
+.sticker{position:absolute;width:150px;height:150px;border-radius:999px;background:var(--accent);color:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;transform:rotate(-8deg);box-shadow:0 10px 30px rgba(19,36,90,.18)}
+.board{background:var(--paper);border:2px solid var(--ink);border-radius:20px;padding:12px;box-shadow:8px 8px 0 var(--bg-2)}
+.lk-c .board{box-shadow:8px 8px 0 var(--brand)}
+.lk-b .board{background:var(--deep);color:#FFFFFF;border:6px solid #8A5A2B;box-shadow:none}
+.board-in{border:1px solid var(--line);border-radius:12px;padding:26px 30px}
+.lk-b .board-in{border:2px dashed rgba(255,255,255,.35)}
+.brow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px dashed var(--line)}
+.lk-b .brow{border-bottom:1px solid rgba(255,255,255,.18)}
+.brow:last-of-type{border-bottom:0}
+.dots{display:flex;align-items:baseline;gap:12px;min-width:0}
+.dots .en{font-family:var(--disp);font-size:22px;line-height:28px;white-space:nowrap}
+.dots .ar{font-size:23px;line-height:30px;color:var(--brand);white-space:nowrap}
+.lk-b .dots .ar{color:#9FC6FF;font-family:Rakkas,serif}
+.dots i{flex:1;border-bottom:2px dotted #C9B998;transform:translateY(-6px);min-width:24px}
+.lk-b .dots i{border-color:rgba(255,255,255,.3)}
+.tagp{font:600 13px/1 Inter,sans-serif;padding:6px 10px;border-radius:999px;white-space:nowrap}
+.inc{background:#E3EFE9;color:#0F6E73}
+.ext{background:var(--deep);color:#FFFFFF}
+.lk-b .ext{background:var(--accent);color:var(--deep)}
+.step{display:flex;flex-direction:column;gap:12px;overflow:hidden;border-radius:20px}
+.lk-a .step{background:var(--paper);border:1px solid var(--line);padding:28px}
+.lk-c .step{background:var(--paper);border:2px solid var(--ink);padding:0 0 26px}
+.lk-b .step{border:2px solid #13245A;box-shadow:5px 5px 0 #13245A;padding:28px}
+.step-top{display:flex;align-items:baseline;gap:12px}
+.lk-c .step-top{justify-content:space-between;padding:14px 22px;color:#FFFFFF}
+.lk-c .step h3,.lk-c .step p{padding:0 22px}
+.step-num{font-size:56px;line-height:1}
+.lk-a .step-num{font-family:'Aref Ruqaa',serif;color:var(--brand)}
+.lk-b .step-num,.lk-c .step-num{font-family:Rakkas,serif}
+.step-n2{font:600 13px Inter,sans-serif;letter-spacing:.12em;color:var(--hot)}
+.lk-b .step-n2,.lk-c .step-n2{font:400 22px Rakkas,serif;letter-spacing:0;color:inherit}
+.plate{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:var(--chip-r);background:var(--paper);border:1px solid var(--line);font:500 15px Inter,sans-serif;color:var(--ink)}
+.lk-b .plate{border:2px solid #FFFFFF;background:transparent;color:#FFFFFF}
+.plate .ar{font-size:19px;color:var(--brand)}
+.lk-b .plate .ar{color:var(--accent);font-family:Rakkas,serif}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font:600 14px/20px Inter,sans-serif;color:var(--ink)}
+.field input,.field select,.field textarea{min-height:48px;border:1px solid var(--in-b);border-radius:6px;padding:12px 14px;font:400 16px Inter,sans-serif;color:var(--ink);background:#FFFFFF;width:100%}
+.lk-b .field input,.lk-b .field select,.lk-b .field textarea{border-width:2px}
+.field textarea{min-height:110px;resize:vertical}
+.consent{display:flex;gap:12px;align-items:flex-start;min-height:44px;font:400 13px/19px Inter,sans-serif;color:var(--ink-2);cursor:pointer}
+.consent input{flex:none;width:22px;height:22px;margin:0;accent-color:var(--brand);cursor:pointer}
+.hours-row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.lk-b .hours-row{border-bottom:2px solid #13245A}
+.owner-box{margin:0;padding:24px;border:2px dashed var(--in-b);border-radius:12px;background:var(--paper);color:var(--ink-2);line-height:26px}
+@media (prefers-reduced-motion:reduce){.lk *{transition:none!important;animation:none!important}}
+.board .eyebrow{color:var(--ink)}
+.lk-b .board .eyebrow{color:var(--accent)}
+.lk-b .board .muted{color:var(--on-deep)}
+.rv{margin:0;display:flex;flex-direction:column;gap:16px;padding:24px;border-radius:16px;border:1px solid rgba(255,255,255,.22)}
+.lk-b .rv{border:2px solid #FFFFFF}
+.stat{display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--accent);padding-top:16px}
+.stat b{font-family:var(--disp);font-weight:400;font-size:30px;line-height:1.1;color:#FFFFFF}
+.stat span{font-size:14px;line-height:20px;color:var(--on-deep)}
+
+.co-grid{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.co-main{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.co-aside{flex:1 1 340px;min-width:0;position:sticky;top:24px}
+.co-card{background:var(--paper);border:var(--card-b);box-shadow:var(--card-sh);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.co-h2{margin:0;font:400 24px/30px var(--disp);color:var(--ink)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin:0 0 12px;font:400 24px/30px var(--disp);color:var(--ink)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.opt{display:flex;align-items:flex-start;gap:12px;min-height:56px;padding:14px 16px;border:1px solid var(--in-b);border-radius:12px;font:400 14px/20px Inter,sans-serif;color:var(--ink-2);cursor:pointer;background:#FFFFFF}
+.lk-b .opt{border-width:2px}
+.opt b{font-weight:600;font-size:15px;color:var(--ink)}
+.opt input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--brand);cursor:pointer}
+.opt-on{border-color:var(--brand);background:var(--bg-2)}
+.lk-b .opt-on{border-color:var(--hot)}
+.opt-dis{opacity:.55;cursor:not-allowed}
+.field input,.field select{height:48px;padding:0 14px}
+.field-err input,.field-err select{border:2px solid var(--err)!important}
+.hint{margin:0;font:400 13px/18px Inter,sans-serif;color:var(--ink-2)}
+.err{display:flex;gap:6px;align-items:flex-start;margin:0;font:600 14px/20px Inter,sans-serif;color:var(--err)}
+.errsum{padding:20px 24px;border-radius:16px;border:2px solid var(--err);background:#FDF0EE;display:flex;flex-direction:column;gap:8px}
+.errsum h2{margin:0;font:600 17px/24px Inter,sans-serif;color:var(--err)}
+.errsum ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.errsum a{color:var(--err);font:600 15px/22px Inter,sans-serif}
+.consent{font-size:14px;line-height:20px}
+.consent b{color:var(--ink);font-weight:600}
+.ph{min-height:200px;align-items:center;justify-content:center;text-align:center}
+.note-box{margin:0;padding:12px 16px;border-radius:12px;background:var(--bg-2);font:400 14px/20px Inter,sans-serif;color:var(--ink)}
+.ln{list-style:none;padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.ln-name{margin:0;font:600 15px/21px Inter,sans-serif;color:var(--ink)}
+.ln-opt{margin:2px 0 0;font:400 13px/18px Inter,sans-serif;color:var(--ink-2)}
+.totals{margin:0;display:flex;flex-direction:column;gap:8px}
+.totals div{display:flex;justify-content:space-between;gap:16px;font:400 15px/22px Inter,sans-serif}
+.totals dt{color:var(--ink-2)}.totals dd{margin:0;font-weight:600;color:var(--ink)}
+.totals .tot{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.totals .tot dt,.totals .tot dd{font:600 17px/24px Inter,sans-serif;color:var(--ink)}
+.sum-toggle{display:none;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:0 4px;border:0;background:transparent;font:600 15px Inter,sans-serif;color:var(--brand-ink);cursor:pointer;text-align:left}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font:500 14px/20px Inter,sans-serif;color:var(--ink-2)}
+.steps li{display:flex;align-items:center;gap:8px}
+.steps .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;border:1px solid var(--in-b);font-weight:600;font-size:13px}
+.steps .on{color:var(--ink);font-weight:600}.steps .on .n{background:var(--brand);border-color:var(--brand);color:#FFFFFF}
+.lk-b .steps .on .n{background:var(--hot);border-color:var(--hot)}
+.steps .done .n{background:var(--bg-2);border-color:var(--bg-2);color:var(--brand-ink)}
+.conf-dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px}
+.conf-dl dt{font:600 12px/16px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--hot);margin-bottom:6px}
+.conf-dl dd{margin:0;font:400 20px/28px var(--disp);color:var(--ink)}
+@media (max-width:899px){.co-aside{order:-1;position:static}.sum-toggle{display:flex}.sum-closed{display:none}}
+@media (max-width:720px){.co-card{padding:20px}}
+
+</style>
+</helmet>
+<div class="{{rootCls}} co" style="background: var(--bg-2);">
+
+  <dc-import name="LookNav" look="{{look}}" current="order" hint-size="100%,172px"></dc-import>
+
+  <sc-if value="{{isCheckout}}" hint-placeholder-val="{{true}}">
+    <section style="padding: 48px 0 112px;">
+      <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <ol class="steps" aria-label="Order progress">
+            <li class="done"><span class="n" aria-hidden="true">✓</span><a href="{{L.order}}">Order</a></li>
+            <li class="on" aria-current="step"><span class="n" aria-hidden="true">2</span>Checkout</li>
+            <li><span class="n" aria-hidden="true">3</span>Confirmed</li>
+          </ol>
+          <h1 style="margin: 0; font-family: var(--disp); font-size: clamp(40px, 5vw, 64px); line-height: 1.04;">Checkout</h1>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-2);">Pickup only at 14035 LaGrange Rd, Orland Park.</p>
+        </div>
+
+        <div class="co-grid">
+          <form class="co-main" novalidate="true" aria-label="Checkout">
+            <sc-if value="{{showSummary}}" hint-placeholder-val="{{false}}">
+              <div class="errsum" role="alert" tabindex="-1" data-err-summary="true">
+                <h2>{{errHeading}}</h2>
+                <ul>
+                  <sc-for list="{{errList}}" as="er" hint-placeholder-count="3">
+                    <li><a href="{{er.href}}">{{er.msg}}</a></li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+
+            <div class="co-card">
+              <fieldset aria-describedby="co-when-hint">
+                <legend>Pickup time</legend>
+                <sc-if value="{{closed}}" hint-placeholder-val="{{false}}">
+                  <p class="note-box" style="margin-bottom: 12px; background: #13245A; color: #FFFFFF;">Online ordering has closed for today (last orders [LAST ORDER TIME]). Please check back during opening hours.</p>
+                </sc-if>
+                <div class="opts">
+                  <label class="{{asapCls}}"><input type="radio" name="co-when" checked="{{isAsap}}" disabled="{{closed}}" onChange="{{pickAsap}}"><span><b>ASAP</b><br>Ready in about [PREP TIME]</span></label>
+                  <label class="{{schedCls}}"><input type="radio" name="co-when" checked="{{isSched}}" disabled="{{closed}}" onChange="{{pickSched}}"><span><b>Schedule for later today</b><br>15-minute slots within today’s [HOURS]</span></label>
+                </div>
+                <p id="co-when-hint" class="hint" style="margin-top: 10px;">We’ll have it bagged and ready at the counter.</p>
+                <sc-if value="{{isSched}}" hint-placeholder-val="{{false}}">
+                  <div class="{{slotFieldCls}}" style="margin-top: 16px; max-width: 360px;">
+                    <label for="co-slot">Pickup time today</label>
+                    <select id="co-slot" value="{{slot}}" aria-invalid="{{slotInvalid}}" aria-describedby="co-slot-err" onChange="{{onSlot}}" onBlur="{{touchSlot}}">
+                      <option value="">Choose a time</option>
+                      <sc-for list="{{slots}}" as="o" hint-placeholder-count="5">
+                        <option value="{{o.v}}">{{o.label}}</option>
+                      </sc-for>
+                    </select>
+                    <sc-if value="{{showSlotErr}}" hint-placeholder-val="{{false}}"><p id="co-slot-err" class="err">{{errSlot}}</p></sc-if>
+                  </div>
+                </sc-if>
+              </fieldset>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Your details</h2>
+              <div class="{{nameFieldCls}}">
+                <label for="co-name">Full name</label>
+                <input id="co-name" type="text" autocomplete="name" value="{{name}}" aria-invalid="{{nameInvalid}}" aria-describedby="co-name-err" onChange="{{onName}}" onBlur="{{touchName}}">
+                <sc-if value="{{showNameErr}}" hint-placeholder-val="{{false}}"><p id="co-name-err" class="err">{{errName}}</p></sc-if>
+              </div>
+              <div class="{{phoneFieldCls}}">
+                <label for="co-phone">Mobile number</label>
+                <input id="co-phone" type="tel" autocomplete="tel" inputmode="tel" value="{{phone}}" aria-invalid="{{phoneInvalid}}" aria-describedby="co-phone-hint co-phone-err" onChange="{{onPhone}}" onBlur="{{touchPhone}}">
+                <p id="co-phone-hint" class="hint">So the counter can reach you about your order.</p>
+                <sc-if value="{{showPhoneErr}}" hint-placeholder-val="{{false}}"><p id="co-phone-err" class="err">{{errPhone}}</p></sc-if>
+              </div>
+              <div class="{{emailFieldCls}}">
+                <label for="co-email">Email</label>
+                <input id="co-email" type="email" autocomplete="email" value="{{email}}" aria-invalid="{{emailInvalid}}" aria-describedby="co-email-hint co-email-err" onChange="{{onEmail}}" onBlur="{{touchEmail}}">
+                <p id="co-email-hint" class="hint">We’ll email your receipt.</p>
+                <sc-if value="{{showEmailErr}}" hint-placeholder-val="{{false}}"><p id="co-email-err" class="err">{{errEmail}}</p></sc-if>
+              </div>
+              <label class="consent"><input type="checkbox" checked="{{smsOrder}}" onChange="{{toggleSmsOrder}}"><span><b>Text me updates about this order</b> (received, ready for pickup). Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="{{L.privacy}}">Privacy &amp; SMS Terms</a>.</span></label>
+              <label class="consent"><input type="checkbox" checked="{{smsMkt}}" onChange="{{toggleSmsMkt}}"><span>Text me opening news and offers from Ibn Hamido. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. See <a href="{{L.privacy}}">Privacy &amp; SMS Terms</a>.</span></label>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Payment</h2>
+              <div class="ph" style="min-height: 200px;">[POS PAYMENT EMBED] · Pay online now, pick up when ready</div>
+              <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+                <p class="note-box">Your card is authorised for the estimated total plus up to [AUTH BUFFER %]. We charge the final amount after weighing, and you’ll get a receipt with the actual weight.</p>
+              </sc-if>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+              <button type="button" class="btn btn-pri" style="min-height: 56px; padding: 0 32px; font-size: 16px;" disabled="{{closed}}" onClick="{{place}}">Place order · {{totalLabel}} [TOTAL]</button>
+              <a href="{{L.order}}" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Back to the menu</a>
+            </div>
+          </form>
+
+          <aside class="co-aside" aria-labelledby="sum-title">
+            <div class="co-card" style="gap: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <h2 id="sum-title" class="co-h2">Order summary</h2>
+                <a href="{{L.order}}" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Edit order</a>
+              </div>
+              <button type="button" class="sum-toggle" aria-expanded="{{sumExpanded}}" aria-controls="sum-body" onClick="{{toggleSum}}">
+                <span>{{sumToggleText}}</span>
+                <span aria-hidden="true">{{sumIcon}}</span>
+              </button>
+              <div id="sum-body" class="{{sumCls}}">
+                <sc-if value="{{isEmpty}}" hint-placeholder-val="{{false}}">
+                  <p class="hint" style="padding: 12px 0;">Your order is empty. <a href="{{L.order}}">Browse the menu</a></p>
+                </sc-if>
+                <ul style="margin: 0; padding: 0;">
+                  <sc-for list="{{lines}}" as="ln" hint-placeholder-count="3">
+                    <li class="ln">
+                      <span style="font: 600 14px/21px Inter, sans-serif; color: var(--ink-2); min-width: 28px;">{{ln.qtyText}}</span>
+                      <div style="flex: 1; min-width: 0;">
+                        <p class="ln-name">{{ln.name}}</p>
+                        <sc-for list="{{ln.optList}}" as="o" hint-placeholder-count="1"><p class="ln-opt">{{o.t}}</p></sc-for>
+                      </div>
+                      <span style="font: 600 14px/21px Inter, sans-serif; white-space: nowrap;">{{ln.price}}</span>
+                    </li>
+                  </sc-for>
+                </ul>
+                <dl class="totals" style="margin-top: 16px;">
+                  <div><dt>Subtotal</dt><dd>[SUBTOTAL]</dd></div>
+                  <div><dt>Tax ([TAX RATE])</dt><dd>[TAX]</dd></div>
+                  <div><dt>Tip</dt><dd>[TIP]</dd></div>
+                  <div class="tot"><dt>{{totalLabel}}</dt><dd>[TOTAL]</dd></div>
+                </dl>
+                <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+                  <p class="hint" style="margin-top: 12px;">Includes fish sold by the pound. The final price is set by actual weight at the counter.</p>
+                </sc-if>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{isConfirmed}}" hint-placeholder-val="{{false}}">
+    <section style="padding: 56px 0 112px;">
+      <div class="wrap" style="display: flex; flex-direction: column; gap: 28px; max-width: 960px;">
+        <ol class="steps" aria-label="Order progress">
+          <li class="done"><span class="n" aria-hidden="true">✓</span>Order</li>
+          <li class="done"><span class="n" aria-hidden="true">✓</span>Checkout</li>
+          <li class="on" aria-current="step"><span class="n" aria-hidden="true">3</span>Confirmed</li>
+        </ol>
+        <div class="co-card" style="padding: clamp(24px, 5vw, 48px); gap: 24px;">
+          <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 999px; background: #E9EEF9; color: #1F9AA0;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+          </span>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <p class="eyebrow">Order confirmed</p>
+            <h1 tabindex="-1" data-conf-title="true" style="margin: 0; font-family: var(--disp); font-size: clamp(36px, 5vw, 60px); line-height: 1.05;">Order #[ORDER NUMBER] is in.</h1>
+            <p lang="ar" dir="rtl" style="margin: 0; font-family: 'Aref Ruqaa', serif; font-size: 28px; line-height: 40px; color: var(--brand); text-align: left;">شكراً</p>
+            <p style="margin: 0; font-size: 17px; line-height: 26px; color: var(--ink-2);">Thank you. We’ve started on your order.</p>
+          </div>
+          <dl class="conf-dl">
+            <div><dt>Pickup time</dt><dd>{{pickupText}}</dd></div>
+            <div><dt>Pick up at</dt><dd>14035 LaGrange Rd<br>Orland Park, IL 60462</dd></div>
+          </dl>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a class="btn btn-pri" href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462">Get directions</a>
+            <a class="btn btn-sec" href="tel:">Call [PHONE NUMBER]</a>
+          </div>
+          <sc-if value="{{smsOrder}}" hint-placeholder-val="{{false}}">
+            <p class="note-box">We’ll text order updates to your mobile number.</p>
+          </sc-if>
+          <div style="border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <h2 class="co-h2">Your items</h2>
+            <ul style="margin: 0; padding: 0;">
+              <sc-for list="{{lines}}" as="ln" hint-placeholder-count="3">
+                <li class="ln">
+                  <span style="font: 600 14px/21px Inter, sans-serif; color: var(--ink-2); min-width: 28px;">{{ln.qtyText}}</span>
+                  <div style="flex: 1; min-width: 0;">
+                    <p class="ln-name">{{ln.name}}</p>
+                    <sc-for list="{{ln.optList}}" as="o" hint-placeholder-count="1"><p class="ln-opt">{{o.t}}</p></sc-for>
+                    <sc-if value="{{ln.lb}}" hint-placeholder-val="{{false}}"><p class="ln-opt" style="font-weight: 600; color: var(--turquoise-ink);">Est., final after weighing</p></sc-if>
+                  </div>
+                  <span style="font: 600 14px/21px Inter, sans-serif; white-space: nowrap;">{{ln.price}}</span>
+                </li>
+              </sc-for>
+            </ul>
+            <dl class="totals" style="margin-top: 12px;">
+              <div class="tot" style="border-top: 0; padding-top: 0;"><dt>{{totalLabel}}</dt><dd>[TOTAL]</dd></div>
+            </dl>
+            <sc-if value="{{hasLb}}" hint-placeholder-val="{{true}}">
+              <p class="hint">Your card was authorised for the estimated total plus up to [AUTH BUFFER %]. We charge the final amount after weighing and send a receipt with the actual weight.</p>
+            </sc-if>
+          </div>
+          <p class="note-box">Dining in? We’re walk-in only. Come pick your fish at the counter.</p>
+          <a href="{{L.order}}" style="font-weight: 600; align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center;">Back to the menu</a>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <dc-import name="LookFooter" look="{{look}}" hint-size="100%,640px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"look":{"editor":"enum","options":["a","b","c"],"default":"c"},"step":{"editor":"enum","options":["checkout","confirmed"],"default":"checkout"},"showErrors":{"editor":"boolean","default":false},"status":{"editor":"enum","options":["open","closed"],"default":"open"},"demoCart":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":2800}}'>
+class Component extends DCLogic {
+  lookVals(look) {
+    const lk = (look === 'a' || look === 'b' || look === 'c') ? look : 'c';
+    const p = lk === 'a' ? 'A_' : (lk === 'b' ? 'B_' : 'L_');
+    const L = {};
+    ['Soon', 'Home', 'Menu', 'Order', 'Checkout', 'Story', 'Visit', 'Catering', 'Privacy'].forEach((n) => { L[n.toLowerCase()] = p + n + '.dc.html'; });
+    const sc = [['#2B4AA5', '#FFFFFF', '#F2C14E'], ['#C8381F', '#FFFFFF', '#F2C14E'], ['#127A80', '#FFFFFF', '#F2C14E'], [lk === 'b' ? '#F6C945' : '#F2C14E', '#13245A', '#C8381F']];
+    const sd = [['١', '01', 'Pick your fish', 'Choose from the day’s catch at the counter. It’s weighed by the pound.'], ['٢', '02', 'Tell the chef how', 'Grilled, fried, baked, singari, rada, butterflied or deboned.'], ['٣', '03', 'Take a seat', 'We seat you while your fish hits the fire.'], ['٤', '04', 'Add your sides', 'Golden rice, tahini, babaghanoush, the Hamido salad and more.']];
+    const steps = sd.map((d, i) => {
+      const c = sc[i];
+      return { ar: d[0], n: d[1], title: d[2], body: d[3],
+        liStyle: lk === 'b' ? 'background: ' + c[0] + '; color: ' + c[1] + ';' : '',
+        topStyle: lk === 'c' ? 'background: ' + c[0] + '; color: ' + c[1] + ';' : '',
+        numStyle: lk === 'a' ? '' : 'color: ' + c[2] + ';',
+        pStyle: lk === 'b' ? 'color: ' + c[1] + ';' : 'color: #4B5675;' };
+    });
+    return { steps, iceTagTop: lk === 'c' ? '104px' : '44px', look: lk, rootCls: 'lk lk-' + lk, isA: lk === 'a', isB: lk === 'b', isC: lk === 'c', notA: lk !== 'a', notB: lk !== 'b', hasSign: lk !== 'a', hasTile: lk !== 'b', hasIce: lk !== 'a', L };
+  }
+  constructor(props) {
+    super(props);
+    this.KEY = 'ihs-order-v4';
+    this.state = {
+      step: props.step ?? 'checkout', when: 'asap', slot: '', name: '', phone: '', email: '',
+      smsOrder: false, smsMkt: false, touched: {}, submitted: !!props.showErrors, sumOpen: false, lines: []
+    };
+  }
+  demoLines() {
+    return [
+      { name: 'Branzino · by the lb', opts: ['Est. weight: 1.5 lb', 'Cooking: Singari (+[PRICE])', 'Add sides: Tahini'], qty: 1, price: 'Est. [PRICE]', lb: true },
+      { name: 'Tiger Shrimp, Grilled or Fried · Hamido Combo', opts: ['Preparation: Grilled', 'Combo sides: Rice, Hamido (House) Salad'], qty: 1, price: '[PRICE]', lb: false },
+      { name: 'Rice (Medium)', opts: [], qty: 1, price: '[PRICE]', lb: false }
+    ];
+  }
+  componentDidMount() {
+    let lines = [];
+    try {
+      const raw = window.localStorage.getItem(this.KEY);
+      if (raw) { const p = JSON.parse(raw); if (p && Array.isArray(p.lines)) lines = p.lines; }
+    } catch (e) {}
+    if (!lines.length && (this.props.demoCart ?? true)) lines = this.demoLines();
+    this.setState({ lines });
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.step !== this.props.step) this.setState({ step: this.props.step ?? 'checkout' });
+    if (prevProps.showErrors !== this.props.showErrors) this.setState({ submitted: !!this.props.showErrors });
+    if (prevProps.demoCart !== this.props.demoCart) this.componentDidMount();
+  }
+  focusSel(sel) { setTimeout(() => { try { const el = document.querySelector(sel); if (el) el.focus(); } catch (e) {} }, 0); }
+  errors() {
+    const s = this.state;
+    const out = {};
+    if (!s.name.trim()) out.name = 'Enter your full name.';
+    if (String(s.phone).replace(/\D/g, '').length < 10) out.phone = 'Enter a mobile number with at least 10 digits, like (708) 555-0123.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email.trim())) out.email = 'Enter an email address, like name@example.com.';
+    if (s.when === 'sched' && !s.slot) out.slot = 'Choose a pickup time.';
+    return out;
+  }
+  renderVals() {
+    const s = this.state;
+    const closed = (this.props.status ?? 'open') === 'closed';
+    const errs = this.errors();
+    const show = (f) => !!errs[f] && (s.submitted || !!s.touched[f]);
+    const touch = (f) => () => this.setState({ touched: { ...this.state.touched, [f]: true } });
+    const order = [['slot', '#co-slot'], ['name', '#co-name'], ['phone', '#co-phone'], ['email', '#co-email']];
+    const errList = s.submitted ? order.filter(([f]) => errs[f]).map(([f, href]) => ({ href, msg: errs[f] })) : [];
+    const lines = s.lines.map((l) => ({ ...l, lb: !!l.lb, qtyText: (l.qty || 1) + '×', optList: (l.opts || []).map((t) => ({ t })) }));
+    const hasLb = s.lines.some((l) => l.lb);
+    const slots = [
+      { v: 's1', label: '[FIRST SLOT]' },
+      { v: 's2', label: '[FIRST SLOT + 15 min]' },
+      { v: 's3', label: '[FIRST SLOT + 30 min]' },
+      { v: 's4', label: '[FIRST SLOT + 45 min]' },
+      { v: 's5', label: '[LAST SLOT] · last orders [LAST ORDER TIME]' }
+    ];
+    const slotObj = slots.find((o) => o.v === s.slot);
+    const fieldCls = (f) => 'field' + (show(f) ? ' field-err' : '');
+    return {
+      ...this.lookVals(this.props.look),
+      isCheckout: s.step !== 'confirmed',
+      isConfirmed: s.step === 'confirmed',
+      closed,
+      showSummary: errList.length > 0,
+      errList,
+      errHeading: 'There ' + (errList.length === 1 ? 'is 1 problem' : 'are ' + errList.length + ' problems') + ' with your order',
+      isAsap: s.when === 'asap', isSched: s.when === 'sched',
+      asapCls: 'opt' + (s.when === 'asap' ? ' opt-on' : '') + (closed ? ' opt-dis' : ''),
+      schedCls: 'opt' + (s.when === 'sched' ? ' opt-on' : '') + (closed ? ' opt-dis' : ''),
+      pickAsap: () => this.setState({ when: 'asap' }),
+      pickSched: () => this.setState({ when: 'sched' }),
+      slots, slot: s.slot,
+      onSlot: (e) => this.setState({ slot: e.target.value }),
+      touchSlot: touch('slot'),
+      slotFieldCls: fieldCls('slot'), slotInvalid: show('slot') ? 'true' : 'false', showSlotErr: show('slot'), errSlot: errs.slot || '',
+      name: s.name, phone: s.phone, email: s.email,
+      onName: (e) => this.setState({ name: e.target.value }),
+      onPhone: (e) => this.setState({ phone: e.target.value }),
+      onEmail: (e) => this.setState({ email: e.target.value }),
+      touchName: touch('name'), touchPhone: touch('phone'), touchEmail: touch('email'),
+      nameFieldCls: fieldCls('name'), phoneFieldCls: fieldCls('phone'), emailFieldCls: fieldCls('email'),
+      nameInvalid: show('name') ? 'true' : 'false', phoneInvalid: show('phone') ? 'true' : 'false', emailInvalid: show('email') ? 'true' : 'false',
+      showNameErr: show('name'), showPhoneErr: show('phone'), showEmailErr: show('email'),
+      errName: errs.name || '', errPhone: errs.phone || '', errEmail: errs.email || '',
+      smsOrder: s.smsOrder, smsMkt: s.smsMkt,
+      toggleSmsOrder: () => this.setState({ smsOrder: !this.state.smsOrder }),
+      toggleSmsMkt: () => this.setState({ smsMkt: !this.state.smsMkt }),
+      hasLb, lines, isEmpty: lines.length === 0,
+      totalLabel: hasLb ? 'Estimated total' : 'Total',
+      sumCls: s.sumOpen ? 'sum-open' : 'sum-closed',
+      sumExpanded: s.sumOpen ? 'true' : 'false',
+      sumToggleText: (s.sumOpen ? 'Hide' : 'Show') + ' items (' + lines.reduce((a, l) => a + (l.qty || 1), 0) + ') · ' + (hasLb ? 'Est. ' : '') + '[TOTAL]',
+      sumIcon: s.sumOpen ? '–' : '+',
+      toggleSum: () => this.setState({ sumOpen: !this.state.sumOpen }),
+      pickupText: s.when === 'sched' && slotObj ? 'Today, ' + slotObj.label : 'ASAP · ready in about [PREP TIME]',
+      place: () => {
+        if (Object.keys(this.errors()).length) { this.setState({ submitted: true }); this.focusSel('[data-err-summary]'); return; }
+        try { window.localStorage.removeItem(this.KEY); } catch (e) {}
+        this.setState({ step: 'confirmed' });
+        try { window.scrollTo(0, 0); } catch (e) {}
+        this.focusSel('[data-conf-title]');
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
