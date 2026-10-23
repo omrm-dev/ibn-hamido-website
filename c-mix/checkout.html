@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Checkout · Ibn Hamido Seafood · C · Mix (mockup)</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../shared/fonts.css">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+/* Page rules. They come before look.css on purpose: on the canvas the shared look and the
+   nav/footer styles are applied after each page's own rules. */
+.co-grid{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.co-main{flex:999 1 560px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.co-aside{flex:1 1 340px;min-width:0;position:sticky;top:24px}
+.co-card{background:var(--paper);border:var(--card-b);box-shadow:var(--card-sh);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.co-h2{margin:0;font:400 24px/30px var(--disp);color:var(--ink)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin:0 0 12px;font:400 24px/30px var(--disp);color:var(--ink)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px}
+.opt{display:flex;align-items:flex-start;gap:12px;min-height:56px;padding:14px 16px;border:1px solid var(--in-b);border-radius:12px;font:400 14px/20px Inter,sans-serif;color:var(--ink-2);cursor:pointer;background:#FFFFFF}
+.lk-b .opt{border-width:2px}
+.opt b{font-weight:600;font-size:15px;color:var(--ink)}
+.opt input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--brand);cursor:pointer}
+.opt-on{border-color:var(--brand);background:var(--bg-2)}
+.lk-b .opt-on{border-color:var(--hot)}
+.opt-dis{opacity:.55;cursor:not-allowed}
+.field input,.field select{height:48px;padding:0 14px}
+.field-err input,.field-err select{border:2px solid var(--err)!important}
+.hint{margin:0;font:400 13px/18px Inter,sans-serif;color:var(--ink-2)}
+.err{display:flex;gap:6px;align-items:flex-start;margin:0;font:600 14px/20px Inter,sans-serif;color:var(--err)}
+.errsum{padding:20px 24px;border-radius:16px;border:2px solid var(--err);background:#FDF0EE;display:flex;flex-direction:column;gap:8px}
+.errsum h2{margin:0;font:600 17px/24px Inter,sans-serif;color:var(--err)}
+.errsum ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.errsum a{color:var(--err);font:600 15px/22px Inter,sans-serif}
+.consent{font-size:14px;line-height:20px}
+.consent b{color:var(--ink);font-weight:600}
+.ph{min-height:200px;align-items:center;justify-content:center;text-align:center}
+.note-box{margin:0;padding:12px 16px;border-radius:12px;background:var(--bg-2);font:400 14px/20px Inter,sans-serif;color:var(--ink)}
+.ln{list-style:none;padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.ln-name{margin:0;font:600 15px/21px Inter,sans-serif;color:var(--ink)}
+.ln-opt{margin:2px 0 0;font:400 13px/18px Inter,sans-serif;color:var(--ink-2)}
+.totals{margin:0;display:flex;flex-direction:column;gap:8px}
+.totals div{display:flex;justify-content:space-between;gap:16px;font:400 15px/22px Inter,sans-serif}
+.totals dt{color:var(--ink-2)}
+.totals dd{margin:0;font-weight:600;color:var(--ink)}
+.totals .tot{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.totals .tot dt,.totals .tot dd{font:600 17px/24px Inter,sans-serif;color:var(--ink)}
+.sum-toggle{display:none;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:0 4px;border:0;background:transparent;font:600 15px Inter,sans-serif;color:var(--brand-ink);cursor:pointer;text-align:left}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font:500 14px/20px Inter,sans-serif;color:var(--ink-2)}
+.steps li{display:flex;align-items:center;gap:8px}
+.steps .n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;border:1px solid var(--in-b);font-weight:600;font-size:13px}
+.steps .on{color:var(--ink);font-weight:600}
+.steps .on .n{background:var(--brand);border-color:var(--brand);color:#FFFFFF}
+.lk-b .steps .on .n{background:var(--hot);border-color:var(--hot)}
+.steps .done .n{background:var(--bg-2);border-color:var(--bg-2);color:var(--brand-ink)}
+.conf-dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px}
+.conf-dl dt{font:600 12px/16px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--hot);margin-bottom:6px}
+.conf-dl dd{margin:0;font:400 20px/28px var(--disp);color:var(--ink)}
+@media (max-width:899px){.co-aside{order:-1;position:static}.sum-toggle{display:flex}.sum-closed{display:none}}
+@media (max-width:720px){.co-card{padding:20px}}
+</style>
+<link rel="stylesheet" href="css/look.css">
+</head>
+<body class="mockup" data-design="c-mix" data-page="checkout" data-look="c">
+<div class="lk lk-c co" style="background: var(--bg-2);">
+
+  
+<div class="lk lk-c" style="background: var(--bg);">
+  <div class="topbar">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 10px; padding-bottom: 10px;">
+      <span><b>Walk-in only</b> · 14035 LaGrange Rd, Orland Park</span>
+      <span>Opening [OPENING DATE]</span>
+    </div>
+  </div>
+  <nav aria-label="Main" class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 18px; padding-bottom: 18px;">
+    <a href="index.html" aria-label="Ibn Hamido Seafood home" style="line-height: 0;"><img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 40px; width: auto;"></a>
+    <div class="nv-links">
+      
+        <a class="nl" href="menu.html" aria-current="false">Menu</a>
+      
+        <a class="nl" href="order.html" aria-current="page">Order</a>
+      
+        <a class="nl" href="story.html" aria-current="false">Our Story</a>
+      
+        <a class="nl" href="visit.html" aria-current="false">Visit</a>
+      
+        <a class="nl" href="catering.html" aria-current="false">Parties &amp; Catering</a>
+      
+      <a class="btn btn-pri" href="order.html" style="min-height: 44px;">Order pickup</a>
+    </div>
+    <button type="button" class="nv-menu" aria-expanded="false" aria-controls="lk-drawer" data-on-click="openDrawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      Menu
+    </button>
+  </nav>
+  
+  <svg aria-hidden="true" width="100%" height="34" style="display: block;">
+    <defs>
+      <pattern id="tl-nav" width="34" height="34" patternUnits="userSpaceOnUse">
+        <rect width="34" height="34" fill="#2B4AA5"></rect>
+        <polygon points="17,4 21,13 30,17 21,21 17,30 13,21 4,17 13,13" fill="#F5EEE2"></polygon>
+        <rect x="11" y="11" width="12" height="12" fill="#2B4AA5" transform="rotate(45 17 17)"></rect>
+        <circle cx="17" cy="17" r="3" fill="#F2C14E"></circle>
+        <circle cx="0" cy="0" r="3" fill="#F2C14E"></circle><circle cx="34" cy="0" r="3" fill="#F2C14E"></circle><circle cx="0" cy="34" r="3" fill="#F2C14E"></circle><circle cx="34" cy="34" r="3" fill="#F2C14E"></circle>
+      </pattern>
+    </defs>
+    <rect width="100%" height="34" fill="url(#tl-nav)"></rect>
+  </svg>
+  
+  
+  <div class="nv-ov" data-if="drawerOpen" hidden>
+      <button type="button" class="nv-scrim" tabindex="-1" aria-hidden="true" data-on-click="closeDrawer"></button>
+      <div id="lk-drawer" class="nv-drawer" role="dialog" aria-modal="true" aria-label="Site menu" data-on-keydown="drawerKey">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+          <img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 30px; width: auto;">
+          <button type="button" class="nv-close" data-lknv-close="true" aria-label="Close menu" data-on-click="closeDrawer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+        </div>
+        <a class="nv-dl" href="index.html">Home</a>
+        
+          <a class="nv-dl" href="menu.html" aria-current="false">Menu</a>
+        
+          <a class="nv-dl" href="order.html" aria-current="page">Order</a>
+        
+          <a class="nv-dl" href="story.html" aria-current="false">Our Story</a>
+        
+          <a class="nv-dl" href="visit.html" aria-current="false">Visit</a>
+        
+          <a class="nv-dl" href="catering.html" aria-current="false">Parties &amp; Catering</a>
+        
+        <a class="btn btn-pri" href="order.html" style="margin-top: 16px;">Order pickup</a>
+        <p style="margin: 12px 0 0; font-size: 14px; line-height: 20px; color: var(--ink-2);">Walk-in only · 14035 LaGrange Rd, Orland Park, IL</p>
+      </div>
+    </div>
+</div>
+
+
+  
+    <section style="padding: 48px 0 112px;">
+      <div class="wrap" style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <ol class="steps" aria-label="Order progress">
+            <li class="done"><span class="n" aria-hidden="true">✓</span><a href="order.html">Order</a></li>
+            <li class="on" aria-current="step"><span class="n" aria-hidden="true">2</span>Checkout</li>
+            <li><span class="n" aria-hidden="true">3</span>Confirmed</li>
+          </ol>
+          <h1 style="margin: 0; font-family: var(--disp); font-size: clamp(40px, 5vw, 64px); line-height: 1.04;">Checkout</h1>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-2);">Pickup only at 14035 LaGrange Rd, Orland Park.</p>
+        </div>
+
+        <div class="co-grid">
+          <form class="co-main" novalidate aria-label="Checkout">
+            <div class="errsum" role="alert" tabindex="-1" data-err-summary="true" data-if="showSummary" hidden>
+                <h2>There are 0 problems with your order</h2>
+                <ul>
+                  
+                </ul>
+              </div>
+
+            <div class="co-card">
+              <fieldset aria-describedby="co-when-hint">
+                <legend>Pickup time</legend>
+                <p class="note-box" style="margin-bottom: 12px; background: #13245A; color: #FFFFFF;" data-if="closed" hidden>Online ordering has closed for today (last orders [LAST ORDER TIME]). Please check back during opening hours.</p>
+                <div class="opts">
+                  <label class="opt opt-on"><input type="radio" name="co-when" checked><span><b>ASAP</b><br>Ready in about [PREP TIME]</span></label>
+                  <label class="opt"><input type="radio" name="co-when"><span><b>Schedule for later today</b><br>15-minute slots within today’s [HOURS]</span></label>
+                </div>
+                <p id="co-when-hint" class="hint" style="margin-top: 10px;">We’ll have it bagged and ready at the counter.</p>
+                <div class="field" style="margin-top: 16px; max-width: 360px;" data-if="isSched" hidden>
+                    <label for="co-slot">Pickup time today</label>
+                    <select id="co-slot" aria-invalid="false" aria-describedby="co-slot-err">
+                      <option value="">Choose a time</option>
+                      
+                        <option value="s1">[FIRST SLOT]</option>
+                      
+                        <option value="s2">[FIRST SLOT + 15 min]</option>
+                      
+                        <option value="s3">[FIRST SLOT + 30 min]</option>
+                      
+                        <option value="s4">[FIRST SLOT + 45 min]</option>
+                      
+                        <option value="s5">[LAST SLOT] · last orders [LAST ORDER TIME]</option>
+                      
+                    </select>
+                    <p id="co-slot-err" class="err" data-if="showSlotErr" hidden></p>
+                  </div>
+              </fieldset>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Your details</h2>
+              <div class="field">
+                <label for="co-name">Full name</label>
+                <input id="co-name" type="text" autocomplete="name" value="" aria-invalid="false" aria-describedby="co-name-err">
+                <p id="co-name-err" class="err" data-if="showNameErr" hidden>Enter your full name.</p>
+              </div>
+              <div class="field">
+                <label for="co-phone">Mobile number</label>
+                <input id="co-phone" type="tel" autocomplete="tel" inputmode="tel" value="" aria-invalid="false" aria-describedby="co-phone-hint co-phone-err">
+                <p id="co-phone-hint" class="hint">So the counter can reach you about your order.</p>
+                <p id="co-phone-err" class="err" data-if="showPhoneErr" hidden>Enter a mobile number with at least 10 digits, like (708) 555-0123.</p>
+              </div>
+              <div class="field">
+                <label for="co-email">Email</label>
+                <input id="co-email" type="email" autocomplete="email" value="" aria-invalid="false" aria-describedby="co-email-hint co-email-err">
+                <p id="co-email-hint" class="hint">We’ll email your receipt.</p>
+                <p id="co-email-err" class="err" data-if="showEmailErr" hidden>Enter an email address, like name@example.com.</p>
+              </div>
+              <label class="consent"><input type="checkbox"><span><b>Text me updates about this order</b> (received, ready for pickup). Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. See <a href="privacy.html">Privacy &amp; SMS Terms</a>.</span></label>
+              <label class="consent"><input type="checkbox"><span>Text me opening news and offers from Ibn Hamido. Msg &amp; data rates may apply. Msg frequency varies. Reply STOP to opt out, HELP for help. See <a href="privacy.html">Privacy &amp; SMS Terms</a>.</span></label>
+            </div>
+
+            <div class="co-card">
+              <h2 class="co-h2">Payment</h2>
+              <div class="ph" style="min-height: 200px;">[POS PAYMENT EMBED] · Pay online now, pick up when ready</div>
+              <p class="note-box" data-if="hasLb" hidden>Your card is authorised for the estimated total plus up to [AUTH BUFFER %]. We charge the final amount after weighing, and you’ll get a receipt with the actual weight.</p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+              <button type="button" class="btn btn-pri" style="min-height: 56px; padding: 0 32px; font-size: 16px;">Place order · Total [TOTAL]</button>
+              <a href="order.html" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Back to the menu</a>
+            </div>
+          </form>
+
+          <aside class="co-aside" aria-labelledby="sum-title">
+            <div class="co-card" style="gap: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+                <h2 id="sum-title" class="co-h2">Order summary</h2>
+                <a href="order.html" style="font-weight: 600; min-height: 44px; display: inline-flex; align-items: center;">Edit order</a>
+              </div>
+              <button type="button" class="sum-toggle" aria-expanded="false" aria-controls="sum-body">
+                <span>Show items (0) · [TOTAL]</span>
+                <span aria-hidden="true">+</span>
+              </button>
+              <div id="sum-body" class="sum-closed">
+                
+                  <p class="hint" style="padding: 12px 0;" data-if="isEmpty">Your order is empty. <a href="order.html">Browse the menu</a></p>
+                
+                <ul style="margin: 0; padding: 0;">
+                  
+                </ul>
+                <dl class="totals" style="margin-top: 16px;">
+                  <div><dt>Subtotal</dt><dd>[SUBTOTAL]</dd></div>
+                  <div><dt>Tax ([TAX RATE])</dt><dd>[TAX]</dd></div>
+                  <div><dt>Tip</dt><dd>[TIP]</dd></div>
+                  <div class="tot"><dt>Total</dt><dd>[TOTAL]</dd></div>
+                </dl>
+                <p class="hint" style="margin-top: 12px;" data-if="hasLb" hidden>Includes fish sold by the pound. The final price is set by actual weight at the counter.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  
+
+  
+
+  
+<div class="lk lk-c">
+  
+  <svg aria-hidden="true" width="100%" height="34" style="display: block;">
+    <defs>
+      <pattern id="tl-ft" width="34" height="34" patternUnits="userSpaceOnUse">
+        <rect width="34" height="34" fill="#2B4AA5"></rect>
+        <polygon points="17,4 21,13 30,17 21,21 17,30 13,21 4,17 13,13" fill="#F5EEE2"></polygon>
+        <rect x="11" y="11" width="12" height="12" fill="#2B4AA5" transform="rotate(45 17 17)"></rect>
+        <circle cx="17" cy="17" r="3" fill="#F2C14E"></circle>
+        <circle cx="0" cy="0" r="3" fill="#F2C14E"></circle><circle cx="34" cy="0" r="3" fill="#F2C14E"></circle><circle cx="0" cy="34" r="3" fill="#F2C14E"></circle><circle cx="34" cy="34" r="3" fill="#F2C14E"></circle>
+      </pattern>
+    </defs>
+    <rect width="100%" height="34" fill="url(#tl-ft)"></rect>
+  </svg>
+  
+  
+  <footer class="ft deep" style="color: var(--on-deep);">
+    <div class="wrap" style="padding-top: 72px; padding-bottom: 32px; display: flex; flex-direction: column; gap: 48px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <img src="../shared/photos/LOGO-02.svg" alt="Ibn Hamido Seafood" style="height: 36px; width: auto; align-self: flex-start;">
+          <p class="ard" lang="ar" dir="rtl" style="font-size: 30px; line-height: 1.3; color: #FFFFFF;">سمكك على مزاجك</p>
+          <p style="margin: 0; font-size: 14px; line-height: 20px;">Your fish, cooked your way. Family-owned Alexandrian seafood in Orland Park, IL.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <p class="ft-h">Visit</p>
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">14035 LaGrange Rd<br>Orland Park, IL 60462</p>
+          <a href="tel:">[PHONE NUMBER]</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462">Get directions</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <p class="ft-h">Hours · Walk-in only</p>
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">Mon–Thu [HOURS]<br>Fri–Sun [HOURS]<br>Hamido Combos Mon–Fri [LUNCH HOURS] [VERIFY: lunch-only or all day]</p>
+          <p style="margin: 0; font-size: 13px; line-height: 18px;">Reservations for private parties only.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <p class="ft-h">Explore</p>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order pickup</a>
+          <a href="story.html">Our Story</a>
+          <a href="visit.html">Visit</a>
+          <a href="catering.html">Private Parties &amp; Catering</a>
+          <a href="mailto:">Careers: [JOBS EMAIL]</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #2E4280; padding-top: 24px; font-size: 13px; line-height: 18px;">
+        <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px;"><span>© 2026 Ibn Hamido Seafood</span><a href="privacy.html">Privacy &amp; SMS Terms</a></span>
+        <span style="display: flex; flex-wrap: wrap; gap: 8px 20px;"><a href="#">Instagram [@HANDLE]</a><a href="#">Facebook [PAGE]</a><a href="#">Google [LISTING]</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+</div>
+<script src="../shared/js/ui.js" defer></script>
+<script src="../shared/js/../data/menu-data.js" defer></script>
+<script src="../shared/js/order.js" defer></script>
+</body>
+</html>
