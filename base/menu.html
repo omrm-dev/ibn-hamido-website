@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Menu · Ibn Hamido Seafood · Base v2 (mockup)</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../shared/fonts.css">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+/* Page rules. They come before look.css on purpose: on the canvas the shared look and the
+   nav/footer styles are applied after each page's own rules. */
+:root{--surface:#FFFFFF;--surface-tint:#F1F4FB;--foam:#E9EEF9;--ink:#0F1B3D;--ink-muted:#4F5F7E;--sea:#2B4AA5;--sea-ink:#213C8C;--sea-deep:#13245A;--turquoise:#1F9AA0;--turquoise-ink:#0F6E73;--turquoise-bright:#5CC8C8;--line:#DCE2F0;--font-display:"Young Serif",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif;--font-arabic:"Aref Ruqaa",serif}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:24px}
+.eyebrow{margin:0;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise-ink)}
+.ar{font-family:var(--font-arabic);direction:rtl}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--font-sans);text-decoration:none;border:2px solid transparent;box-sizing:border-box;cursor:pointer}
+.btn-primary{background:#2B4AA5;color:#FFFFFF}
+.btn-primary:hover{background:#213C8C;color:#FFFFFF}
+.btn-secondary{border-color:#213C8C;color:#213C8C;background:transparent}
+.btn-secondary:hover{background:#E9EEF9;color:#213C8C}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #DCE2F0;font:500 14px var(--font-sans);color:#0F1B3D;text-decoration:none;background:#FFFFFF}
+.chip:hover{background:#E9EEF9;color:#0F1B3D}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.ph{background:repeating-linear-gradient(135deg,#E6EBF5 0 12px,#EEF2F9 12px 24px);color:#3F4F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box;font:600 12px/1.5 var(--font-sans);letter-spacing:.08em;text-transform:uppercase}
+.arch{border-radius:50% 50% 12px 12px / 200px 200px 12px 12px;overflow:hidden}
+.item{display:grid;grid-template-columns:112px minmax(0,1fr) auto;gap:16px 20px;align-items:center;padding:18px 0;border-bottom:1px solid #DCE2F0}
+.item h3{margin:0;font:400 22px/28px var(--font-display)}
+.item p{margin:0;font:400 15px/22px var(--font-sans);color:#4F5F7E}
+.item .price{margin-top:4px;font:600 15px/22px var(--font-sans);color:#0F1B3D}
+.thumb{width:112px;aspect-ratio:1;border-radius:12px;padding:8px;font-size:10px;line-height:1.3;letter-spacing:.04em}
+.order-this{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #213C8C;color:#213C8C;font:600 14px/1 var(--font-sans);text-decoration:none;white-space:nowrap}
+.order-this:hover{background:#E9EEF9;color:#213C8C}
+.list{max-width:880px}
+@media (max-width:600px){.item{grid-template-columns:88px minmax(0,1fr)}.thumb{width:88px}.order-this{grid-column:2;justify-self:start}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+.ph-on{position:relative;overflow:hidden}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;border-radius:inherit}
+.ph-tag{position:absolute;left:8px;bottom:8px;z-index:2;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;background:rgba(15,27,61,.86);color:#FFFFFF;font:600 10px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:none;padding:4px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}
+.thumb .ph-tag{left:4px;bottom:4px;font-size:8px;padding:3px 5px;letter-spacing:0}
+.ph-white{background:#FFFFFF !important;border-color:#FFFFFF}
+</style>
+<link rel="stylesheet" href="css/look.css">
+</head>
+<body class="mockup" data-design="base" data-page="menu">
+<div style="background: var(--surface); color: var(--ink); font-family: var(--font-sans);">
+
+  
+<div class="nv" style="font-family: Inter, system-ui, sans-serif; color: #0F1B3D; background: #FFFFFF; border-bottom: 1px solid #DCE2F0;">
+  <div class="nv-top" style="background: #13245A; color: #C9D3EE; font-size: 13px; line-height: 18px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;">
+      <span><span style="color: #5CC8C8; font-weight: 600;">Walk-in only</span> · 14035 LaGrange Rd</span>
+      
+        <span>Opening [OPENING DATE]</span>
+      
+    </div>
+  </div>
+  <nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 16px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px;">
+    <a href="index.html" aria-label="Ibn Hamido Seafood home" style="display: block; line-height: 0;">
+      <img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 40px; width: auto;">
+    </a>
+    <div class="nv-links">
+      
+        <a href="menu.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; text-decoration: none; color: #2B4AA5; border-bottom: 2px solid #1F9AA0;" aria-current="page">Menu</a>
+      
+        <a href="order.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Order</a>
+      
+        <a href="story.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Our Story</a>
+      
+        <a href="visit.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Visit</a>
+      
+        <a href="catering.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Parties &amp; Catering</a>
+      
+      <a class="nv-cta" href="order.html">Order pickup</a>
+    </div>
+    <button type="button" class="nv-menu-btn" aria-expanded="false" aria-controls="nv-drawer" data-on-click="openDrawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      Menu
+    </button>
+  </nav>
+  <div class="nv-overlay" data-if="drawerOpen" hidden>
+      <button type="button" class="nv-scrim" tabindex="-1" aria-hidden="true" data-on-click="closeDrawer"></button>
+      <div id="nv-drawer" class="nv-drawer" role="dialog" aria-modal="true" aria-label="Site menu" data-on-keydown="drawerKey">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+          <img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 32px; width: auto;">
+          <button type="button" class="nv-close" data-nv-close="true" aria-label="Close menu" data-on-click="closeDrawer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+        </div>
+        <a class="nv-dlink" href="index.html">Home</a>
+        
+          <a class="nv-dlink" href="menu.html" aria-current="page">Menu</a>
+        
+          <a class="nv-dlink" href="order.html" aria-current="false">Order</a>
+        
+          <a class="nv-dlink" href="story.html" aria-current="false">Our Story</a>
+        
+          <a class="nv-dlink" href="visit.html" aria-current="false">Visit</a>
+        
+          <a class="nv-dlink" href="catering.html" aria-current="false">Parties &amp; Catering</a>
+        
+        <a class="nv-cta" href="order.html" style="justify-content: center; min-height: 48px; margin-top: 16px;">Order pickup</a>
+        <p style="margin: 12px 0 0; font-size: 14px; line-height: 20px; color: #4F5F7E;">Walk-in only · 14035 LaGrange Rd, Orland Park, IL</p>
+      </div>
+    </div>
+</div>
+
+
+  <section style="background: var(--surface-tint); border-bottom: 1px solid var(--line); padding: 72px 0 48px;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 20px;">
+      <p class="eyebrow">Menu · Orland Park</p>
+      <h1 style="margin: 0; font-family: var(--font-display); font-size: clamp(44px, 6vw, 76px); line-height: 1;">The menu</h1>
+      <p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-muted); max-width: 620px;">Fresh fish by the pound, cooked how you like it, plus Hamido Combos, signature dishes, sandwiches and Egyptian sides. Order anything for pickup.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 8px;">
+        <nav aria-label="Menu sections" style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a class="chip" href="#catch">Fresh catch</a>
+          <a class="chip" href="#styles">Cooking styles</a>
+          <a class="chip" href="#combos">Hamido Combos</a>
+          <a class="chip" href="#signature">Signature dishes</a>
+          <a class="chip" href="#sandwiches">Sandwiches</a>
+          <a class="chip" href="#sides">Salads &amp; sides</a>
+        </nav>
+        <a class="btn btn-primary" href="order.html" style="margin-left: auto;">Order pickup</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="catch" style="padding: 96px 0 72px;">
+    <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 64px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <p class="eyebrow">By the pound · in store and online</p>
+        <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">بالوزن</p>
+        <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Fresh catch</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Pick it at the counter or order it online by estimated weight. Market price [PRICE]/lb plus a cooking charge of [PRICE]/lb; singari, rada, butterfly and deboned are +[PRICE]. The final price is set by actual weight.</p>
+        <div class="ph arch ph-on ph-white" style="aspect-ratio: 4 / 5; margin-top: 16px; max-height: 560px;"><img class="ph-img" src="../shared/photos/M-01.jpg" alt="The day’s catch on ice" style="object-position: center bottom;"><span class="ph-tag">AI concept</span>M-01 · Counter on ice · arch 4:5</div>
+      </div>
+      <div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-01.jpg" alt="Branzino, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-01 · Branzino, raw on ice, overhead · 1:1</div>
+          <div><h3>Branzino</h3><p>Mediterranean sea bass.</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Branzino by the pound">Order by the lb</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-02.jpg" alt="Salmon, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-02 · Salmon, raw on ice, overhead · 1:1</div>
+          <div><h3>Salmon</h3><p>[OWNER: description]</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Salmon by the pound">Order by the lb</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-03.jpg" alt="Red snapper, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-03 · Red Snapper, raw on ice, overhead · 1:1</div>
+          <div><h3>Red Snapper</h3><p>[OWNER: description]</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Red Snapper by the pound">Order by the lb</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-04.jpg" alt="Tiger shrimp, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-04 · Tiger Shrimp, raw on ice, overhead · 1:1</div>
+          <div><h3>Tiger Shrimp</h3><p>[OWNER: description]</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Tiger Shrimp by the pound">Order by the lb</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-05.jpg" alt="Scallops, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-05 · Scallops, raw on ice, overhead · 1:1</div>
+          <div><h3>Scallops</h3><p>[OWNER: description]</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Scallops by the pound">Order by the lb</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/F-06.jpg" alt="Lobster, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-06 · Lobster, raw on ice, overhead · 1:1</div>
+          <div><h3>Lobster</h3><p>[OWNER: description]</p><p class="price">[PRICE]/lb · market price</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Lobster by the pound">Order by the lb</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="styles" style="background: var(--surface-tint); padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px;">
+        <p class="eyebrow">Tell the chef how</p>
+        <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Cooking styles</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Seven ways to cook your fish. Tap a style to see how we make it and which fish it’s offered on.</p>
+      </div>
+      
+<div style="font-family: Inter, system-ui, sans-serif; color: #0F1B3D; display: flex; flex-direction: column; gap: 16px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; align-items: start;">
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-grilled-panel" data-on-click="toggle" data-idx="0" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">01</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Grilled</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #F1F4FB; color: #0F6E73;">Included</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-grilled-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-01.jpg" alt="Grilled fish, plated" style="object-position: center;"><span class="ph-tag">AI concept</span>K-01 · Grilled, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what grilled is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Included, no extra charge.</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Salmon, Red Snapper, Tiger Shrimp, Scallops, Lobster [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-fried-panel" data-on-click="toggle" data-idx="1" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">02</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Fried</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #F1F4FB; color: #0F6E73;">Included</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-fried-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-02.jpg" alt="Fried fish, plated" style="object-position: center;"><span class="ph-tag">AI concept</span>K-02 · Fried, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what fried is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Included, no extra charge.</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Salmon, Red Snapper, Tiger Shrimp, Scallops [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-baked-panel" data-on-click="toggle" data-idx="2" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">03</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Baked</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #F1F4FB; color: #0F6E73;">Included</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-baked-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-03.jpg" alt="Baked fish, plated" style="object-position: center 60%;"><span class="ph-tag">AI concept</span>K-03 · Baked, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what baked is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Included, no extra charge.</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Salmon, Red Snapper, Lobster [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-singari-panel" data-on-click="toggle" data-idx="3" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">04</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Singari</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #E9EEF9; color: #213C8C;">+[PRICE]</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-singari-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-04.jpg" alt="Singari-style fish, plated" style="object-position: center 60%;"><span class="ph-tag">AI concept</span>K-04 · Singari, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what singari is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Extra cooking charge: +[PRICE]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Salmon, Red Snapper, Tiger Shrimp, Scallops [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-rada-panel" data-on-click="toggle" data-idx="4" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">05</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Rada</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #E9EEF9; color: #213C8C;">+[PRICE]</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-rada-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-05.jpg" alt="Rada-style fish, plated" style="object-position: center 60%;"><span class="ph-tag">AI concept</span>K-05 · Rada, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what rada is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Extra cooking charge: +[PRICE]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Red Snapper [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-butterfly-panel" data-on-click="toggle" data-idx="5" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">06</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Butterfly</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #E9EEF9; color: #213C8C;">+[PRICE]</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-butterfly-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-06.jpg" alt="Butterflied fish, plated" style="object-position: center;"><span class="ph-tag">AI concept</span>K-06 · Butterfly, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what butterfly is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Extra cooking charge: +[PRICE]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Red Snapper [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+      <div class="cs-card" style="border: 1px solid #DCE2F0; background: #FFFFFF;">
+        <h3 style="margin: 0; font-weight: 400;">
+          <button type="button" class="cs-btn" aria-expanded="false" aria-controls="style-deboned-panel" data-on-click="toggle" data-idx="6" style="color: #0F1B3D;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .08em; color: #0F6E73;">07</span>
+            <span style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+              <span style="font-family: 'Young Serif', Georgia, serif; font-size: 23px; line-height: 28px;">Deboned</span>
+              <span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 22px; padding: 0 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #E9EEF9; color: #213C8C;">+[PRICE]</span>
+            </span>
+            <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; background: #E9EEF9; color: #2B4AA5;">+</span>
+          </button>
+        </h3>
+        <div id="style-deboned-panel" class="cs-reveal">
+          
+            <div class="cs-ph ph-on" data-if="item.closed"><img class="ph-img" src="../shared/photos/K-07.jpg" alt="Deboned fish, plated" style="object-position: center;"><span class="ph-tag">AI concept</span>K-07 · Deboned, plated · 16:9</div>
+          
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto;" data-if="item.active" hidden>
+              <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">[OWNER: what deboned is, how it’s prepared, best fish for it]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #C9D3EE;">Extra cooking charge: +[PRICE]</p>
+              <p style="margin: 0; font-size: 13px; line-height: 18px; color: #FFFFFF;"><b>Offered on:</b> Branzino, Red Snapper [OWNER CONFIRM]</p>
+              <a class="cs-link" href="order.html">Order it this way</a>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+  <p style="margin: 0; font-size: 14px; line-height: 20px; color: #4F5F7E;">Grilled, fried and baked are included. Singari, rada, butterfly and deboned are +[PRICE]. Not every style suits every fish: each card lists the fish it’s offered on. Tell the chef at the counter, or choose a style when you order by the pound online.</p>
+</div>
+
+    </div>
+  </section>
+
+  <section id="combos" style="padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px;">
+          <p class="eyebrow">Hamido Combos · two sides included</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">كومبو ابن حميدو</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Hamido Combos</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">One price, [PRICE] each, with your choice of two sides. [VERIFY: lunch-only Mon–Fri [LUNCH HOURS] or all day]</p>
+        </div>
+        <a class="btn btn-secondary" href="order.html">Order a combo</a>
+      </div>
+      
+<div class="ac-wide" style="font-family: Inter, system-ui, sans-serif; display: flex; gap: 10px; flex-direction: row; height: 520px;">
+  
+    <div class="ac-panel" style="flex: 7 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="0" data-on-mouseleave="hoverOut">
+      
+        <div class="ac-open" data-if="item.active">
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-01.jpg" alt="Grilled salmon combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-01 · Grilled Salmon, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-01 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Grilled Salmon</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Half a pound of grilled salmon, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+      <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Grilled Salmon" data-on-click="select" data-idx="0" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed" hidden>
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Salmon</span>
+        </button>
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="1" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-02.jpg" alt="Mixed grilled calamari and shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-02 · Mixed Grilled Calamari &amp; Shrimp, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-02 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Mixed Grilled Calamari &amp; Shrimp</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Half a pound of calamari and shrimp off the grill, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Mixed Grilled Calamari &amp; Shrimp" data-on-click="select" data-idx="1" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Grilled Mix</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="2" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-03.jpg" alt="Mixed fried calamari and shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-03 · Mixed Fried Calamari &amp; Shrimp, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-03 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Mixed Fried Calamari &amp; Shrimp</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Half a pound of calamari and shrimp, lightly battered and fried, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Mixed Fried Calamari &amp; Shrimp" data-on-click="select" data-idx="2" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Fried Mix</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="3" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-04.jpg" alt="Tiger shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-04 · Tiger Shrimp, Grilled or Fried, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-04 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Tiger Shrimp, Grilled or Fried</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Seven black tiger shrimp, grilled or fried, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Tiger Shrimp, Grilled or Fried" data-on-click="select" data-idx="3" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Tiger Shrimp</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="4" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-05.jpg" alt="Calamari combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-05 · Calamari, Grilled or Fried, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-05 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Calamari, Grilled or Fried</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Half a pound of calamari, grilled or fried, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Calamari, Grilled or Fried" data-on-click="select" data-idx="4" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Calamari</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="5" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/CB-06.jpg" alt="Whole branzino combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-06 · Whole Branzino, Grilled or Fried, plated with two side bowls · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">CB-06 · Hamido Combo</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Whole Branzino, Grilled or Fried</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">A one-pound whole branzino, grilled or fried, with your choice of two sides.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · 2 sides included</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Whole Branzino, Grilled or Fried" data-on-click="select" data-idx="5" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Branzino</span>
+        </button>
+      
+    </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  <section id="signature" style="background: var(--surface-tint); padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px;">
+          <p class="eyebrow">From the kitchen</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">أطباق ابن حميدو</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Signature Dishes</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">The house plates, from stuffed branzino singari to seafood tajin.</p>
+        </div>
+      <div class="list">
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-01.jpg" alt="Branzino stuffed singari" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-01 · Branzino Stuffed Singari, plated · 1:1</div>
+          <div><h3>Branzino Stuffed Singari</h3><p>Whole branzino, butterflied and stuffed with calamari, shrimp and vegetables, Alexandrian singari style.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Branzino Stuffed Singari">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-02.jpg" alt="Whole wild red snapper" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-02 · Whole Wild Red Snapper, plated · 1:1</div>
+          <div><h3>Whole Wild Red Snapper</h3><p>A one-pound wild red snapper, butterflied, fried or grilled, with garlic sauce.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Whole Wild Red Snapper">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-03.jpg" alt="Seafood tajin" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-03 · Seafood Tajin, plated · 1:1</div>
+          <div><h3>Seafood Tajin</h3><p>A one-pound stew of calamari and shrimp baked in tomato sauce.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Seafood Tajin">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-04.jpg" alt="Head-on shrimp butterfly" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-04 · Head-on Shrimp Butterfly, plated · 1:1</div>
+          <div><h3>Head-on Shrimp Butterfly</h3><p>About a pound of wild head-on shrimp (3–4 pieces by weight) in a savory butter sauce.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Head-on Shrimp Butterfly">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-05.jpg" alt="Jumbo shrimp grilled" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-05 · Jumbo Shrimp Grilled, plated · 1:1</div>
+          <div><h3>Jumbo Shrimp Grilled</h3><p>Wild jumbo shrimp stuffed with vegetables, grilled in garlic olive oil.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Jumbo Shrimp Grilled">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-06.jpg" alt="King crab legs" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-06 · King Crab Legs, plated · 1:1</div>
+          <div><h3>King Crab Legs</h3><p>One pound of king crab legs in butter sauce, with extra sauce on the side.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order King Crab Legs">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-07.jpg" alt="Lobster tail" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-07 · Lobster Tail (9 oz), plated · 1:1</div>
+          <div><h3>Lobster Tail (9 oz)</h3><p>A 9 oz lobster tail with a buttery finish.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Lobster Tail (9 oz)">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-08.jpg" alt="Baked clams" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-08 · Baked Clams, plated · 1:1</div>
+          <div><h3>Baked Clams</h3><p>A dozen little neck clams baked in garlic olive oil.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Baked Clams">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-09.jpg" alt="Scallops and shrimp linguine" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-09 · Scallops &amp; Shrimp Linguine, plated · 1:1</div>
+          <div><h3>Scallops &amp; Shrimp Linguine</h3><p>Scallops and shrimp tossed with linguine in garlic sauce.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Scallops &amp; Shrimp Linguine">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-10.jpg" alt="White sauce pasta with shrimp" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-10 · White Sauce Pasta with Shrimp, plated · 1:1</div>
+          <div><h3>White Sauce Pasta with Shrimp</h3><p>Penne and shrimp in a creamy white sauce. One serving.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order White Sauce Pasta with Shrimp">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-11.jpg" alt="Fish and chips" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-11 · Fish &amp; Chips, plated · 1:1</div>
+          <div><h3>Fish &amp; Chips</h3><p>Four fried tilapia fillets with seasoned fries.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Fish &amp; Chips">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-12.jpg" alt="White fried shrimp" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-12 · White Fried Shrimp, plated · 1:1</div>
+          <div><h3>White Fried Shrimp</h3><p>Fifteen fried white shrimp with tartar sauce.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order White Fried Shrimp">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SG-13.jpg" alt="Hamido seafood pizza" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-13 · Hamido Seafood Pizza, plated · 1:1</div>
+          <div><h3>Hamido Seafood Pizza</h3><p>A 12-inch pizza with shrimp, scallops, peppers and mozzarella.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Hamido Seafood Pizza">Order this</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sandwiches" style="padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px;">
+          <p class="eyebrow">On a hero or brioche</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">سندوتشات</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Seafood Sandwiches</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">Served with fries or a bag of potato chips: Classic, BBQ, Salt &amp; Vinegar or Sour Cream &amp; Onion.</p>
+        </div>
+      <div class="list">
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SW-01.jpg" alt="Fried fish fillet sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-01 · Fried Fish Fillet Sandwich with fries · 1:1</div>
+          <div><h3>Fried Fish Fillet Sandwich</h3><p>Fried tilapia with sautéed peppers and onions on a hero.</p><p class="price">[PRICE] · with fries or chips</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Fried Fish Fillet Sandwich">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SW-02.jpg" alt="Grilled fish fillet sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-02 · Grilled Fish Fillet Sandwich with fries · 1:1</div>
+          <div><h3>Grilled Fish Fillet Sandwich</h3><p>Grilled tilapia with sautéed peppers and onions on a hero.</p><p class="price">[PRICE] · with fries or chips</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Grilled Fish Fillet Sandwich">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SW-03.jpg" alt="Fried shrimp sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-03 · Fried Shrimp Sandwich with fries · 1:1</div>
+          <div><h3>Fried Shrimp Sandwich</h3><p>Fried shrimp with lettuce and tartar sauce on a hero.</p><p class="price">[PRICE] · with fries or chips</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Fried Shrimp Sandwich">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SW-04.jpg" alt="Grilled shrimp sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-04 · Grilled Shrimp Sandwich with fries · 1:1</div>
+          <div><h3>Grilled Shrimp Sandwich</h3><p>Grilled shrimp with peppers and onions on a hero.</p><p class="price">[PRICE] · with fries or chips</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Grilled Shrimp Sandwich">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SW-05.jpg" alt="Salmon burger with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-05 · Salmon Burger with fries · 1:1</div>
+          <div><h3>Salmon Burger</h3><p>Homemade salmon patty with peppers and onions on a brioche bun.</p><p class="price">[PRICE] · with fries or chips</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Salmon Burger">Order this</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sides" style="background: var(--surface-tint); padding: 96px 0;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 12px; max-width: 680px;">
+          <p class="eyebrow">On the table</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 28px; line-height: 40px; color: var(--sea); text-align: left;">سلطات</p>
+          <h2 style="margin: 0; font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px); line-height: 1.1;">Salads &amp; Sides</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">[PRICE] each à la carte. These nine are also the combo sides; rice comes small, medium or large.</p>
+        </div>
+      
+<div class="ac-wide" style="font-family: Inter, system-ui, sans-serif; display: flex; gap: 10px; flex-direction: row; height: 520px;">
+  
+    <div class="ac-panel" style="flex: 7 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="0" data-on-mouseleave="hoverOut">
+      
+        <div class="ac-open" data-if="item.active">
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-01.jpg" alt="Golden rice" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-01 · Rice · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-01 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Rice</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Egyptian golden rice cooked with caramelized onions.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE] · Small / Medium / Large</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+      <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Rice" data-on-click="select" data-idx="0" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed" hidden>
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Rice</span>
+        </button>
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="1" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-02.jpg" alt="Tahini" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-02 · Tahini · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-02 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Tahini</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Smooth sesame tahini.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Tahini" data-on-click="select" data-idx="1" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Tahini</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="2" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-03.jpg" alt="Babaghanoush" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-03 · Babaghanoush · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-03 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Babaghanoush</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Smoked eggplant with tahini, lemon, garlic and olive oil.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Babaghanoush" data-on-click="select" data-idx="2" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Babaghanoush</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="3" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-04.jpg" alt="Hamido house salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-04 · Hamido (House) Salad · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-04 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Hamido (House) Salad</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Tomato, cucumber, cilantro and onion with vinegar and olive oil.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Hamido (House) Salad" data-on-click="select" data-idx="3" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Hamido Salad</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="4" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-05.jpg" alt="Beet salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-05 · Beet Salad · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-05 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Beet Salad</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Diced beets with garlic and olive oil.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Beet Salad" data-on-click="select" data-idx="4" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Beet Salad</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="5" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-06.jpg" alt="Lemon potatoes" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-06 · Lemon Potatoes · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-06 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Lemon Potatoes</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Roasted potatoes and bell peppers in lemon and olive oil.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Lemon Potatoes" data-on-click="select" data-idx="5" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Lemon Potatoes</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="6" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-07.jpg" alt="Garlic eggplant" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-07 · Garlic Eggplant · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-07 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Garlic Eggplant</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Roasted eggplant and mild chilies in a garlic-vinegar marinade.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Garlic Eggplant" data-on-click="select" data-idx="6" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Garlic Eggplant</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="7" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-08.jpg" alt="Moussaka" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-08 · Moussaka · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-08 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">Moussaka</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Roasted eggplant and chilies in a garlicky tomato sauce. Vegetarian.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show Moussaka" data-on-click="select" data-idx="7" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Moussaka</span>
+        </button>
+      
+    </div>
+  
+    <div class="ac-panel" style="flex: 1 1 0; min-width: 0;" data-on-mouseenter="hoverIn" data-idx="8" data-on-mouseleave="hoverOut">
+      <div class="ac-open" data-if="item.active" hidden>
+          <div class="ac-shot ph-on"><img class="ph-img" src="../shared/photos/SD-09.jpg" alt="French fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-09 · French Fries · 1:1</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; max-width: 380px;">
+            <span style="font-size: 13px; font-weight: 600; letter-spacing: .1em; color: #5CC8C8;">SD-09 · Side</span>
+            <h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF;">French Fries</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 22px; color: #E9EEF9;">Straight-cut fries with house seasoning.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 8px;">
+              <span style="font-size: 16px; font-weight: 600; color: #FFFFFF;">[PRICE]</span>
+              <a class="ac-link" href="order.html">Order this</a>
+            </div>
+          </div>
+        </div>
+      
+        <button type="button" class="ac-btn" aria-expanded="false" aria-label="Show French Fries" data-on-click="select" data-idx="8" style="align-items: flex-end; justify-content: center;" data-if="item.collapsed">
+          <span aria-hidden="true" style="font-family: &#x27;Young Serif&#x27;, Georgia, serif; font-size: 19px; line-height: 24px; color: #FFFFFF; white-space: nowrap; writing-mode: vertical-rl; transform: rotate(180deg);">Fries</span>
+        </button>
+      
+    </div>
+  
+</div>
+
+      <div class="list">
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SD-10.jpg" alt="Greek salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-10 · Greek Salad · 1:1</div>
+          <div><h3>Greek Salad</h3><p>Romaine, cucumber, tomato, onion, olives and feta with vinaigrette.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Greek Salad">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SD-11.jpg" alt="Herring salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-11 · Herring Salad · 1:1</div>
+          <div><h3>Herring Salad</h3><p>Smoked herring with tahini, tomato, lemon and vinegar.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Herring Salad">Order this</a>
+        </div>
+        <div class="item">
+          <div class="ph thumb ph-on"><img class="ph-img" src="../shared/photos/SD-12.jpg" alt="Mezza platter" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-12 · Mezza Platter · 1:1</div>
+          <div><h3>Mezza Platter</h3><p>Tahini, babaghanoush, moussaka and lemon potatoes on one platter.</p><p class="price">[PRICE]</p></div>
+          <a class="order-this" href="order.html" aria-label="Order Mezza Platter">Order this</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 72px 0 96px;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 16px;">
+      <p style="margin: 0; padding: 20px 24px; border: 1px dashed #AFBBD6; border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--ink-muted);">Drinks, desserts, kids’ items, hummus, grilled vegetables and pita: [VERIFY: are these served in Orland Park?]</p>
+      <p style="margin: 0; padding: 20px 24px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--ink-muted);">Allergen and dietary note: [OWNER: shellfish &amp; gluten warnings, halal sourcing if applicable]</p>
+    </div>
+  </section>
+
+  
+<footer class="ft" style="font-family: Inter, system-ui, sans-serif; background: #13245A; color: #C9D3EE;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 72px clamp(16px, 4vw, 48px) 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <img src="../shared/photos/LOGO-02.svg" alt="Ibn Hamido Seafood" style="height: 36px; width: auto; align-self: flex-start;">
+        <p lang="ar" dir="rtl" style="margin: 0; font-family: 'Aref Ruqaa', serif; font-size: 24px; line-height: 34px; color: #E9EEF9; text-align: left;">من بحر إسكندرية</p>
+        <p style="margin: 0; font-size: 14px; line-height: 20px;">Family-owned Alexandrian seafood in Orland Park, IL.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Visit</p>
+        <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">14035 LaGrange Rd<br>Orland Park, IL 60462</p>
+        <a href="tel:" style="color: #FFFFFF; font-size: 15px;">[PHONE NUMBER]</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462" style="color: #FFFFFF; font-size: 15px;">Get directions</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Hours · Walk-in only</p>
+        <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">Mon–Thu [HOURS]<br>Fri–Sun [HOURS]<br>Lunch special Mon–Fri [LUNCH HOURS]</p>
+        <p style="margin: 0; font-size: 13px; line-height: 18px;">Reservations for private parties only.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Explore</p>
+        <a href="menu.html" style="color: #FFFFFF; font-size: 15px;">Menu</a>
+        <a href="order.html" style="color: #FFFFFF; font-size: 15px;">Order pickup</a>
+        <a href="story.html" style="color: #FFFFFF; font-size: 15px;">Our Story</a>
+        <a href="visit.html" style="color: #FFFFFF; font-size: 15px;">Visit</a>
+        <a href="catering.html" style="color: #FFFFFF; font-size: 15px;">Private Parties &amp; Catering</a>
+        <a href="mailto:" style="color: #FFFFFF; font-size: 15px;">Careers: [JOBS EMAIL]</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #2E4280; padding-top: 24px; font-size: 13px; line-height: 18px;">
+      <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px;">
+        <span>© 2026 Ibn Hamido Seafood</span>
+        <a href="privacy.html" style="color: #FFFFFF;">Privacy &amp; SMS Terms</a>
+      </span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 20px;">
+        <a href="#" style="color: #FFFFFF;">Instagram [@HANDLE]</a>
+        <a href="#" style="color: #FFFFFF;">Facebook [PAGE]</a>
+        <a href="#" style="color: #FFFFFF;">Google [LISTING]</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<script src="../shared/js/ui.js" defer></script>
+</body>
+</html>

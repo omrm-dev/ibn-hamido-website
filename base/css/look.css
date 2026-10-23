@@ -1,0 +1,75 @@
+/* Base v2: shared look. Generated from the canvas boards; page-specific rules stay in each page. */
+body{margin:0}
+a{color:#213C8C}
+a:hover{color:#13245A}
+h1,h2,h3{font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding:0 48px;box-sizing:border-box}
+@media (max-width:720px){.wrap{padding:0 16px}}
+
+/* Reviews */
+.rv-btn{width:48px;height:48px;border-radius:999px;border:1px solid #8C9CCB;background:transparent;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.rv-btn:hover{background:rgba(255,255,255,.08)}
+.rv-play{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;border-radius:999px;border:1px solid #8C9CCB;background:transparent;color:#FFFFFF;font:600 14px/1 Inter,system-ui,sans-serif;cursor:pointer}
+.rv-play:hover{background:rgba(255,255,255,.08)}
+.rv button:focus-visible{outline:2px solid #5CC8C8;outline-offset:2px}
+.rv-dot{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;padding:0;margin:0;background:transparent;cursor:pointer}
+.rv-pip{display:block;height:10px;border-radius:999px;transition:width .3s ease}
+@media (prefers-reduced-motion:reduce){.rv-pip{transition:none}}
+
+/* Nav */
+.nv-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px}
+.nv-menu-btn{display:none;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;border:1px solid #AFBBD6;background:#FFFFFF;color:#0F1B3D;font:600 15px/1 Inter,system-ui,sans-serif;cursor:pointer}
+.nv-menu-btn:hover{background:#E9EEF9}
+.nv-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#2B4AA5;color:#FFFFFF;font-weight:600;font-size:15px;text-decoration:none}
+.nv-cta:hover{background:#213C8C;color:#FFFFFF}
+.nv a:focus-visible,.nv button:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.nv-top a:focus-visible{outline-color:#5CC8C8}
+@media (max-width:899px){.nv-links{display:none}.nv-menu-btn{display:inline-flex}}
+.nv-overlay{position:fixed;inset:0;z-index:60}
+.nv-scrim{position:absolute;inset:0;width:100%;height:100%;border:0;margin:0;padding:0;background:rgba(15,27,61,.5);cursor:pointer}
+.nv-drawer{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:#FFFFFF;box-shadow:-12px 0 40px rgba(15,27,61,.2);display:flex;flex-direction:column;gap:8px;padding:16px 20px 24px;box-sizing:border-box;overflow-y:auto;animation:nvIn .22s ease-out}
+@keyframes nvIn{from{transform:translateX(24px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.nv-drawer{animation:none}}
+.nv-dlink{display:flex;align-items:center;min-height:52px;padding:0 4px;border-bottom:1px solid #DCE2F0;font:400 22px/1.2 'Young Serif',Georgia,serif;color:#0F1B3D;text-decoration:none}
+.nv-dlink:hover{color:#2B4AA5}
+.nv-close{width:44px;height:44px;border-radius:999px;border:1px solid #DCE2F0;background:#FFFFFF;color:#0F1B3D;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+
+/* Accordion */
+.ac-panel{position:relative;overflow:hidden;border-radius:16px;background:repeating-linear-gradient(135deg,#1E3270 0 14px,#223878 14px 28px);transition:flex .45s ease}
+.ac-open{display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:24px;box-sizing:border-box;height:100%;background:rgba(10,18,45,.35)}
+.ac-shot{align-self:flex-end;width:min(190px,100%);aspect-ratio:1;border-radius:12px;background:repeating-linear-gradient(135deg,#3A57B0 0 12px,#3350A8 12px 24px);color:#E9EEF9;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-sizing:border-box;font:600 11px/1.45 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.ac-btn{position:absolute;inset:0;width:100%;height:100%;margin:0;border:0;background:rgba(10,18,45,.15);font:inherit;color:#FFFFFF;cursor:pointer;display:flex;padding:24px;box-sizing:border-box}
+.ac-btn:hover{background:rgba(10,18,45,.05)}
+.ac-btn:focus-visible,.ac-link:focus-visible{outline:2px solid #5CC8C8;outline-offset:-4px}
+.ac-link{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#13245A;font:600 14px/1 Inter,system-ui,sans-serif;text-decoration:none}
+.ac-link:hover{background:#E9EEF9;color:#13245A}
+.ac-narrow .ac-shot{align-self:flex-start}
+@media (prefers-reduced-motion:reduce){.ac-panel{transition:none}}
+.ph-on{position:relative;overflow:hidden}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;border-radius:inherit}
+.ph-tag{position:absolute;left:8px;bottom:8px;z-index:2;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;background:rgba(15,27,61,.86);color:#FFFFFF;font:600 10px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:none;padding:4px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}
+.thumb .ph-tag{left:4px;bottom:4px;font-size:8px;padding:3px 5px;letter-spacing:0}
+.ph-white{background:#FFFFFF !important;border-color:#FFFFFF}
+
+/* Footer */
+.ft a{display:inline-flex;align-items:center;min-height:32px}
+.ft a:focus-visible{outline:2px solid #5CC8C8;outline-offset:2px}
+
+/* CookingStyles */
+.cs-card{border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:background-color .2s ease,border-color .2s ease}
+.cs-btn{background:transparent;border:0;margin:0;font:inherit;box-sizing:border-box;width:100%;min-height:76px;padding:18px 20px;display:flex;align-items:center;gap:14px;cursor:pointer;text-align:left}
+.cs-btn:focus-visible,.cs-link:focus-visible{outline:2px solid #5CC8C8;outline-offset:-4px}
+.cs-reveal{height:236px;box-sizing:border-box;padding:0 20px 20px;display:flex;flex-direction:column}
+.cs-ph{flex:1;border-radius:12px;background:repeating-linear-gradient(135deg,#E6EBF5 0 12px,#EEF2F9 12px 24px);color:#3F4F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;box-sizing:border-box;font:600 12px/1.5 Inter,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.cs-link{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#13245A;font:600 14px/1 Inter,system-ui,sans-serif;text-decoration:none;align-self:flex-start}
+.cs-link:hover{background:#E9EEF9;color:#13245A}
+@media (prefers-reduced-motion:reduce){.cs-card{transition:none}}
+
+/* Mockup helpers (not from the canvas) */
+body:not(.mockup) .ph-tag{display:none}
+html:not(.js) .reveal{opacity:1;transform:none}
+[hidden]{display:none !important}
+.capture *,.capture *::before,.capture *::after{animation:none !important;transition:none !important}
+/* Contrast fix: on the canvas ".lk a" out-ranks ".btn-pri", which turns primary link-buttons blue on blue */
+.lk a.btn-pri,.lk a.btn-pri:hover{color:#FFFFFF}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

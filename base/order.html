@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Order pickup · Ibn Hamido Seafood · Base v2 (mockup)</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../shared/fonts.css">
+<link rel="stylesheet" href="../shared/tokens.css">
+<style>
+/* Page rules. They come before look.css on purpose: on the canvas the shared look and the
+   nav/footer styles are applied after each page's own rules. */
+:root{--surface:#FFFFFF;--surface-tint:#F1F4FB;--foam:#E9EEF9;--ink:#0F1B3D;--ink-muted:#4F5F7E;--sea:#2B4AA5;--sea-ink:#213C8C;--sea-deep:#13245A;--turquoise:#1F9AA0;--turquoise-ink:#0F6E73;--turquoise-bright:#5CC8C8;--line:#DCE2F0;--font-display:"Young Serif",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif;--font-arabic:"Aref Ruqaa",serif}
+html{scroll-behavior:smooth}
+.eyebrow{margin:0;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--turquoise-ink)}
+.ar{font-family:var(--font-arabic);direction:rtl}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px;padding:0;border:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--font-sans);text-decoration:none;border:2px solid transparent;box-sizing:border-box;cursor:pointer}
+.btn-primary{background:#2B4AA5;color:#FFFFFF}
+.btn-primary:hover{background:#213C8C;color:#FFFFFF}
+.btn-primary:disabled{background:#E9EEF9;color:#4F5F7E;cursor:not-allowed}
+.btn-secondary{border-color:#213C8C;color:#213C8C;background:transparent}
+.btn-secondary:hover{background:#E9EEF9;color:#213C8C}
+.od a:focus-visible,.od button:focus-visible,.od input:focus-visible,.od textarea:focus-visible{outline:2px solid #2B4AA5;outline-offset:2px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;background:#E9EEF9;color:#13245A;font:600 13px/1 var(--font-sans)}
+.banner{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;border-radius:16px;font:500 15px/22px var(--font-sans)}
+.banner-open,.banner-lunch{background:#F1F4FB;border:1px solid #DCE2F0;color:#0F1B3D}
+.banner-closed{background:#13245A;color:#FFFFFF}
+.banner-dot{flex:none;width:10px;height:10px;border-radius:999px;margin-top:6px}
+.tabs{position:sticky;top:0;z-index:20;background:#FFFFFF;border-bottom:1px solid #DCE2F0;margin-top:24px}
+.tabs-in{display:flex;align-items:center;gap:12px;min-height:68px}
+.tab{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;font:500 14px var(--font-sans);color:#0F1B3D;text-decoration:none;white-space:nowrap;border:1px solid #DCE2F0;background:#FFFFFF}
+.tab:hover{background:#E9EEF9;color:#0F1B3D}
+.tab-on{background:#2B4AA5;border-color:#2B4AA5;color:#FFFFFF}
+.tab-on:hover{background:#213C8C;color:#FFFFFF}
+.cat{padding:64px 0 24px;scroll-margin-top:84px}
+.cat-head{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;max-width:720px}
+.cat-head h2{margin:0;font:400 clamp(28px,3.4vw,40px)/1.1 var(--font-display)}
+.cat-head p{margin:0;font:400 15px/22px var(--font-sans);color:#4F5F7E}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:20px}
+.card{display:flex;flex-direction:column;border:1px solid #DCE2F0;border-radius:16px;overflow:hidden;background:#FFFFFF}
+.card-ph{aspect-ratio:1;background:repeating-linear-gradient(135deg,#E6EBF5 0 12px,#EEF2F9 12px 24px);color:#3F4F70;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;box-sizing:border-box;font:600 12px/1.5 var(--font-sans);letter-spacing:.06em;text-transform:uppercase}
+.card-sold .card-ph{opacity:.55}
+.card-body{display:flex;flex-direction:column;gap:8px;padding:16px;flex:1;min-width:0}
+.card-title{margin:0;font:400 20px/26px var(--font-display);color:#0F1B3D}
+.card-desc{margin:0;font:400 14px/20px var(--font-sans);color:#4F5F7E}
+.card-note{margin:0;font:500 13px/18px var(--font-sans);color:#0F6E73}
+.card-foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:8px}
+.price{font:600 15px/1.2 var(--font-sans);color:#0F1B3D}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{display:inline-flex;align-items:center;min-height:24px;padding:0 10px;border-radius:999px;font:600 12px/1 var(--font-sans)}
+.badge-lunch{background:#E9EEF9;color:#213C8C}
+.badge-lb{background:#F1F4FB;color:#0F6E73;border:1px solid #DCE2F0}
+.badge-sold{background:#13245A;color:#FFFFFF}
+.btn-add{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:72px;padding:0 18px;border-radius:999px;border:0;background:#2B4AA5;color:#FFFFFF;font:600 14px/1 var(--font-sans);cursor:pointer}
+.btn-add:hover{background:#213C8C}
+.btn-add:disabled{background:#E9EEF9;color:#4F5F7E;cursor:not-allowed}
+.how{list-style:none;margin:0 0 28px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.how li{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border:1px solid #DCE2F0;border-radius:16px;background:#F1F4FB;font:400 15px/22px var(--font-sans);color:#0F1B3D}
+.how-n{flex:none;width:32px;height:32px;border-radius:999px;background:#2B4AA5;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font:600 14px var(--font-sans)}
+.instore{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px;padding:28px;border-radius:20px;background:#13245A;color:#FFFFFF}
+.instore li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2E4280;font:500 15px/22px var(--font-sans)}
+@media (max-width:600px){.grid{grid-template-columns:1fr;gap:12px}.card{flex-direction:row}.card-ph{width:104px;flex:none;align-self:flex-start;margin:12px 0 12px 12px;border-radius:12px;padding:6px;font-size:9px;line-height:1.3;letter-spacing:.03em}.card-body{padding:12px 14px}.card-title{font-size:18px;line-height:23px}}
+.ov{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+.ov-right{justify-content:flex-end;align-items:stretch;padding:0}
+.scrim{position:absolute;inset:0;width:100%;height:100%;border:0;margin:0;padding:0;background:rgba(15,27,61,.55);cursor:pointer}
+.sheet{position:relative;width:min(600px,100%);max-height:calc(100vh - 48px);display:flex;flex-direction:column;background:#FFFFFF;border-radius:24px;box-shadow:0 24px 64px rgba(15,27,61,.3);overflow:hidden;animation:sheetIn .2s ease-out}
+.sheet-head{display:flex;align-items:flex-start;gap:16px;padding:24px 24px 16px}
+.sheet-handle{display:none}
+.sheet-body{overflow-y:auto;padding:0 24px 24px;display:flex;flex-direction:column;gap:24px}
+.sheet-foot{border-top:1px solid #DCE2F0;padding:16px 24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#FFFFFF}
+.icon-btn{flex:none;width:44px;height:44px;border-radius:999px;border:1px solid #DCE2F0;background:#FFFFFF;color:#0F1B3D;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.icon-btn:hover{background:#E9EEF9}
+@keyframes sheetIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes drawerIn{from{transform:translateX(32px);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:600px){.ov{align-items:flex-end;padding:0}.sheet{width:100%;max-height:92vh;border-radius:24px 24px 0 0}.sheet-handle{display:block;width:40px;height:4px;border-radius:999px;background:#AFBBD6;margin:10px auto 0}}
+.drawer{position:relative;width:min(440px,100%);height:100%;background:#FFFFFF;display:flex;flex-direction:column;box-shadow:-16px 0 48px rgba(15,27,61,.25);animation:drawerIn .22s ease-out}
+.drawer-body{flex:1;overflow-y:auto;padding:0 24px 24px;display:flex;flex-direction:column;gap:20px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin:0 0 10px;font:600 16px/22px var(--font-sans);color:#0F1B3D;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.req{display:inline-flex;align-items:center;min-height:22px;padding:0 8px;border-radius:999px;background:#E9EEF9;color:#213C8C;font:600 12px/1 var(--font-sans)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:8px}
+.opts-wide{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.opt{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border:1px solid #AFBBD6;border-radius:12px;font:500 15px/1.25 var(--font-sans);color:#0F1B3D;cursor:pointer;background:#FFFFFF;box-sizing:border-box}
+.opt input{width:20px;height:20px;margin:0;accent-color:#2B4AA5;flex:none;cursor:pointer}
+.opt:hover{background:#F1F4FB}
+.opt-on{border-color:#2B4AA5;background:#E9EEF9}
+.opt-dis{opacity:.5;cursor:not-allowed}
+.opt-extra{margin-left:auto;font:500 13px var(--font-sans);color:#4F5F7E;white-space:nowrap}
+.opt-style{align-items:flex-start;padding:12px 14px}
+.opt-style input{margin-top:2px}
+.opt-sub{display:block;margin-top:2px;font:400 13px/18px var(--font-sans);color:#4F5F7E}
+.fs-err .opt,.fs-err .srow{border-color:#B42318}
+.counter{margin:8px 0 0;font:600 14px/20px var(--font-sans);color:#0F6E73}
+.err{display:flex;gap:8px;align-items:flex-start;margin:8px 0 0;font:600 14px/20px var(--font-sans);color:#B42318}
+.err-box{padding:12px 16px;border-radius:12px;background:#FDF0EE;border:1px solid #F1B8B0;font:600 14px/20px var(--font-sans);color:#B42318}
+.srows{display:flex;flex-direction:column;border:1px solid #DCE2F0;border-radius:12px;padding:0 14px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border-bottom:1px solid #DCE2F0;font:500 15px/1.25 var(--font-sans);color:#0F1B3D}
+.srow:last-child{border-bottom:0}
+.srow-on{font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font:600 15px/20px var(--font-sans);color:#0F1B3D}
+.field textarea,.field input{min-height:48px;border:1px solid #AFBBD6;border-radius:4px;padding:12px 14px;font:400 16px var(--font-sans);color:#0F1B3D;background:#FFFFFF;box-sizing:border-box;width:100%}
+.field textarea{min-height:88px;resize:vertical}
+.hint{margin:0;font:400 13px/18px var(--font-sans);color:#4F5F7E}
+.stepper{display:inline-flex;align-items:center;border:1px solid #AFBBD6;border-radius:999px;background:#FFFFFF}
+.stepper button{width:44px;height:44px;border:0;background:transparent;color:#0F1B3D;font:600 20px/1 var(--font-sans);cursor:pointer;border-radius:999px}
+.stepper button:hover{background:#E9EEF9}
+.stepper button:disabled{color:#AFBBD6;cursor:not-allowed;background:transparent}
+.stepper span{min-width:28px;text-align:center;font:600 15px var(--font-sans)}
+.note-box{padding:12px 16px;border-radius:12px;background:#F1F4FB;font:400 14px/20px var(--font-sans);color:#0F1B3D}
+.breakdown{padding:16px 18px;border-radius:12px;border:1px dashed #AFBBD6;background:#FFFFFF;display:flex;flex-direction:column;gap:6px}
+.breakdown b{font:600 17px/24px var(--font-sans);color:#0F1B3D}
+.breakdown span{font:500 14px/20px var(--font-sans);color:#4F5F7E}
+.ln{list-style:none;padding:16px 0;border-bottom:1px solid #DCE2F0;display:flex;flex-direction:column;gap:10px}
+.ln-name{margin:0;font:600 16px/22px var(--font-sans);color:#0F1B3D}
+.ln-opt{margin:2px 0 0;font:400 14px/20px var(--font-sans);color:#4F5F7E}
+.link-btn{min-height:44px;padding:0 10px;border:0;background:transparent;color:#213C8C;font:600 14px var(--font-sans);text-decoration:underline;cursor:pointer;border-radius:8px}
+.link-btn:hover{background:#E9EEF9}
+.totals{margin:0;display:flex;flex-direction:column;gap:8px}
+.totals div{display:flex;justify-content:space-between;gap:16px;font:400 15px/22px var(--font-sans)}
+.totals dt{color:#4F5F7E}
+.totals dd{margin:0;font-weight:600;color:#0F1B3D}
+.totals .tot{border-top:1px solid #DCE2F0;padding-top:12px;margin-top:4px}
+.totals .tot dt,.totals .tot dd{font:600 17px/24px var(--font-sans);color:#0F1B3D}
+.tips{display:flex;flex-wrap:wrap;gap:8px}
+.tips .opt{min-height:44px;border-radius:999px;padding:0 14px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:14px;padding:8px 8px 8px 20px;border-radius:999px;background:#13245A;color:#FFFFFF;font:500 15px/20px var(--font-sans);box-shadow:0 12px 32px rgba(15,27,61,.3);max-width:calc(100% - 24px)}
+.toast button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:#FFFFFF;color:#13245A;font:600 14px var(--font-sans);cursor:pointer}
+.mbar{display:none}
+@media (max-width:899px){.mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}.cart-desk{display:none}.toast{bottom:84px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sheet,.drawer{animation:none}*{transition:none!important}}
+.ph-on{position:relative;overflow:hidden}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;border-radius:inherit}
+.ph-tag{position:absolute;left:8px;bottom:8px;z-index:2;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;background:rgba(15,27,61,.86);color:#FFFFFF;font:600 10px/1.2 Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:none;padding:4px 8px;border-radius:999px;white-space:nowrap;pointer-events:none}
+.thumb .ph-tag{left:4px;bottom:4px;font-size:8px;padding:3px 5px;letter-spacing:0}
+.ph-white{background:#FFFFFF !important;border-color:#FFFFFF}
+</style>
+<link rel="stylesheet" href="css/look.css">
+</head>
+<body class="mockup" data-design="base" data-page="order">
+<div class="od" style="background: var(--surface); color: var(--ink); font-family: var(--font-sans);">
+
+  
+<div class="nv" style="font-family: Inter, system-ui, sans-serif; color: #0F1B3D; background: #FFFFFF; border-bottom: 1px solid #DCE2F0;">
+  <div class="nv-top" style="background: #13245A; color: #C9D3EE; font-size: 13px; line-height: 18px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;">
+      <span><span style="color: #5CC8C8; font-weight: 600;">Walk-in only</span> · 14035 LaGrange Rd</span>
+      
+        <span>Opening [OPENING DATE]</span>
+      
+    </div>
+  </div>
+  <nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 16px clamp(16px, 4vw, 48px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px;">
+    <a href="index.html" aria-label="Ibn Hamido Seafood home" style="display: block; line-height: 0;">
+      <img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 40px; width: auto;">
+    </a>
+    <div class="nv-links">
+      
+        <a href="menu.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Menu</a>
+      
+        <a href="order.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 600; text-decoration: none; color: #2B4AA5; border-bottom: 2px solid #1F9AA0;" aria-current="page">Order</a>
+      
+        <a href="story.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Our Story</a>
+      
+        <a href="visit.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Visit</a>
+      
+        <a href="catering.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 500; text-decoration: none; color: #0F1B3D; border-bottom: 2px solid transparent;" aria-current="false">Parties &amp; Catering</a>
+      
+      <a class="nv-cta" href="order.html">Order pickup</a>
+    </div>
+    <button type="button" class="nv-menu-btn" aria-expanded="false" aria-controls="nv-drawer" data-on-click="openDrawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      Menu
+    </button>
+  </nav>
+  <div class="nv-overlay" data-if="drawerOpen" hidden>
+      <button type="button" class="nv-scrim" tabindex="-1" aria-hidden="true" data-on-click="closeDrawer"></button>
+      <div id="nv-drawer" class="nv-drawer" role="dialog" aria-modal="true" aria-label="Site menu" data-on-keydown="drawerKey">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+          <img src="../shared/photos/LOGO-01.svg" alt="Ibn Hamido Seafood" style="height: 32px; width: auto;">
+          <button type="button" class="nv-close" data-nv-close="true" aria-label="Close menu" data-on-click="closeDrawer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+        </div>
+        <a class="nv-dlink" href="index.html">Home</a>
+        
+          <a class="nv-dlink" href="menu.html" aria-current="false">Menu</a>
+        
+          <a class="nv-dlink" href="order.html" aria-current="page">Order</a>
+        
+          <a class="nv-dlink" href="story.html" aria-current="false">Our Story</a>
+        
+          <a class="nv-dlink" href="visit.html" aria-current="false">Visit</a>
+        
+          <a class="nv-dlink" href="catering.html" aria-current="false">Parties &amp; Catering</a>
+        
+        <a class="nv-cta" href="order.html" style="justify-content: center; min-height: 48px; margin-top: 16px;">Order pickup</a>
+        <p style="margin: 12px 0 0; font-size: 14px; line-height: 20px; color: #4F5F7E;">Walk-in only · 14035 LaGrange Rd, Orland Park, IL</p>
+      </div>
+    </div>
+</div>
+
+
+  <section style="background: var(--surface-tint); border-bottom: 1px solid var(--line); padding: 56px 0 36px;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 14px;">
+      <p class="eyebrow">Pickup · Orland Park</p>
+      <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 30px; line-height: 42px; color: var(--sea); text-align: left;">اطلب من ابن حميدو</p>
+      <h1 style="margin: 0; font-family: var(--font-display); font-size: clamp(44px, 6vw, 72px); line-height: 1;">Order pickup</h1>
+      <p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-muted); max-width: 640px;">Browse the menu, build your order, pay online, pick up when it’s ready.</p>
+      <p style="margin: 0; font-size: 16px; line-height: 24px; color: var(--ink-muted);">14035 LaGrange Rd, Orland Park, IL 60462 · Ready in about [PREP TIME]</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span class="chip"><span style="width: 8px; height: 8px; border-radius: 999px; background: #1F9AA0; display: inline-block;"></span>Pickup only · pay online</span>
+        
+          <span class="chip">Halal [OWNER CONFIRM]</span>
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top: 24px;">
+    <div id="order-banner" role="status" class="banner banner-open">
+      <span class="banner-dot" aria-hidden="true" style="background: #1F9AA0;"></span>
+      <span style="display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-weight: 600;">Ordering open · last orders [LAST ORDER TIME]</span>
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="wrap tabs-in">
+      <nav id="order-tabs" aria-label="Menu categories" style="display: flex; gap: 8px; overflow-x: auto; flex: 1; min-width: 0; padding: 4px 2px;">
+        
+          <a class="tab tab-on" href="#cat-catch" aria-current="true">Fresh Catch · by the lb</a>
+        
+          <a class="tab" href="#cat-combos" aria-current="false">Hamido Combos</a>
+        
+          <a class="tab" href="#cat-signature" aria-current="false">Signature Dishes</a>
+        
+          <a class="tab" href="#cat-sandwiches" aria-current="false">Seafood Sandwiches</a>
+        
+          <a class="tab" href="#cat-sides" aria-current="false">Salads &amp; Sides</a>
+        
+      </nav>
+      <button type="button" class="btn btn-primary cart-desk" aria-haspopup="dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"></path><path d="M9 7a3 3 0 016 0"></path></svg>
+        Your order (0)
+      </button>
+    </div>
+  </div>
+
+  <div id="order-menu"><section id="cat-catch" data-cat="catch" class="cat">
+    <div class="wrap">
+      <div class="cat-head">
+        <p class="eyebrow">Fresh catch · by the lb</p>
+        <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 26px; line-height: 36px; color: var(--sea); text-align: left;">بالوزن</p>
+        <h2>Fresh Catch</h2>
+        <p>Today’s catch, priced by the pound. Pick your fish, tell us how you want it, and we’ll weigh and cook it for pickup.</p>
+      </div>
+      
+        <h3 class="sr">How by-the-pound works</h3>
+        <ol class="how" aria-label="How by-the-pound works">
+          <li><span class="how-n" aria-hidden="true">1</span><span><b>Choose your fish and an estimated weight.</b> About 1 lb of whole fish per person [OWNER CONFIRM].</span></li>
+          <li><span class="how-n" aria-hidden="true">2</span><span><b>Pay the estimate online.</b> Market price plus the cooking charge, by the pound.</span></li>
+          <li><span class="how-n" aria-hidden="true">3</span><span><b>We weigh it at the counter.</b> Your final price matches the actual weight.</span></li>
+        </ol>
+        <div class="grid">
+          
+            <article class="card" aria-labelledby="it-F-01">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-01.jpg" alt="Branzino, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-01 · Branzino, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span></div>
+                <h3 id="it-F-01" class="card-title">Branzino</h3>
+                <p class="card-desc">Mediterranean sea bass.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" aria-label="Order Branzino by the pound">Order by the lb</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-F-02">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-02.jpg" alt="Salmon, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-02 · Salmon, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span></div>
+                <h3 id="it-F-02" class="card-title">Salmon</h3>
+                <p class="card-desc">[OWNER: description]</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" aria-label="Order Salmon by the pound">Order by the lb</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-F-03">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-03.jpg" alt="Red snapper, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-03 · Red Snapper, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span></div>
+                <h3 id="it-F-03" class="card-title">Red Snapper</h3>
+                <p class="card-desc">[OWNER: description]</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" aria-label="Order Red Snapper by the pound">Order by the lb</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-F-04">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-04.jpg" alt="Tiger shrimp, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-04 · Tiger Shrimp, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span></div>
+                <h3 id="it-F-04" class="card-title">Tiger Shrimp</h3>
+                <p class="card-desc">[OWNER: description]</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" aria-label="Order Tiger Shrimp by the pound">Order by the lb</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-F-05">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-05.jpg" alt="Scallops, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-05 · Scallops, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span></div>
+                <h3 id="it-F-05" class="card-title">Scallops</h3>
+                <p class="card-desc">[OWNER: description]</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" aria-label="Order Scallops by the pound">Order by the lb</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card card-sold" aria-labelledby="it-F-06">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/F-06.jpg" alt="Lobster, raw on ice" style="object-position: center;"><span class="ph-tag">AI concept</span>F-06 · Lobster, raw on ice, overhead · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lb">By the lb</span><span class="badge badge-sold">Sold out today</span></div>
+                <h3 id="it-F-06" class="card-title">Lobster</h3>
+                <p class="card-desc">[OWNER: description]</p>
+                <p class="card-note">Sold out today. Check back tomorrow.</p>
+                <div class="card-foot">
+                  <span class="price">[PRICE]/lb · market price</span>
+                  <button type="button" class="btn-add" disabled aria-label="Sold out: Lobster">Sold out today</button>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      
+      
+    </div>
+  </section>
+
+  
+    <section id="cat-combos" data-cat="combos" class="cat">
+      <div class="wrap">
+        <div class="cat-head">
+          <p class="eyebrow">Two sides included</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 26px; line-height: 36px; color: var(--sea); text-align: left;">كومبو ابن حميدو</p>
+          <h2>Hamido Combos</h2>
+          <p>Your choice of two sides.</p>
+        </div>
+        <div class="grid">
+          
+            <article class="card" aria-labelledby="it-CB-01">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-01.jpg" alt="Grilled salmon combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-01 · Grilled Salmon, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-01" class="card-title">Grilled Salmon</h3>
+                <p class="card-desc">Half a pound of grilled salmon, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Grilled Salmon">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-CB-02">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-02.jpg" alt="Mixed grilled calamari and shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-02 · Mixed Grilled Calamari &amp; Shrimp, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-02" class="card-title">Mixed Grilled Calamari &amp; Shrimp</h3>
+                <p class="card-desc">Half a pound of calamari and shrimp off the grill, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Mixed Grilled Calamari &amp; Shrimp">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-CB-03">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-03.jpg" alt="Mixed fried calamari and shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-03 · Mixed Fried Calamari &amp; Shrimp, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-03" class="card-title">Mixed Fried Calamari &amp; Shrimp</h3>
+                <p class="card-desc">Half a pound of calamari and shrimp, lightly battered and fried, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Mixed Fried Calamari &amp; Shrimp">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-CB-04">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-04.jpg" alt="Tiger shrimp combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-04 · Tiger Shrimp, Grilled or Fried, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-04" class="card-title">Tiger Shrimp, Grilled or Fried</h3>
+                <p class="card-desc">Seven black tiger shrimp, grilled or fried, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Tiger Shrimp, Grilled or Fried">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-CB-05">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-05.jpg" alt="Calamari combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-05 · Calamari, Grilled or Fried, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-05" class="card-title">Calamari, Grilled or Fried</h3>
+                <p class="card-desc">Half a pound of calamari, grilled or fried, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Calamari, Grilled or Fried">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-CB-06">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/CB-06.jpg" alt="Whole branzino combo with two sides" style="object-position: center;"><span class="ph-tag">AI concept</span>CB-06 · Whole Branzino, Grilled or Fried, plated with two side bowls · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-lunch">2 sides included</span></div>
+                <h3 id="it-CB-06" class="card-title">Whole Branzino, Grilled or Fried</h3>
+                <p class="card-desc">A one-pound whole branzino, grilled or fried, with your choice of two sides.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Whole Branzino, Grilled or Fried">Add</button>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section id="cat-signature" data-cat="signature" class="cat">
+      <div class="wrap">
+        <div class="cat-head">
+          <p class="eyebrow">From the kitchen</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 26px; line-height: 36px; color: var(--sea); text-align: left;">أطباق ابن حميدو</p>
+          <h2>Signature Dishes</h2>
+          
+        </div>
+        <div class="grid">
+          
+            <article class="card" aria-labelledby="it-SG-01">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-01.jpg" alt="Branzino stuffed singari" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-01 · Branzino Stuffed Singari, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-01" class="card-title">Branzino Stuffed Singari</h3>
+                <p class="card-desc">Whole branzino, butterflied and stuffed with calamari, shrimp and vegetables, Alexandrian singari style.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Branzino Stuffed Singari to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-02">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-02.jpg" alt="Whole wild red snapper" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-02 · Whole Wild Red Snapper, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-02" class="card-title">Whole Wild Red Snapper</h3>
+                <p class="card-desc">A one-pound wild red snapper, butterflied, fried or grilled, with garlic sauce.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Whole Wild Red Snapper">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-03">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-03.jpg" alt="Seafood tajin" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-03 · Seafood Tajin, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-03" class="card-title">Seafood Tajin</h3>
+                <p class="card-desc">A one-pound stew of calamari and shrimp baked in tomato sauce.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Seafood Tajin to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-04">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-04.jpg" alt="Head-on shrimp butterfly" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-04 · Head-on Shrimp Butterfly, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-04" class="card-title">Head-on Shrimp Butterfly</h3>
+                <p class="card-desc">About a pound of wild head-on shrimp (3–4 pieces by weight) in a savory butter sauce.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Head-on Shrimp Butterfly to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-05">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-05.jpg" alt="Jumbo shrimp grilled" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-05 · Jumbo Shrimp Grilled, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-05" class="card-title">Jumbo Shrimp Grilled</h3>
+                <p class="card-desc">Wild jumbo shrimp stuffed with vegetables, grilled in garlic olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Jumbo Shrimp Grilled to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card card-sold" aria-labelledby="it-SG-06">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-06.jpg" alt="King crab legs" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-06 · King Crab Legs, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"><span class="badge badge-sold">Sold out</span></div>
+                <h3 id="it-SG-06" class="card-title">King Crab Legs</h3>
+                <p class="card-desc">One pound of king crab legs in butter sauce, with extra sauce on the side.</p>
+                <p class="card-note">Sold out today.</p>
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" disabled aria-label="Sold out: King Crab Legs">Sold out</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-07">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-07.jpg" alt="Lobster tail" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-07 · Lobster Tail (9 oz), plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-07" class="card-title">Lobster Tail (9 oz)</h3>
+                <p class="card-desc">A 9 oz lobster tail with a buttery finish.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Lobster Tail (9 oz) to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-08">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-08.jpg" alt="Baked clams" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-08 · Baked Clams, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-08" class="card-title">Baked Clams</h3>
+                <p class="card-desc">A dozen little neck clams baked in garlic olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Baked Clams to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-09">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-09.jpg" alt="Scallops and shrimp linguine" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-09 · Scallops &amp; Shrimp Linguine, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-09" class="card-title">Scallops &amp; Shrimp Linguine</h3>
+                <p class="card-desc">Scallops and shrimp tossed with linguine in garlic sauce.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Scallops &amp; Shrimp Linguine to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-10">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-10.jpg" alt="White sauce pasta with shrimp" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-10 · White Sauce Pasta with Shrimp, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-10" class="card-title">White Sauce Pasta with Shrimp</h3>
+                <p class="card-desc">Penne and shrimp in a creamy white sauce. One serving.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add White Sauce Pasta with Shrimp to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-11">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-11.jpg" alt="Fish and chips" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-11 · Fish &amp; Chips, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-11" class="card-title">Fish &amp; Chips</h3>
+                <p class="card-desc">Four fried tilapia fillets with seasoned fries.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Fish &amp; Chips">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-12">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-12.jpg" alt="White fried shrimp" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-12 · White Fried Shrimp, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-12" class="card-title">White Fried Shrimp</h3>
+                <p class="card-desc">Fifteen fried white shrimp with tartar sauce.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add White Fried Shrimp to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SG-13">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SG-13.jpg" alt="Hamido seafood pizza" style="object-position: center;"><span class="ph-tag">AI concept</span>SG-13 · Hamido Seafood Pizza, plated · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SG-13" class="card-title">Hamido Seafood Pizza</h3>
+                <p class="card-desc">A 12-inch pizza with shrimp, scallops, peppers and mozzarella.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Hamido Seafood Pizza to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section id="cat-sandwiches" data-cat="sandwiches" class="cat">
+      <div class="wrap">
+        <div class="cat-head">
+          <p class="eyebrow">On a hero or brioche</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 26px; line-height: 36px; color: var(--sea); text-align: left;">سندوتشات</p>
+          <h2>Seafood Sandwiches</h2>
+          <p>Served with fries or a bag of potato chips.</p>
+        </div>
+        <div class="grid">
+          
+            <article class="card" aria-labelledby="it-SW-01">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SW-01.jpg" alt="Fried fish fillet sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-01 · Fried Fish Fillet Sandwich with fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SW-01" class="card-title">Fried Fish Fillet Sandwich</h3>
+                <p class="card-desc">Fried tilapia with sautéed peppers and onions on a hero.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Fried Fish Fillet Sandwich">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SW-02">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SW-02.jpg" alt="Grilled fish fillet sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-02 · Grilled Fish Fillet Sandwich with fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SW-02" class="card-title">Grilled Fish Fillet Sandwich</h3>
+                <p class="card-desc">Grilled tilapia with sautéed peppers and onions on a hero.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Grilled Fish Fillet Sandwich">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SW-03">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SW-03.jpg" alt="Fried shrimp sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-03 · Fried Shrimp Sandwich with fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SW-03" class="card-title">Fried Shrimp Sandwich</h3>
+                <p class="card-desc">Fried shrimp with lettuce and tartar sauce on a hero.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Fried Shrimp Sandwich">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SW-04">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SW-04.jpg" alt="Grilled shrimp sandwich with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-04 · Grilled Shrimp Sandwich with fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SW-04" class="card-title">Grilled Shrimp Sandwich</h3>
+                <p class="card-desc">Grilled shrimp with peppers and onions on a hero.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Grilled Shrimp Sandwich">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SW-05">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SW-05.jpg" alt="Salmon burger with fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SW-05 · Salmon Burger with fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SW-05" class="card-title">Salmon Burger</h3>
+                <p class="card-desc">Homemade salmon patty with peppers and onions on a brioche bun.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Salmon Burger">Add</button>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section id="cat-sides" data-cat="sides" class="cat">
+      <div class="wrap">
+        <div class="cat-head">
+          <p class="eyebrow">On the table</p>
+          <p class="ar" lang="ar" dir="rtl" style="margin: 0; font-size: 26px; line-height: 36px; color: var(--sea); text-align: left;">سلطات</p>
+          <h2>Salads &amp; Sides</h2>
+          <p>[PRICE] each. Rice comes in small, medium or large.</p>
+        </div>
+        <div class="grid">
+          
+            <article class="card" aria-labelledby="it-SD-01">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-01.jpg" alt="Golden rice" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-01 · Rice · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-01" class="card-title">Rice</h3>
+                <p class="card-desc">Egyptian golden rice cooked with caramelized onions.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE] · S / M / L</span>
+                  <button type="button" class="btn-add" aria-label="Choose options for Rice">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-02">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-02.jpg" alt="Tahini" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-02 · Tahini · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-02" class="card-title">Tahini</h3>
+                <p class="card-desc">Smooth sesame tahini.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Tahini to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-03">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-03.jpg" alt="Babaghanoush" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-03 · Babaghanoush · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-03" class="card-title">Babaghanoush</h3>
+                <p class="card-desc">Smoked eggplant with tahini, lemon, garlic and olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Babaghanoush to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-04">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-04.jpg" alt="Hamido house salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-04 · Hamido (House) Salad · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-04" class="card-title">Hamido (House) Salad</h3>
+                <p class="card-desc">Tomato, cucumber, cilantro and onion with vinegar and olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Hamido (House) Salad to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-05">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-05.jpg" alt="Beet salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-05 · Beet Salad · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-05" class="card-title">Beet Salad</h3>
+                <p class="card-desc">Diced beets with garlic and olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Beet Salad to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-06">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-06.jpg" alt="Lemon potatoes" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-06 · Lemon Potatoes · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-06" class="card-title">Lemon Potatoes</h3>
+                <p class="card-desc">Roasted potatoes and bell peppers in lemon and olive oil.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Lemon Potatoes to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-07">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-07.jpg" alt="Garlic eggplant" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-07 · Garlic Eggplant · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-07" class="card-title">Garlic Eggplant</h3>
+                <p class="card-desc">Roasted eggplant and mild chilies in a garlic-vinegar marinade.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Garlic Eggplant to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-08">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-08.jpg" alt="Moussaka" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-08 · Moussaka · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-08" class="card-title">Moussaka</h3>
+                <p class="card-desc">Roasted eggplant and chilies in a garlicky tomato sauce. Vegetarian.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Moussaka to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-09">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-09.jpg" alt="French fries" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-09 · French Fries · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-09" class="card-title">French Fries</h3>
+                <p class="card-desc">Straight-cut fries with house seasoning.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add French Fries to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-10">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-10.jpg" alt="Greek salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-10 · Greek Salad · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-10" class="card-title">Greek Salad</h3>
+                <p class="card-desc">Romaine, cucumber, tomato, onion, olives and feta with vinaigrette.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Greek Salad to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-11">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-11.jpg" alt="Herring salad" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-11 · Herring Salad · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-11" class="card-title">Herring Salad</h3>
+                <p class="card-desc">Smoked herring with tahini, tomato, lemon and vinegar.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Herring Salad to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card" aria-labelledby="it-SD-12">
+              <div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/SD-12.jpg" alt="Mezza platter" style="object-position: center;"><span class="ph-tag">AI concept</span>SD-12 · Mezza Platter · 1:1</div>
+              <div class="card-body">
+                <div class="badges"></div>
+                <h3 id="it-SD-12" class="card-title">Mezza Platter</h3>
+                <p class="card-desc">Tahini, babaghanoush, moussaka and lemon potatoes on one platter.</p>
+                
+                <div class="card-foot">
+                  <span class="price">[PRICE]</span>
+                  <button type="button" class="btn-add" aria-label="Add Mezza Platter to your order">Add</button>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+  
+
+  </div>
+  <section class="cat" style="padding-bottom: 112px;">
+    <div class="wrap" style="display: flex; flex-direction: column; gap: 16px;">
+      <p style="margin: 0; padding: 20px 24px; border: 1px dashed #AFBBD6; border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--ink-muted);">Drinks, desserts, kids’ items, hummus, grilled vegetables and pita: [VERIFY: are these served in Orland Park?]</p>
+      <p style="margin: 0; padding: 20px 24px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--ink-muted);">Allergen and dietary note: [OWNER: shellfish &amp; gluten warnings, halal sourcing if applicable]</p>
+      <p style="margin: 0; font-size: 14px; line-height: 20px; color: var(--ink-muted);">Dining in? We’re walk-in only. Come pick your fish at the counter. <a href="visit.html">Hours and directions</a></p>
+    </div>
+  </section>
+
+  
+<footer class="ft" style="font-family: Inter, system-ui, sans-serif; background: #13245A; color: #C9D3EE;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 72px clamp(16px, 4vw, 48px) 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <img src="../shared/photos/LOGO-02.svg" alt="Ibn Hamido Seafood" style="height: 36px; width: auto; align-self: flex-start;">
+        <p lang="ar" dir="rtl" style="margin: 0; font-family: 'Aref Ruqaa', serif; font-size: 24px; line-height: 34px; color: #E9EEF9; text-align: left;">من بحر إسكندرية</p>
+        <p style="margin: 0; font-size: 14px; line-height: 20px;">Family-owned Alexandrian seafood in Orland Park, IL.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Visit</p>
+        <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">14035 LaGrange Rd<br>Orland Park, IL 60462</p>
+        <a href="tel:" style="color: #FFFFFF; font-size: 15px;">[PHONE NUMBER]</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=14035+LaGrange+Rd+Orland+Park+IL+60462" style="color: #FFFFFF; font-size: 15px;">Get directions</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Hours · Walk-in only</p>
+        <p style="margin: 0; font-size: 15px; line-height: 22px; color: #FFFFFF;">Mon–Thu [HOURS]<br>Fri–Sun [HOURS]<br>Lunch special Mon–Fri [LUNCH HOURS]</p>
+        <p style="margin: 0; font-size: 13px; line-height: 18px;">Reservations for private parties only.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="margin: 0 0 4px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #5CC8C8;">Explore</p>
+        <a href="menu.html" style="color: #FFFFFF; font-size: 15px;">Menu</a>
+        <a href="order.html" style="color: #FFFFFF; font-size: 15px;">Order pickup</a>
+        <a href="story.html" style="color: #FFFFFF; font-size: 15px;">Our Story</a>
+        <a href="visit.html" style="color: #FFFFFF; font-size: 15px;">Visit</a>
+        <a href="catering.html" style="color: #FFFFFF; font-size: 15px;">Private Parties &amp; Catering</a>
+        <a href="mailto:" style="color: #FFFFFF; font-size: 15px;">Careers: [JOBS EMAIL]</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid #2E4280; padding-top: 24px; font-size: 13px; line-height: 18px;">
+      <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px;">
+        <span>© 2026 Ibn Hamido Seafood</span>
+        <a href="privacy.html" style="color: #FFFFFF;">Privacy &amp; SMS Terms</a>
+      </span>
+      <span style="display: flex; flex-wrap: wrap; gap: 8px 20px;">
+        <a href="#" style="color: #FFFFFF;">Instagram [@HANDLE]</a>
+        <a href="#" style="color: #FFFFFF;">Facebook [PAGE]</a>
+        <a href="#" style="color: #FFFFFF;">Google [LISTING]</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+  <p class="sr" aria-live="polite"></p>
+
+  
+
+  
+
+  
+
+  
+
+</div>
+<script src="../shared/js/ui.js" defer></script>
+<script src="../shared/js/../data/menu-data.js" defer></script>
+<script src="../shared/js/order.js" defer></script>
+</body>
+</html>
