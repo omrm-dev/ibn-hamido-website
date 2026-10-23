@@ -1,0 +1,50 @@
+/* Design tokens: "Ibn Hamido — Orland Park" design system (canvas project/ds/ibnhamido/tokens.json).
+   Light theme values. Each design's css/look.css maps its own look onto these. */
+:root{
+  --surface: #FFFFFF; /* Default page background */
+  --surface-tint: #F1F4FB; /* Pale blue ground for alternating sections and cards */
+  --foam: #E9EEF9; /* Blue tint fill from the logo blue */
+  --ink: #0F1B3D; /* Body and heading text on surface, surface-warm and foam */
+  --ink-muted: #4F5F7E; /* Secondary text (hours labels, captions) on surface and surface-warm */
+  --sea: #2B4AA5; /* PRIMARY ACCENT, the brand blue from the logo file */
+  --on-sea: #FFFFFF; /* Text and icons on a sea fill */
+  --sea-ink: #213C8C; /* Links and small blue text on surface and surface-warm */
+  --sea-deep: #13245A; /* Deep navy fill: footer, story slideshow, reviews band */
+  --turquoise: #1F9AA0; /* SECONDARY ACCENT (Mediterranean turquoise, the Alexandria harbor) */
+  --turquoise-ink: #0F6E73; /* Turquoise for small text: eyebrows and labels on surface and surface-tint */
+  --turquoise-bright: #5CC8C8; /* Turquoise eyebrows, stars and dots on sea-deep (7 */
+  --line: #DCE2F0; /* Hairline borders and dividers on surface */
+  --input-border: #AFBBD6;
+  --on-navy: #C9D3EE;
+  --font-display: "Young Serif", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-arabic: "Aref Ruqaa", "Amiri", serif;
+  --text-hero: 400 64px/64px var(--font-display);
+  --text-hero-tracking: -0.02em;
+  --text-h1: 400 44px/48px var(--font-display);
+  --text-h1-tracking: -0.01em;
+  --text-h2: 400 32px/38px var(--font-display);
+  --text-h3: 400 22px/28px var(--font-display);
+  --text-body-lg: 400 18px/28px var(--font-sans);
+  --text-body: 400 16px/24px var(--font-sans);
+  --text-eyebrow: 600 12px/16px var(--font-sans);
+  --text-eyebrow-tracking: 0.14em;
+  --text-caption: 500 13px/18px var(--font-sans);
+  --text-arabic-accent: 400 36px/48px var(--font-arabic);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-arch: 999px;
+  --shadow-card: 0 8px 24px rgba(15, 27, 61, 0.12);
+  --radius-arch-shape: 50% 50% 12px 12px / 200px 200px 12px 12px;
+  --container: 1200px;
+}
