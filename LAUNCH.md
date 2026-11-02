@@ -8,7 +8,7 @@
 | Waitlist button does nothing; email **and** SMS fields | Real **Mailchimp** form, **email only**. The SMS field stays hidden until SMS terms exist. |
 | Review cards with `[OWNER: …]` quotes | Removed until the owner supplies real reviews. The Astoria press line stays. |
 | "Halal [OWNER CONFIRM]" chip | Removed until confirmed |
-| Striped map placeholder | Live Google Map of 14035 LaGrange Rd |
+| Striped map placeholder | Live Google Map of 14035 LaGrange Rd (the demo pages now embed it too) |
 | Shared files from `../shared/` | Self-contained (fonts, logo, favicon, photos in `launch/`), so the folder deploys on its own |
 | — | `privacy.html` (Privacy Policy), `404.html` |
 
@@ -23,7 +23,6 @@ Run it yourself with `cd launch && node check.mjs`. Today it lists:
 
 | To finish | Where | Who |
 |---|---|---|
-| `[OPENING DATE]` (2×) | index.html | Owner |
 | `[PHONE NUMBER]` | index.html (structured data) | Owner. If there's no phone yet, delete the `"telephone"` line. |
 | `[INSTAGRAM_URL]`, `[@HANDLE]` | index.html | Owner |
 | `[JOBS EMAIL]` | index.html (Now hiring) | Owner. Or delete the Now hiring card. |

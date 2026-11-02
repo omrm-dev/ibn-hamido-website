@@ -169,7 +169,7 @@ body{margin:0}
 
   <section style="padding: 72px 0 112px;">
     <div class="wrap" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 56px; align-items: start;">
-      <div class="ph" style="aspect-ratio: 4 / 3; border-radius: 24px;">MAP · Google Maps embed: 14035 LaGrange Rd, Orland Park, IL 60462 · 4:3</div>
+      <div class="ph map-embed" style="aspect-ratio: 4 / 3; border-radius: 24px; padding: 0; overflow: hidden; position: relative;"><iframe title="Map: Ibn Hamido Seafood, 14035 LaGrange Rd, Orland Park, IL 60462" src="https://maps.google.com/maps?q=14035%20LaGrange%20Rd%2C%20Orland%20Park%2C%20IL%2060462&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"></iframe></div>
       <div style="display: flex; flex-direction: column; gap: 36px;">
         <div style="display: flex; flex-direction: column; gap: 8px;">
           <p class="eyebrow">Address</p>
@@ -220,7 +220,7 @@ class Component extends DCLogic {
   }
   renderVals() {
     const launchMode = this.props.launchMode ?? true;
-    return { ...this.lookVals(this.props.look), launchMode, todayChip: launchMode ? 'Opening [OPENING DATE]' : 'Open today [HOURS]' };
+    return { ...this.lookVals(this.props.look), launchMode, todayChip: launchMode ? 'Opening SOON' : 'Open today [HOURS]' };
   }
 }
 </script>
