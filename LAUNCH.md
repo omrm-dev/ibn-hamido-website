@@ -34,6 +34,8 @@ Run it yourself with `cd launch && node check.mjs`. Today it lists:
 
 To swap a photo, replace the file with the same name. No HTML changes are needed.
 
+The owner's answers come in through Part 1 of the [owner content doc](https://claude.ai/artifact/5v96YvmjWBPvCFQ7mW1mMR).
+
 ## Mailchimp waitlist (about 5 minutes)
 
 1. In Mailchimp, go to **Audience → Signup forms → Embedded forms**.

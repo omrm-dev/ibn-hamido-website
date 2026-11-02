@@ -99,6 +99,8 @@ When a price is set (for example `"price": 21.99`), the cards, sheets, cart and 
 
 ## Open owner questions (SPEC §9)
 
+> **Sent to the owner as a fill-in doc:** [Ibn Hamido Orland Park — Content we need from you (design A)](https://claude.ai/artifact/5v96YvmjWBPvCFQ7mW1mMR). It has 8 parts: launch blockers, business facts, prices by menu ID, ordering setup, copy, confirmations, Arabic lines and the 65 photos by shot ID. Answers there replace the list below.
+
 - **Facts:** [OPENING DATE] · [HOURS] Mon–Thu / Fri–Sun · [LUNCH HOURS] · [HOLIDAY NOTE] · [PHONE NUMBER] · [EMAIL] · [@HANDLE] Instagram · Facebook [PAGE] · Google [LISTING] · [JOBS EMAIL] · [GRAND OPENING OFFER]
 - **Ordering:** all [PRICE] values (Astoria references are in menu-data.json) · [TAX RATE] · [PREP TIME] · [LAST ORDER TIME] · pickup slot rules · POS/payment provider · sold-out handling
 - **Parties & catering:** [CAPACITY] · [MIN. NOTICE] · tray sizes [X–Y] · [RESPONSE TIME]
