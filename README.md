@@ -1,8 +1,14 @@
-# Ibn Hamido Seafood · Orland Park: website mockups
+# Ibn Hamido Seafood · Orland Park: website
 
-Static HTML/CSS/JS versions of the four designs on the Claude Design canvas: **Base v2**, **A · Corniche**, **B · Anfushi market** and **C · Mix**. Each design is the full 9-page site (10 HTML files, because Checkout and Confirmation are separate pages) with working mock pickup ordering.
+**Decision (2 November 2026): the owner chose design A · Corniche.**
 
-> **Not production.** Content is placeholders (`[PRICE]`, `[HOURS]`, `[OWNER: …]`, `[VERIFY: …]`), photos are **AI concept** images and **stand-ins**, and payments are mocked (`[POS PAYMENT EMBED]`). Every page carries `<meta name="robots" content="noindex, nofollow">`. Don't point the real domain here.
+- `launch/` is the production Coming Soon page for ibnhamidochicago.com. See **[LAUNCH.md](LAUNCH.md)**.
+- `a-corniche/` is the full 9-page site with mock pickup ordering, as an internal demo. The repo root redirects there.
+- Base v2, B · Anfushi market and C · Mix are kept in `archive/` for reference only.
+
+The rest of this README covers the mockup site (`a-corniche/` and `archive/`). Each design is the full 9-page site (10 HTML files, because Checkout and Confirmation are separate pages) with working mock pickup ordering.
+
+> **The mockup site is not production.** (`launch/` is.) Content is placeholders (`[PRICE]`, `[HOURS]`, `[OWNER: …]`, `[VERIFY: …]`), photos are **AI concept** images and **stand-ins**, and payments are mocked (`[POS PAYMENT EMBED]`). Every page carries `<meta name="robots" content="noindex, nofollow">`. Don't point the real domain here.
 
 No framework, no build step: open the files or serve the folder.
 
@@ -10,16 +16,18 @@ No framework, no build step: open the files or serve the folder.
 
 | Path | What it is |
 |---|---|
-| `index.html` | Internal picker that links the 4 designs and their review states. Marked "Internal preview: not the live site". |
-| `base/`, `a-corniche/`, `b-anfushi/`, `c-mix/` | One design each: `index.html` (Home), `coming-soon.html`, `menu.html`, `order.html`, `checkout.html`, `confirmed.html`, `story.html`, `visit.html`, `catering.html`, `privacy.html`, plus `css/look.css` (that design's shared styles). Rules used by only one page sit in that page's `<style>`. |
+| `launch/` | **Production** Coming Soon page (A · Corniche): real waitlist form, SEO, self-contained. Deploy steps and remaining owner facts are in [LAUNCH.md](LAUNCH.md). |
+| `index.html` | Redirects to the A demo (`a-corniche/`). |
+| `a-corniche/` | **The chosen design.** `index.html` (Home), `coming-soon.html`, `menu.html`, `order.html`, `checkout.html`, `confirmed.html`, `story.html`, `visit.html`, `catering.html`, `privacy.html`, plus `css/look.css` (that design's shared styles). Rules used by only one page sit in that page's `<style>`. |
+| `archive/` | The designs that weren't chosen (`base/`, `b-anfushi/`, `c-mix/`, same layout), the four-design picker (`archive/index.html`) and their Figma import files. Not maintained. |
 | `shared/tokens.css` | Design tokens from the installed design system ("Ibn Hamido — Orland Park": colors, type, spacing, radius, shadow). |
 | `shared/fonts.css`, `shared/fonts/` | Young Serif, Inter, Aref Ruqaa and Rakkas, self-hosted (SIL Open Font License) so pages render the same offline. |
 | `shared/photos/<ID>.jpg` | The 70 photos by shot ID (AI concept images and stand-ins, all **REPLACE BEFORE LAUNCH**) plus `LOGO-01.svg` (blue) and `LOGO-02.svg` (white). `OG-01.jpg` is the social-share image (not shown on a page). |
 | `shared/data/menu-data.json` | The menu data file, unchanged. Every price is `null`, so the UI shows `[PRICE]`. |
 | `shared/data/menu-data.js` | The same data wrapped as `window.IHS_MENU_DATA`, only for pages opened straight from disk (browsers block `fetch()` on `file://`). |
-| `shared/js/order.js` | One ordering engine for all 4 designs. It renders the menu from `menu-data.json` and handles: option sheets (combo sides stepper with "0 / 2" and repeats, preparation, sandwich side, rice size, fresh catch weight/style/sides with a live price breakdown), direct add with "Added · Undo", the cart drawer and mobile bar, the `localStorage` cart, checkout validation and confirmation. Price math is a set of pure functions (`window.IHS.Price`): `null` prices give `[PRICE]`. |
+| `shared/js/order.js` | One ordering engine for all designs. It renders the menu from `menu-data.json` and handles: option sheets (combo sides stepper with "0 / 2" and repeats, preparation, sandwich side, rice size, fresh catch weight/style/sides with a live price breakdown), direct add with "Added · Undo", the cart drawer and mobile bar, the `localStorage` cart, checkout validation and confirmation. Price math is a set of pure functions (`window.IHS.Price`): `null` prices give `[PRICE]`. |
 | `shared/js/ui.js` | Mobile nav drawer, cooking-style reveal (click/tap only), dish accordion (150 ms hover intent, click always works), reviews carousel with Pause/Play, story scroll reveal. All of it respects `prefers-reduced-motion`. |
-| `figma-import/` | One self-contained HTML snapshot per page, state and width (1440 / 390) for the html.to.design Figma plugin. Steps are in [`figma-import/README.md`](figma-import/README.md). |
+| `figma-import/` | A · Corniche: one self-contained HTML snapshot per page, state and width (1440 / 390) for the html.to.design Figma plugin. Steps are in [`figma-import/README.md`](figma-import/README.md). |
 | `design-source/` | For the record: every canvas board (`project/*.dc.html`), `project/canvas.json`, the design-system tokens, `SPEC.md`, and `ContentChecklist.md` (the owner checklist board as markdown). |
 
 The canvas boards were converted to plain HTML: the markup and styles come from the boards, while the interactions and ordering logic are re-implemented in `shared/js/`. No canvas runtime is included. `/_blob/` asset URLs from the canvas are replaced by files in `shared/photos/`.
