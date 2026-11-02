@@ -1,5 +1,7 @@
 # Figma import files (html.to.design)
 
+> The owner chose **A · Corniche**, so only `a-corniche/` is here now. The Base v2, B and C files moved to `archive/figma-import/`.
+
 Self-contained snapshots of every page, ready for the **html.to.design** Figma plugin. Each file is one frame at a fixed width:
 
 - **Rendered:** the page after its JavaScript ran, with no autoplay and the Story chapters revealed.

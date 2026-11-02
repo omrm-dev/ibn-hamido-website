@@ -8,6 +8,8 @@
 (function () {
   'use strict';
   var KEY = 'ihs-order-v4';
+  // shared/ folder, resolved from this script's own URL so pages can live at any depth (e.g. archive/)
+  var SHARED = ((document.currentScript && document.currentScript.src) || '../shared/js/order.js').replace(/js\/order\.js(\?.*)?$/, '');
   var LAST = 'ihs-last-order-v4';
   var MAXLB_FALLBACK = 10; // stands in for [MAX LB] until the owner sets it
   var page = document.body.getAttribute('data-page');
@@ -134,7 +136,7 @@
   function loadData() {
     var fromGlobal = function () { return window.IHS_MENU_DATA ? Promise.resolve(window.IHS_MENU_DATA) : Promise.reject(new Error('menu data missing')); };
     if (location.protocol === 'file:') return fromGlobal();
-    return fetch('../shared/data/menu-data.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(fromGlobal);
+    return fetch(SHARED + 'data/menu-data.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).catch(fromGlobal);
   }
 
   /* =====================================================================
@@ -235,7 +237,7 @@
     var addText = sold ? (isFish ? 'Sold out today' : 'Sold out') : (isFish ? 'Order by the lb' : 'Add');
     var addLabel = sold ? 'Sold out: ' + it.name : (isFish ? 'Order ' + it.name + ' by the pound' : (hasOpts(it) ? 'Choose options for ' + it.name : 'Add ' + it.name + ' to your order'));
     return '<article class="' + (sold ? 'card card-sold' : 'card') + '" aria-labelledby="it-' + it.id + '">' +
-      '<div class="card-ph ph-on"><img class="ph-img" src="../shared/photos/' + it.id + '.jpg" alt="' + esc(alt) + '" style="object-position: center;" loading="lazy"><span class="ph-tag">AI concept</span>' + esc(shot) + '</div>' +
+      '<div class="card-ph ph-on"><img class="ph-img" src="' + SHARED + 'photos/' + it.id + '.jpg" alt="' + esc(alt) + '" style="object-position: center;" loading="lazy"><span class="ph-tag">AI concept</span>' + esc(shot) + '</div>' +
       '<div class="card-body"><div class="badges">' + badges.map(function (b) { return '<span class="' + b[1] + '">' + esc(b[0]) + '</span>'; }).join('') + '</div>' +
       '<h3 id="it-' + it.id + '" class="card-title">' + esc(it.name) + (CFG.cardAr && it.ar ? ' <span class="card-ar" lang="ar" dir="rtl">' + esc(it.ar) + '</span>' : '') + '</h3>' +
       '<p class="card-desc">' + esc(it.desc) + '</p>' + (note ? '<p class="card-note">' + esc(note) + '</p>' : '') +
